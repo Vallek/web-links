@@ -9,8 +9,6 @@
 			font-size: 18px;
 			margin: 0;
 			font-family: sans-serif;
-			display: grid;
-    		grid-template-columns: 1fr 2fr auto 2fr 1fr;
 		}
 		header {	
 			max-width: 80ch;
@@ -27,9 +25,17 @@
     		grid-row: 2 / 3;
 			justify-self: left;
 			align-self: start;
-			position: sticky;
-			top: 1em;
 			box-sizing: border-box;
+		}
+		@supports (display:grid) {
+			body {
+				display: grid;
+    			grid-template-columns: 1fr 2fr auto 2fr 1fr;
+			}
+			.contents {
+				position: sticky;
+				top: 1em;
+			}
 		}
 		.contents-list {
 			padding-left: 1em;
