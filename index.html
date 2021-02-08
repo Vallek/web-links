@@ -81,7 +81,8 @@
 			box-shadow: 8px 10px 20px 0 #b3b3b3;
 			margin-bottom: 10px;
 		}
-		article {
+		article,
+		aside {
 			margin-bottom: 1.5em;
 		}
 		section {
@@ -98,15 +99,36 @@
 		<span class="feedback">Если какая-то ссылка не работает, устарела или еще что-то, пожалуйста, напишите на почту.</span>
 	</header>
 	<main>
+		<aside>
+			<h2 id="">Содержание</h2>
+			<ul>
+				<li><a href="#specs">Официальные спецификации</a></li>
+				<li><a href="#reference">Общие справочные материалы </a></li>
+				<li><a href="#layout">Верстка</a></li>
+				<li><a href="#news">Новости, статьи и подборки</a></li>
+				<li><a href="#tools">Инструменты и другие материалы</a></li>
+				<li><a href="#qna">Найти ответы на вопросы и задать их самому</a></li>
+				<li><a href="#access">Доступность</a></li>
+				<li><a href="#interactive">Интерактивное обучение</a></li>
+				<li><a href="#video">Видео</a></li>
+				<li><a href="#cms">CMS и серверы</a></li>
+				<li><a href="#resources">Официально бесплатные ресурсы</a></li>
+				<li><a href="#soft">Софт</a></li>
+				<li><a href="#git">Система контроля версий Git</a></li>
+				<li><a href="#other">Другое</a></li>
+				<li><a href="#seo">SEO верстка</a></li>
+				<li><a href="#next">Чем заняться дальше</a></li>
+			</ul>
+		</aside>
 		<article>
-			<h2>Официальные спецификации 🧙‍♂️</h2>
+			<h2 id="specs">Официальные спецификации 🧙‍♂️</h2>
 			<ul>
 				<li><a href="https://html.spec.whatwg.org/multipage/">Всегда актуальная версия спецификации HTML</a></li>
 				<li><a href="https://www.w3.org/TR/CSS/">Спецификации CSS</a></li>
 			</ul>
 		</article>
 		<article>
-			<h2>Общие справочные материалы 📖</h2>
+			<h2 id="reference">Общие справочные материалы 📖</h2>
 			<ul>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Справочник по HTML от Мозиллы</a></li>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Справочник по CSS от Мозиллы</a></li>
@@ -115,7 +137,7 @@
 			</ul>
 		</article>
 		<article>
-			<h2>Верстка</h2>
+			<h2 id="layout">Верстка</h2>
 			<section>
 				<h3>Основы 🏷️</h3>
 				<ul>
@@ -158,7 +180,7 @@
 			</section>
 		</article>
 		<article>
-			<h2>Новости, статьи и подборки 🔖</h2>
+			<h2 id="news">Новости, статьи и подборки 🔖</h2>
 			<ul>
 				<li><a href="https://bespoyasov.ru/front-not-pain/">Фронтенд — это не больно!</a></li>
 				<li><a href="https://habr.com/en/users/alexzfort/posts/">Дайджест новостей фронтенда</a></li>
@@ -170,7 +192,7 @@
 			</ul>
 		</article>
 		<article>
-			<h2>Инструменты и другие материалы</h2>
+			<h2 id="tools">Инструменты и другие материалы</h2>
 			<section>
 				<h3>Валидация (проверка ошибок) ✔️</h3>
 				<ul>
@@ -206,7 +228,7 @@
 			<p>Для онлайн подбора цвета погуглите "color picker".</p>
 		</article>
 		<article>
-			<h2>Найти ответы на вопросы и задать их самому 🦉</h2>
+			<h2 id="qna">Найти ответы на вопросы и задать их самому 🦉</h2>
 			<p>На эти сайты часто можно попасть, погуглив какую-то задачу:</p>
 			<ul>
 				<li><a href="https://stackoverflow.com/">Stackoverflow</a> (<a href="https://ru.stackoverflow.com/">русская версия</a>)</li>
@@ -216,7 +238,7 @@
 			</ul>	
 		</article>
 		<article>
-			<h2>Доступность 😊</h2>
+			<h2 id="access">Доступность 😊</h2>
 			<ul>
 				<li><a href="https://developer.mozilla.org/ru/docs/Learn/%D0%94%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%BE%D1%81%D1%82%D1%8C/What_is_accessibility">Что такое доступность</a></li>
 				<li><a href="http://yoksel.github.io/easy-markup/accessibility/">Еще про доступность</a></li>
@@ -225,7 +247,7 @@
 			</ul>
 		</article>	
 		<article>
-			<h2>Интерактивное обучение ⌨️</h2>
+			<h2 id="interactive">Интерактивное обучение ⌨️</h2>
 			<ul>
 				<li><a href="https://htmlacademy.ru/courses">HTML Академия</a></li>
 				<li><a href="https://www.codecademy.com/">Codecademy</a></li>
@@ -233,7 +255,7 @@
 			</ul>
 		</article>
 		<article>
-			<h2>Видео 📺</h2>
+			<h2 id="video">Видео 📺</h2>
 			<ul>
 				<li><a href="https://www.youtube.com/channel/UCMtlICYxr6Dz_PG9_SVqRYQ">Академия Яндекса про фронтенд</a></li>
 				<li><a href="https://www.youtube.com/user/wstdays">Подкаст Веб-стандарты и записи с конференций</a></li>
@@ -241,7 +263,7 @@
 			</ul>
 		</article>
 		<article>
-			<h2>CMS и серверы ⚙️</h2>
+			<h2 id="cms">CMS и серверы ⚙️</h2>
 			<ul>
 				<li><a href="https://ru.wordpress.org/">WordPress CMS</a></li>
 				<li><a href="https://codex.wordpress.org/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Справка по WordPress на русском</a></li>
@@ -253,7 +275,7 @@
 			</ul>
 		</article>
 		<article>
-			<h2>Официально бесплатные ресурсы 🧱</h2>
+			<h2 id="resources">Официально бесплатные ресурсы 🧱</h2>
 			<ul>
 				<li><a href="https://fonts.google.com/">Гугловские Шрифты</a> и <a href="https://google-webfonts-helper.herokuapp.com/fonts">сервис для скачивания всех форматов оттуда</a></li>
 				<li><a href="https://www.flaticon.com/">Иконки</a></li>
@@ -263,7 +285,7 @@
 			</ul>
 		</article>
 		<article>
-			<h2>Софт 💻</h2>
+			<h2 id="soft">Софт 💻</h2>
 			<section>
 				<h3>Редакторы кода</h3>
 				<ul>
@@ -293,7 +315,7 @@
 			</section>
 		</article>
 		<article>
-			<h2>Система контроля версий Git 🐙</h2>
+			<h2 id="git">Система контроля версий Git 🐙</h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
@@ -315,7 +337,7 @@
 			</section>
 		</article>
 		<article>
-			<h2>Другое</h2>
+			<h2 id="other">Другое</h2>
 			<ul>
 				<li><a href="https://bureau.ru/bb/soviet/20140324/">Якорные объекты</a></li>
 				<li><a href="https://bureau.ru/bb/soviet/20150517/">Верстка+редактура</a></li>
@@ -324,7 +346,7 @@
 			</ul>
 		</article>
 		<article>
-			<h2>SEO верстка 📈</h2>
+			<h2 id="seo">SEO верстка 📈</h2>
 			<ul>
 				<li><a href="https://www.searchengines.ru/">Новости SEO</a></li>
 				<li><a href="https://yandex.ru/support/webmaster/recommendations/intro.xml">Рекомендации от Яндекс</a></li>
@@ -337,7 +359,7 @@
 			</ul>
 		</article>
 		<article>
-			<h2>Чем заняться дальше 🚀</h2>
+			<h2 id="next">Чем заняться дальше 🚀</h2>
 			<ul>
 				<li>JavaScript (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN</a>, <a href="https://javascript.info/">javascript.info</a> и <a href="https://learn.javascript.ru/">русская версия</a>)</li>
 				<li>Методологии (<a href="https://ru.bem.info/methodology/quick-start/">БЭМ</a>)</li>
