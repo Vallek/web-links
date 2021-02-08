@@ -35,6 +35,19 @@
 			padding-left: 1em;
 			font-size: 14px;	
 		}
+		@media screen and (max-width: 1120px) {
+			.contents {
+				visibility: hidden;
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+		}
 		main {
 			max-width: 80ch;
 			margin: 0 auto;
@@ -54,18 +67,9 @@
 		section {
 			margin-bottom: 1em;
 		}
-		@media screen and (max-width: 1120px) {
-			.contents {
-				visibility: hidden;
-				border: 0;
-				clip: rect(0 0 0 0);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
+		h1, h2, h3 {
+			font-weight: normal;
+			line-height: 1;
 		}
 		h1 {
 			font-size: 2.5em;
@@ -97,10 +101,6 @@
 			font-size: 1.1em;
 			margin-top: 0;
 			margin-bottom: 10px;
-		}
-		h1, h2, h3 {
-			font-weight: normal;
-			line-height: 1;
 		}
 		p {
 			font-size: 1em;
