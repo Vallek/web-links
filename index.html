@@ -4,33 +4,49 @@
 	<meta charset="utf-8">
 	<title>Материалы для самостоятельного обучения</title>
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✊</text></svg>">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style type="text/css">
 		body {
+			position: relative;
 			font-size: 18px;
 			margin: 0;
+			padding-bottom: 2em;
 			font-family: sans-serif;
+		}
+		body::before {
+			content: '';
+			display: block;
+			box-shadow: 8px 10px 20px 0 #b3b3b3;
+			position: absolute;
+			width: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			max-width: 80ch;
+			top: 235px;
+			bottom: 2em;
+			z-index: -1;
 		}
 		header {	
 			max-width: 80ch;
-			padding: 2em 1em;
-			margin: 0 auto;
-			grid-column: 3 / 4;
+			padding: 2em;
+			grid-column: 1 / 6;
    			grid-row: 1 / 2;
+			justify-self: center;
 		}
 		.contents {
-			padding: 0 1em 1em;
+			box-sizing: border-box;
+			padding-left: 1.5em;
 			margin-bottom: 1.5em;
 			min-width: 20ch;
-			grid-column: 4 / 5;
-    		grid-row: 2 / 3;
+			grid-column: 4 / 6;
+    		grid-row: 2 / 50;
 			justify-self: left;
 			align-self: start;
-			box-sizing: border-box;
     	}
 		@supports (display:grid) {
 			body {
 				display: grid;
-    			grid-template-columns: 1fr 2fr auto 2fr 1fr;
+    			grid-template-columns: 1fr 2fr minmax(auto, 80ch) 2fr 1fr;
 			}
 			.contents {
 				position: sticky;
@@ -41,23 +57,12 @@
 			padding-left: 1em;
 			font-size: 14px;	
 		}
-		@media screen and (max-width: 1120px) {
-			.contents {
-				visibility: hidden;
-				border: 0;
-				clip: rect(0 0 0 0);
-				height: 1px;
-				margin: -1px;
-				overflow: hidden;
-				padding: 0;
-				position: absolute;
-				width: 1px;
-			}
-		}
 		.contents-heading:hover::after {
+			position: absolute;
 			content: '\23EB';
 		}
 		main {
+			display: contents;
 			max-width: 80ch;
 			margin: 0 auto;
 			position: relative;
@@ -68,13 +73,92 @@
 			margin-bottom: 10px;
 			grid-column: 3 / 4;
 			position: relative;
-			z-index: 2;
 		}
 		article {
+			position: relative;
 			margin-bottom: 1.5em;
+			padding: 0 2em;
+			grid-column: 3 / 4;
+		}
+		article:first-of-type {
+			margin-top: 2em;
+		}
+		article:last-of-type {
+			margin-bottom: 2em;
+		}
+		.my-ads {
+			display: contents;
+		}
+		.my-ad {
+			box-sizing: border-box;
+			grid-column: 1 / 3;
+			margin-right: 2em;
+			max-width: 250px;
+			min-width: 200px;
+			height: 200px;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-size: cover;
+			display: flex;
+			flex-direction: column;
+    		justify-content: flex-end;
+			justify-self: right;
+			border: 2px solid #eab4b4;
+		}
+		.my-ad__heading,
+		.my-ad__strong {
+			margin: 0;
+			color: white;
+			background-color: rgb(26 52 148);
+			text-align: center;
+			font-size: 1em;
+		}
+		.my-ad__heading {
+			padding: 0.2em;
+    		line-height: 1.2;
+		}
+		.my-ad__text {
+			text-align: center;
+			margin: 0;
+			background-color: white;
+		}
+		.my-ad > a {
+			text-align: center;
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+		}
+		.my-ad > a:first-of-type {
+			flex-grow: 1;
+		}
+		.my-ad > a:first-of-type:hover {
+			text-decoration-color: white;
+		}
+		.ad-pop {
+			background-image: url('https://vallek.github.io/Portfolio/img/projects/pop-mistakes-min.svg');
+			grid-row: 6 / 7;
+		}
+		.ad-search {
+			background-image: url('https://vallek.github.io/Portfolio/img/projects/search.png');
+			grid-row: 7 / 8;
+		}
+		.ad-git {
+			background-image: url('img/git.png');
+			background-size: contain;
+			background-position: 100% 20%;
+			grid-row: 14 / 15;
+		}
+		.ad-bem {
+			background-image: url('img/blocks.svg');
+			background-size: contain;
+			grid-row: 15 / 16;
 		}
 		section {
 			margin-bottom: 1em;
+		}
+		section:last-of-type,
+		p:last-of-type {
+			margin-bottom: 0;
 		}
 		h1, h2, h3 {
 			font-weight: normal;
@@ -137,8 +221,36 @@
 		ol {
 			margin-top: 0;
 		}
+		@media screen and (max-width: 800px) {
+			body::before {
+				top: 0;
+			}
+		}
+		@media screen and (max-width: 1400px) {
+			.my-ad {
+				justify-self: left;
+				margin-right: 0;
+			}
+		}
+		@media screen and (max-width: 1220px) {
+			.contents {
+				position: static;
+				grid-column: 3 / 4;
+				grid-row: 2 / 3;
+				padding: 2em 0 0 2em;
+			}
+			.my-ads {
+				display: flex;
+				flex-wrap: wrap;
+				grid-column: 3 / 4;
+				grid-row: 3 / 4;
+			} 
+			.my-ad {	
+				margin-left: 2em;
+				margin-bottom: 1em;
+			}
+		}
 	</style>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<header>
@@ -169,15 +281,41 @@
 			<li><a href="#next">Чем заняться дальше</a></li>
 		</ol>
 	</aside>
-	<main>
-		<article>
+	<main class="shadow-box">
+		<div class="my-ads">
+			<aside class="my-ad ad-pop">
+				<a href="https://vallek.github.io/Portfolio/pages/projects/pop-mistakes.html">
+					<h2 class="my-ad__heading">Популярные ошибки и как их <strong class="my-ad__strong">избегать</strong></h2>
+				</a>
+				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/pop-sign-up.html" class="my-ad__text">Записаться на вебинар</a>
+			</aside>
+			<aside class="my-ad ad-search">
+				<a href="https://vallek.github.io/Portfolio/pages/projects/search.html">
+					<h2 class="my-ad__heading">Как <strong>эффективно</strong> искать информацию</h2>
+				</a>
+				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/search-sign-up.html" class="my-ad__text">Записаться на лекцию</a>
+			</aside>
+			<aside class="my-ad ad-git">
+				<a href="https://vallek.github.io/Portfolio/pages/projects/git.html">
+					<h2 class="my-ad__heading">Система контроля версий <strong>Git</strong></h2>
+				</a>
+				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/git-sign-up.html" class="my-ad__text">Записаться на занятие</a>
+			</aside>
+			<aside class="my-ad ad-bem">
+				<a href="https://vallek.github.io/Portfolio/pages/projects/bem.html">
+					<h2 class="my-ad__heading">Введение в методологию <strong>БЭМ</strong></h2>
+				</a>
+				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/bem-sign-up.html" class="my-ad__text">Записаться на занятие</a>
+			</aside>
+		</div>
+		<article class="specs">
 			<h2 id="specs">Официальные спецификации 🧙‍♂️</h2>
 			<ul>
 				<li><a href="https://html.spec.whatwg.org/multipage/">Всегда актуальная версия спецификации HTML</a></li>
 				<li><a href="https://www.w3.org/TR/CSS/">Спецификации CSS</a></li>
 			</ul>
 		</article>
-		<article>
+		<article class="reference">
 			<h2 id="reference">Общие справочные материалы 📖</h2>
 			<ul>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Справочник по HTML от Мозиллы</a></li>
@@ -186,7 +324,7 @@
 				<li><a href="https://learn.javascript.ru/css-units">Единицы измерения</a></li>
 			</ul>
 		</article>
-		<article>
+		<article class="layout">
 			<h2 id="layout">Верстка</h2>
 			<section>
 				<h3>Основы 🏷️</h3>
@@ -229,7 +367,7 @@
 				</ul>
 			</section>
 		</article>
-		<article>
+		<article class="news">
 			<h2 id="news">Новости, статьи и подборки 🔖</h2>
 			<ul>
 				<li><a href="https://bespoyasov.ru/front-not-pain/">Фронтенд — это не больно!</a></li>
@@ -241,7 +379,7 @@
 				<li><a href="http://css-live.ru/faq/put-verstalshhika-god-2017.html">Советы верстальщику</a></li>
 			</ul>
 		</article>
-		<article>
+		<article class="tools">
 			<h2 id="tools">Инструменты и другие материалы</h2>
 			<section>
 				<h3>Валидация (проверка ошибок) ✔️</h3>
@@ -277,7 +415,7 @@
 			</section>
 			<p>Для онлайн подбора цвета погуглите "color picker".</p>
 		</article>
-		<article>
+		<article class="qna">
 			<h2 id="qna">Найти ответы на вопросы и задать их самому 🦉</h2>
 			<p>На эти сайты часто можно попасть, погуглив какую-то задачу:</p>
 			<ul>
@@ -287,7 +425,7 @@
 				<li>Комментарии на <a href="https://habr.com/">хабре</a></li>
 			</ul>	
 		</article>
-		<article>
+		<article class="access">
 			<h2 id="access">Доступность 😊</h2>
 			<ul>
 				<li><a href="https://developer.mozilla.org/ru/docs/Learn/%D0%94%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%BE%D1%81%D1%82%D1%8C/What_is_accessibility">Что такое доступность</a></li>
@@ -296,7 +434,7 @@
 				<li><a href="https://youtu.be/ssJsjGZE2sc">Доклад Вадима Макеева про доступность</a> и про <a href="https://youtu.be/MWJKwn_gKR4">ссылки</a></li>
 			</ul>
 		</article>	
-		<article>
+		<article class="interactive">
 			<h2 id="interactive">Интерактивное обучение ⌨️</h2>
 			<ul>
 				<li><a href="https://htmlacademy.ru/courses">HTML Академия</a></li>
@@ -304,7 +442,7 @@
 				<li><a href="https://codebra.ru">Codebra</a></li>
 			</ul>
 		</article>
-		<article>
+		<article class="video">
 			<h2 id="video">Видео 📺</h2>
 			<ul>
 				<li><a href="https://www.youtube.com/channel/UCMtlICYxr6Dz_PG9_SVqRYQ">Академия Яндекса про фронтенд</a></li>
@@ -312,7 +450,7 @@
 				<li><a href="https://www.youtube.com/user/htmlacademyru/videos">Канал Html Академии</a></li>
 			</ul>
 		</article>
-		<article>
+		<article class="cms">
 			<h2 id="cms">CMS и серверы ⚙️</h2>
 			<ul>
 				<li><a href="https://ru.wordpress.org/">WordPress CMS</a></li>
@@ -324,7 +462,7 @@
 				<li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Forms/%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0_%D0%B8_%D0%9F%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85_%D1%84%D0%BE%D1%80%D0%BC%D1%8B">Про отправку данных на сервер через формы</a></li>
 			</ul>
 		</article>
-		<article>
+		<article class="resources">
 			<h2 id="resources">Официально бесплатные ресурсы 🧱</h2>
 			<ul>
 				<li><a href="https://fonts.google.com/">Гугловские Шрифты</a> и <a href="https://google-webfonts-helper.herokuapp.com/fonts">сервис для скачивания всех форматов оттуда</a></li>
@@ -334,7 +472,7 @@
 				<li><a href="https://pixabay.com/">Фото, видео, картинки</a></li>
 			</ul>
 		</article>
-		<article>
+		<article class="soft">
 			<h2 id="soft">Софт 💻</h2>
 			<section>
 				<h3>Редакторы кода</h3>
@@ -364,7 +502,7 @@
 				</ul>
 			</section>
 		</article>
-		<article>
+		<article class="git">
 			<h2 id="git">Система контроля версий Git 🐙</h2>
 			<section>
 				<h3>Основы</h3>
@@ -386,7 +524,7 @@
 				</ul>
 			</section>
 		</article>
-		<article>
+		<article class="bem">
 			<h2 id="bem">Методология БЭМ</h2>
 			<section>
 				<h3>Основы</h3>
@@ -409,7 +547,7 @@
 				</ul>
 			</section>
 		</article>
-		<article>
+		<article class="other">
 			<h2 id="other">Другое</h2>
 			<ul>
 				<li><a href="https://bureau.ru/bb/soviet/20140324/">Якорные объекты</a></li>
@@ -418,7 +556,7 @@
 				<li><a href="http://maximilyahov.ru/blog/all/diploma-tech/">Варианты создания сайта</a></li>
 			</ul>
 		</article>
-		<article>
+		<article class="seo">
 			<h2 id="seo">SEO верстка 📈</h2>
 			<ul>
 				<li><a href="https://www.searchengines.ru/">Новости SEO</a></li>
@@ -431,7 +569,7 @@
 				<li><a href="https://webmaster.yandex.ru/#welcome">Инструменты вебмастера Яндекс</a></li>
 			</ul>
 		</article>
-		<article>
+		<article class="next">
 			<h2 id="next">Чем заняться дальше 🚀</h2>
 			<ul>
 				<li>JavaScript (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN</a>, <a href="https://javascript.info/">javascript.info</a> и <a href="https://learn.javascript.ru/">русская версия</a>)</li>
