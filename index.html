@@ -16,7 +16,7 @@
 			padding-bottom: 2em;
 			font-family: sans-serif;
 		}
-		body::before {
+		main::before {
 			content: '';
 			display: block;
 			box-shadow: 8px 10px 20px 0 #b3b3b3;
@@ -25,16 +25,20 @@
 			left: 50%;
 			transform: translateX(-50%);
 			max-width: 80ch;
-			top: 235px;
-			bottom: 2em;
+			top: 0;
+			bottom: 0;
 			z-index: -1;
+			grid-column: 3 / 4;
+			grid-row: 2 / 22;
 		}
 		header {	
-			max-width: 80ch;
 			padding: 2em;
 			grid-column: 1 / 6;
    			grid-row: 1 / 2;
 			justify-self: center;
+		}
+		header a {
+			text-decoration: underline;
 		}
 		.contents {
 			box-sizing: border-box;
@@ -175,7 +179,7 @@
 		.sub-heading {
 			display: block;
 			font-size: 1.5em;
-			margin-bottom: 1em;
+			margin-bottom: 0.3em;
 		}
 		.version {
 			display: block;
@@ -228,11 +232,6 @@
 		.my-lectures {
 			display: none;
 		}
-		@media screen and (max-width: 800px) {
-			body::before {
-				top: 0;
-			}
-		}
 		@media screen and (max-width: 1400px) {
 			.my-lecture {
 				justify-self: left;
@@ -261,8 +260,8 @@
 </head>
 <body>
 	<header>
-		<h1>Создание и верстка веб-сайтов</h1>
-		<span class="sub-heading">Материалы для самостоятельного обучения</span>
+		<h1>Основы Фронтенда</h1>
+		<span class="sub-heading">Материалы для студентов курса <a href="https://vallek.github.io/Portfolio/pages/courses/web.html">"Создание и верстка веб-сайтов"</a></span>
 		<span class="author">Автор подборки: <a href="https://github.com/Vallek/">Vallek</a> (<a href="https://vallek.github.io/Portfolio/index.html">портфолио</a>, <a href="mailto:vwebdis@gmail.com">почта</a>)</span>
 		<span class="feedback">Если какая-то ссылка не работает, устарела или еще что-то, пожалуйста, напишите на почту.</span>
 	</header>
