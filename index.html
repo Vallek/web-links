@@ -150,7 +150,11 @@
 		}
 		.lecture-search {
 			background-image: url('https://vallek.github.io/Portfolio/img/projects/search.png');
-			grid-row: 7 / 8;
+			grid-row: 5 / 6;
+		}
+		.lecture-devtools {
+			background-image: url('https://vallek.github.io/Portfolio/img/projects/devtools.png');
+			grid-row: 6 / 7;
 		}
 		.lecture-git {
 			background-image: url('img/git.png');
@@ -282,6 +286,7 @@
 			<li><a href="#layout">Верстка</a></li>
 			<li><a href="#news">Новости</a></li>
 			<li><a href="#tools">Инструменты</a></li>
+			<li><a href="#qa">Тестирование</a></li>
 			<li><a href="#qna">Ответы на вопросы</a></li>
 			<li><a href="#access">Доступность</a></li>
 			<li><a href="#interactive">Интерактивное обучение</a></li>
@@ -310,6 +315,12 @@
 					<h2 class="my-lecture__heading">Как <strong>эффективно</strong> искать информацию</h2>
 				</a>
 				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/search-sign-up.html" class="my-lecture__text">Записаться на лекцию</a>
+			</aside>
+			<aside class="my-lecture lecture-devtools">
+				<a href="https://vallek.github.io/Portfolio/pages/projects/devtools.html">
+					<h2 class="my-lecture__heading">Вебинар "Инструменты разработчика в браузерах"</h2>
+				</a>
+				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/devtools-sign-up.html" class="my-lecture__text">Записаться на лекцию</a>
 			</aside>
 			<aside class="my-lecture lecture-git">
 				<a href="https://vallek.github.io/Portfolio/pages/projects/git.html">
@@ -407,7 +418,7 @@
 				</ul>
 			</section>
 			<section>
-				<h3>Онлайн-тесты 🔬</h3>
+				<h3>Онлайн-тесты</h3>
 				<ul>
 					<li><a href="https://developers.google.com/speed/">Гугловский сервис для проверки скорости сайта</a></li>
 					<li><a href="https://webpagetest.org/">Тесты на разных устройствах</a></li>
@@ -430,6 +441,25 @@
 				</ul>
 			</section>
 			<p>Для онлайн подбора цвета погуглите "color picker".</p>
+		</article>
+		<article class="qa">
+			<h2 id="qa">Тестирование, дебаггинг, поиск ошибок 🔬</h2>
+			<section>
+				<h3>Инструменты разработчика</h3>
+				<ul>
+					<li><a href="https://developer.chrome.com/docs/devtools/">Документация по девтулзам в Хроме</a></li>
+					<li><a href="https://developer.mozilla.org/ru/docs/Tools">Документация по девтулзам в Лисе</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Тестирование на разных устройствах</h3>
+				<ul>
+					<li><a href="https://www.browserstack.com/">Сервис browserstack</a></li>
+					<li><a href="https://www.lambdatest.com/">Альтернатива browserstack подешевле</a></li>
+					<li><a href="https://youtu.be/71qnSzSjCyY">Как тестировать верстку на мобильных</a></li>
+				</ul>
+			</section>
+			<p>Также можете погуглить установку MacOS на виртуальную машину</p>
 		</article>
 		<article class="qna">
 			<h2 id="qna">Найти ответы на вопросы и задать их самому 🦉</h2>
