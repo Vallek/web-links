@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Frontend links compilation</title>
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✊</text></svg>">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Frontend links compilation">
+	<meta name="keywords" content="education, courses, frontend, web, html, css, javascript, links, materials">
+	<meta name="author" content="Vallek">
+	<style type="text/css">
+		body {
+			position: relative;
+			font-size: 18px;
+			margin: 0;
+			padding-bottom: 2em;
+			font-family: sans-serif;
+		}
+		header {	
+			padding: 2em 0;
+			grid-column: 3 / 5;
+   			grid-row: 1 / 2;
+		}
+		@media (max-width: 855px) {
+			header {
+				padding: 2em 2vw;
+			}
+		}
+		header a {
+			text-decoration: underline;
+		}
+		.contents {
+			box-sizing: border-box;
+			padding-left: 1.5em;
+			min-width: 20ch;
+			grid-column: 4 / 6;
+    		grid-row: 2 / 50;
+			justify-self: left;
+			align-self: start;
+    	}
+		@supports (display:grid) {
+			body {
+				display: grid;
+    			grid-template-columns: 1fr 2fr minmax(auto, 80ch) 2fr 1fr;
+			}
+			.contents {
+				position: sticky;
+				top: 1em;
+			}
+		}
+		.contents-list {
+			padding-left: 1em;
+			font-size: 14px;	
+		}
+		.contents-heading-link:hover::after {
+			position: absolute;
+			content: '\23EB';
+		}
+		main {
+			display: contents;
+			max-width: 80ch;
+			margin: 0 auto;
+			position: relative;
+			box-sizing: border-box;
+			padding: 2em 2em 1px;
+			border-radius: 5px;
+			box-shadow: 8px 10px 20px 0 #b3b3b3;
+			margin-bottom: 10px;
+			grid-column: 3 / 4;
+			position: relative;
+		}
+		main::before {
+			content: '';
+			display: block;
+			box-shadow: 8px 10px 20px 0 #b3b3b3;
+			position: absolute;
+			width: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			max-width: 80ch;
+			top: 0;
+			bottom: 0;
+			z-index: -1;
+			grid-column: 3 / 4;
+			grid-row: 2 / 22;
+		}
+		article {
+			position: relative;
+			margin-bottom: 1.5em;
+			padding: 0 2vw;
+			grid-column: 3 / 4;
+		}
+		article:first-of-type {
+			margin-top: 2em;
+		}
+		article:last-of-type {
+			margin-bottom: 2em;
+		}
+		.my-lectures {
+			display: contents;
+		}
+		.my-lecture {
+			box-sizing: border-box;
+			grid-column: 1 / 3;
+			margin-right: 2em;
+			margin-bottom: 1em;
+			max-width: 250px;
+			min-width: 200px;
+			height: 200px;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-size: cover;
+			display: flex;
+			flex-direction: column;
+    		justify-content: flex-end;
+			justify-self: right;
+			border: 2px solid #eab4b4;
+		}
+		.my-lecture__heading,
+		.my-lecture__strong {
+			margin: 0;
+			color: white;
+			background-color: rgb(26 52 148);
+			text-align: center;
+			font-size: 1em;
+		}
+		.my-lecture__heading {
+			padding: 0.2em;
+    		line-height: 1.2;
+		}
+		.my-lecture__text {
+			text-align: center;
+			margin: 0;
+			background-color: white;
+		}
+		.my-lecture > a {
+			text-align: center;
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+		}
+		.my-lecture > a:first-of-type {
+			flex-grow: 1;
+		}
+		.my-lecture > a:first-of-type:hover {
+			text-decoration-color: white;
+		}
+		.lecture-pop {
+			background-image: url('https://vallek.github.io/Portfolio/img/projects/pop-mistakes-min.svg');
+			grid-row: 7 / 8;
+		}
+		.lecture-search {
+			background-image: url('https://vallek.github.io/Portfolio/img/projects/search.png');
+			grid-row: 5 / 6;
+		}
+		.lecture-devtools {
+			background-image: url('https://vallek.github.io/Portfolio/img/projects/devtools.png');
+			grid-row: 8 / 9;
+		}
+		.lecture-git {
+			background-image: url('../img/git.png');
+			background-size: contain;
+			background-position: 100% 20%;
+			grid-row: 14 / 15;
+		}
+		.lecture-bem {
+			background-image: url('../img/blocks.svg');
+			background-size: contain;
+			grid-row: 15 / 16;
+		}
+		h1 {
+			font-size: 2.5em;
+			margin-top: 0;
+			margin-bottom: 0.2em;
+			word-wrap: break-word;
+			hyphens: auto;
+		}
+		.sub-heading {
+			display: block;
+			font-size: 1.5em;
+			margin-bottom: 0.3em;
+		}
+		.version {
+			display: block;
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+		.author,
+		.feedback {
+			display: block;
+		}
+		.author {
+			margin-bottom: 0.1em;
+		}
+		section {
+			margin-bottom: 1em;
+		}
+		section:last-of-type {
+			margin-bottom: 0;
+		}
+		h2, h3 {
+			font-weight: normal;
+			line-height: 1;
+		}
+		h2 {
+			font-size: 1.5em;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		h2:target {
+			background-color: rgba(132, 207, 250, 0.5);
+			transition: 0.5s ease-out;
+		}
+		h3 {
+			font-size: 1.1em;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		p {
+			font-size: 1em;
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			font-size: 1em;
+			text-decoration: none;
+			line-height: 1.4;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		span {
+			font-size: 1em;
+		}
+		ul {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-left: 18px;
+		}
+		ol {
+			margin-top: 0;
+		}
+		/* .my-lectures {
+			display: none;
+		} */
+		@media screen and (max-width: 1400px) {
+			.my-lecture {
+				justify-self: left;
+				margin-right: 0;
+			}
+		}
+		@media screen and (max-width: 1220px) {
+			.contents {
+				position: static;
+				grid-column: 3 / 4;
+				grid-row: 2 / 3;
+				padding: 2em 0 0 2em;
+			}
+			.my-lectures {
+				display: flex;
+				flex-wrap: wrap;
+				grid-column: 3 / 4;
+				grid-row: 20 / 21;
+			} 
+			.my-lecture {	
+				margin-left: 2em;
+				margin-bottom: 1em;
+			}
+		}
+		.rss-n-favs__links {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 2em;
+		}
+		.rss-n-favs__link {
+			width: 46%;
+			flex: 1 1;
+			min-width: 200px;
+			height: 180px;
+			background-color: rgb(50, 122, 163);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Frontend Basics</h1>
+		<span class="sub-heading">Links for "<a href="https://vallek.github.io/Portfolio/pages/courses/web.html">Frontend Basics Course</a>" students</span>
+		<span class="author">Compilation by: <a href="https://github.com/Vallek/">Vallek</a> (<a href="https://vallek.github.io/Portfolio/index.html">portfolio</a>)</span>
+		<span class="feedback">If some link doesn't work, outdated or something else is wrong, please write me <a href="mailto:vwebdis@gmail.com">an email</a>.</span>
+	</header>
+	<aside class="contents">
+		<h2 class="contents-heading" title="В начало">
+			<a class="contents-heading-link" href="#">Contents</a>
+		</h2>
+		<ol class="contents-list">
+			<li><a href="#specs">Specs</a></li>
+			<li><a href="#reference">Reference </a></li>
+			<li><a href="#layout">CSS Layouts</a></li>
+			<li><a href="#news">News</a></li>
+			<li><a href="#tools">Tools</a></li>
+			<li><a href="#qna">QnA</a></li>
+			<li><a href="#qa">Debugging</a></li>
+			<li><a href="#access">Accessibility</a></li>
+			<li><a href="#interactive">Interactive learning</a></li>
+			<li><a href="#video">Video</a></li>
+			<li><a href="#cms">CMS ans servers</a></li>
+			<li><a href="#resources">Resources</a></li>
+			<li><a href="#soft">Soft</a></li>
+			<li><a href="#git">Git</a></li>
+			<li><a href="#bem">BEM</a></li>
+			<li><a href="#js">JavaScript</a></li>
+			<li><a href="#build">Building</a></li>
+			<li><a href="#seo">SEO</a></li>
+			<li><a href="#other">Other</a></li>
+		</ol>
+	</aside>
+	<main class="shadow-box">
+		<div class="my-lectures">
+			<aside class="my-lecture lecture-pop">
+				<a href="https://vallek.github.io/Portfolio/pages/projects/pop-mistakes.html">
+					<h2 class="my-lecture__heading">Популярные ошибки и как их <strong class="my-lecture__strong">избегать</strong></h2>
+				</a>
+				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/pop-sign-up.html" class="my-lecture__text">Записаться на вебинар</a>
+			</aside>
+			<aside class="my-lecture lecture-search">
+				<a href="https://vallek.github.io/Portfolio/pages/projects/search.html">
+					<h2 class="my-lecture__heading">Как <strong>эффективно</strong> искать информацию</h2>
+				</a>
+				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/search-sign-up.html" class="my-lecture__text">Записаться на лекцию</a>
+			</aside>
+			<aside class="my-lecture lecture-devtools">
+				<a href="https://vallek.github.io/Portfolio/pages/projects/devtools.html">
+					<h2 class="my-lecture__heading">Вебинар "Инструменты разработчика в браузерах"</h2>
+				</a>
+				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/devtools-sign-up.html" class="my-lecture__text">Записаться на лекцию</a>
+			</aside>
+			<aside class="my-lecture lecture-git">
+				<a href="https://vallek.github.io/Portfolio/pages/projects/git.html">
+					<h2 class="my-lecture__heading">Система контроля версий <strong>Git</strong></h2>
+				</a>
+				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/git-sign-up.html" class="my-lecture__text">Записаться на занятие</a>
+			</aside>
+			<aside class="my-lecture lecture-bem">
+				<a href="https://vallek.github.io/Portfolio/pages/projects/bem.html">
+					<h2 class="my-lecture__heading">Введение в методологию <strong>БЭМ</strong></h2>
+				</a>
+				<a href="https://vallek.github.io/Portfolio/pages/lectures-sign-up/bem-sign-up.html" class="my-lecture__text">Записаться на занятие</a>
+			</aside>
+		</div>
+		<article class="specs">
+			<h2 id="specs">Official specification 🧙‍♂️</h2>
+			<ul>
+				<li><a href="https://html.spec.whatwg.org/multipage/">Always current HTML specs</a></li>
+				<li><a href="https://www.w3.org/TR/CSS/">CSS specs</a></li>
+			</ul>
+		</article>
+		<article class="reference">
+			<h2 id="reference">Reference 📖</h2>
+			<ul>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML elements on MDN</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS properties on MDN</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">CSS Units</a></li>
+				<li>CSS Colors <a href="https://web.dev/learn/css/color/">on web.dev</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">on MDN</a></li>
+			</ul>
+		</article>
+		<article class="layout">
+			<h2 id="layout">Layouts</h2>
+			<section>
+				<h3>Basics 🏷️</h3>
+				<ul>
+					<li><a href="https://developer.mozilla.org/ru/docs/Learn">MDN Manual</a></li>
+					<li><a href="https://html5book.ru/kontentnaya-model-html5/">HTML Content Models</a></li>
+					<li><a href="https://css-tricks.com/dom/">What is DOM</a> and <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">detail dive from Google</a></li>
+					<li><a href="https://web.dev/learn/css/selectors/">CSS Selectors</a></li>
+					<li><a href="https://github.com/ChiragKushwaha/common-words/blob/master/README_EN.md">Common CSS classes names</a></li>
+					<li><a href="https://web-standards.ru/articles/css-architecture/">More detailed article about CSS naming</a></li>
+					<li><a href="http://learnlayout.com/">CSS Layouts</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">Positioning</a></li>
+					<li>Backgrounds reference <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">on MDN</a> and <a href="https://css-tricks.com/almanac/properties/b/background/">CSS-tricks</a></li>
+					<li>Can I nest one html element into another? <a href="https://caninclude.glitch.me/">This online tool will help</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Flexbox Layout 🟩🟨🟧</h3>
+				<ul>
+					<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Main flexbox properties guide</a></li>
+					<li><a href="https://www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/">How flexbox works in gifs</a></li>
+					<li><a href="https://www.freecodecamp.org/news/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af/">Big flexbox guide</a></li>
+					<li><a href="https://www.freecodecamp.org/news/the-ultimate-guide-to-flexbox-learning-through-examples-8c90248d4676/">Using flexbox layout guide</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Grid Layout &#9638;</h3>
+				<ul>
+					<li><a href="https://www.freecodecamp.org/news/learn-css-grid-in-5-minutes-f582e87b1228/">Quick grid layout guide</a></li>
+					<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS-tricks grid guide</a></li>
+					<li><a href="https://www.freecodecamp.org/news/how-to-make-your-html-responsive-by-adding-a-single-line-of-css-2a62de81e431/">How to make grid layout responsive</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">MDN grid guide</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Best Practices 👍</h3>
+				<ul>
+					<li><a href="https://ishadeed.com/article/viewport-units/#2-second-solution-flexbox-and-viewport-units-recommended">Modern way to press down footer</a></li>
+					<li><a href="https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines">Creating headings recommendations</a></li>
+				</ul>
+			</section>
+		</article>
+		<article class="news">
+			<h2 id="news">News, articles and digests 🔖</h2>
+			<ul>
+				<li><a href="https://css-tricks.com/">Guides and articles on css-tricks</a></li>
+				<li><a href="https://web.dev/learn/">Google's web.dev for frontend devs</a></li>
+				<li><a href="https://www.smashingmagazine.com/">Articles on Smashing Magazine</a></li>
+				<li><a href="https://www.freecodecamp.org/news">Web Dev posts on freecodecamp</a></li>
+				<li><a href="https://alistapart.com/">Articles on A List Apart</a></li>
+				<li><a href="https://ishadeed.com/articles/">Ahmad Shadeed's Blog</a></li>
+				<li><a href="https://chenhuijing.com/blog/">Chen Hui Jing's blog</a></li>
+				<li>Frontend News on Twitter by <a href="https://twitter.com/FrontendDaily">FrontendDaily</a>, <a href="https://twitter.com/CSSWeekly">CSSWeekly</a> and <a href="https://twitter.com/WebToolsWeekly">WebToolsWeekly</a></li>
+			</ul>
+		</article>
+		<article class="tools">
+			<h2 id="tools">Tools</h2>
+			<section>
+				<h3>Essentials ✔️</h3>
+				<ul>
+					<li><a href="https://validator.w3.org/nu/">Online Code Validation</a> (can check both html and css)</li>
+					<li><a href="https://caniuse.com/">Browsers CSS features support</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Other</h3>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">Browser version detection</a></li>
+					<li><a href="https://specificity.keegan.st/">Specificity calculator</a></li>
+					<li><a href="https://www.cssfontstack.com/">Safe web fonts</a></li>
+					<li><a href="https://csstriggers.com/">How CSS properties affect page rendering</a></li>
+					<li><a href="https://dev.w3.org/html5/html-author/charref">HTML special characters code</a></li>
+					<li><a href="https://realfavicongenerator.net/">Favicons generator</a></li>
+					<li><a href="https://svgontheweb.com/ru/#implementation">Working with SVG vector images</a></li>
+					<li><a href="https://nicolasgallagher.com/about-normalize-css/">What is CSS normalization</a></li>
+					<li><a href="http://yoksel.github.io/html-tree/">HTML tree generator</a></li>
+				</ul>
+			</section>
+			<p>To pick different colors google "color picker".</p>
+		</article>
+		<article class="qna">
+			<h2 id="qna">Find answers and ask questions 🦉</h2>
+			<p>You can often get to these sites by Googling a task:</p>
+			<ul>
+				<li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
+				<li>Thematic sub<a href="https://www.reddit.com/">reddit</a>s</li>
+				<li><a href="https://dev.to/">DEV.to community</a></li>
+			</ul>	
+		</article>
+		<article class="qa">
+			<h2 id="qa">Testing and debugging 🔬</h2>
+			<section>
+				<h3>Devtools</h3>
+				<ul>
+					<li><a href="https://developer.chrome.com/docs/devtools/">Chrome devtools docs</a></li>
+					<li><a href="https://developer.mozilla.org/ru/docs/Tools">Firefox devtools docs</a></li>
+					<li><a href="https://code.visualstudio.com/docs/editor/debugging">Debugging in VS Code</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Simple Online tests</h3>
+				<ul>
+					<li><a href="https://developers.google.com/speed/">Google page speed test</a></li>
+					<li><a href="https://webpagetest.org/">webpagetest tools</a></li>
+					<li><a href="https://tools.pingdom.com">pingdom tools</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Testing on different devices</h3>
+				<ul>
+					<li><a href="https://www.browserstack.com/">Browserstack service</a></li>
+					<li><a href="https://www.lambdatest.com/">Cheaper browserstack alternative</a></li>
+				</ul>
+			</section>
+			<p>You can also google installing MacOS on virtual machine if you don't have a mac</p>
+		</article>
+		<article class="access">
+			<h2 id="access">Accessibility 😊</h2>
+			<section>
+				<h3>Theory</h3>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility</a></li>
+					<li><a href="https://a11y-101.com/">Site on accessibility</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Practice</h3>
+				<ul>
+					<li><a href="https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements">How to hide elements</a></li>
+					<li><a href="https://www.w3.org/TR/using-aria/">Using ARIA attributes</a></li>
+					<li><a href="https://www.a11yproject.com/checklist/">Accessibility checklist</a></li>	
+				</ul>
+			</section>
+		</article>	
+		<article class="interactive">
+			<h2 id="interactive">Interactive learning ⌨️</h2>
+			<ul>
+				<li><a href="https://www.codecademy.com/">Codecademy</a></li>
+				<li><a href="https://codebra.ru">Codebra</a></li>
+			</ul>
+		</article>
+		<article class="cms">
+			<h2 id="cms">CMS and servers ⚙️</h2>
+			<section>
+				<h3>Servers</h3>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">How to upload files</a></li>
+					<li><a href="https://filezilla-project.org/">Filezilla FTP client</a></li>
+					<li><a href="https://sourceforge.net/projects/wampserver/">Local server for testing sites with backend (for example on WordPress)</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">How sending data through forms work</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>CMS</h3>
+				<ul>
+					<li><a href="https://ru.wordpress.org/">WordPress CMS</a></li>
+					<li><a href="https://codex.wordpress.org/">WordPress docs</a></li>
+					<li><a href="https://codex.wordpress.org/Theme_Development">Creating WP Themes</a></li>
+					<li><a href="https://wordpress.org/support/article/how-to-install-wordpress/">Installing WordPress</a></li>
+				</ul>
+			</section>
+		</article>
+		<article class="resources">
+			<h2 id="resources">Officially free resources 🧱</h2>
+			<ul>
+				<li><a href="https://fonts.google.com/">Google Fonts</a> и <a href="https://google-webfonts-helper.herokuapp.com/fonts">service for downloading all google fonts formats</a></li>
+				<li><a href="https://www.flaticon.com/">Icons</a></li>
+				<li><a href="https://www.freepik.com/home">Illustrations</a></li>
+				<li><a href="https://www.pexels.com/">Photos and videos on pexels</a></li>
+				<li><a href="https://pixabay.com/">Photos, videos and images on pixabay</a></li>
+				<li><a href="https://unsplash.com/">Photos on unsplash</a></li>
+				<li><a href="https://www.figma.com/community/web_design">Figma Templates</a></li>
+			</ul>
+		</article>
+		<article class="soft">
+			<h2 id="soft">Soft 💻</h2>
+			<section>
+				<h3>Code Editors</h3>
+				<ul>
+					<li><a href="https://code.visualstudio.com/">Microsoft Visual Studio Code Editor</a></li>
+					<li><a href="https://code.visualstudio.com/docs/getstarted/themes#_customizing-a-color-theme">Customizing a Color Theme</a></li>
+					<li><a href="https://code.visualstudio.com/docs">VS Code Docs</a></li>
+					<li><a href="https://www.sublimetext.com/">Sublime Text Editor</a></li>
+					<li><a href="https://www.sublimetext.com/docs/3/">Sublime Text Docs</a></li>
+					<li><a href="https://packagecontrol.io/">Sublime Text Packages (extensions)</a>, <a href="https://packagecontrol.io/packages/Emmet">Emmet to speed up writing code</a>, <a href="https://docs.emmet.io/">Emmet Docs</a></li>
+					<li><a href="https://atom.io/">Atom Editor</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Graphic Editors for working with web templates</h3>
+				<ul>
+					<li><a href="https://www.figma.com">Figma</a></li>
+					<li><a href="https://helpx.adobe.com/ru/photoshop/user-guide.html">Photoshop Docs</a></li>
+				</ul>
+			</section>
+		</article>
+		<article class="git">
+			<h2 id="git">Git Version Control 🐙</h2>
+			<section>
+				<h3>Basics</h3>
+				<ul>
+					<li><a href="https://git-scm.com/">Installing Git</a></li>
+					<li><a href="https://git-scm.com/book/en/v2">Official Docs</a></li>
+					<li><a href="https://www.atlassian.com/git/tutorials">Simpler non official docs</a></li>
+					<li><a href="https://github.com/">GitHub (remote projects hosting service)</a></li>
+					<li><a href="https://guides.github.com/introduction/flow/">GitHub workflow</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>QnA</h3>
+				<ul>
+					<li><a href="https://stackoverflow.com/questions/651038/how-do-you-clone-a-git-repository-into-a-specific-folder">How to clone repo in specific folder</a></li>
+					<li><a href="https://stackoverflow.com/questions/1628088/reset-local-repository-branch-to-be-just-like-remote-repository-head">How to reset local repo to remote state</a></li>
+					<li><a href="https://stackoverflow.com/questions/34730585/how-can-i-commit-some-changes-to-a-file-but-not-others-in-vscode">How to commit only certain lines in VS Code</a></li>
+				</ul>
+			</section>
+		</article>
+		<article class="bem">
+			<h2 id="bem">BEM Methodology</h2>
+			<section>
+				<h3>Basics</h3>
+				<ul>
+					<li><a href="https://en.bem.info/methodology/quick-start/">Quick start</a></li>
+					<li><a href="https://en.bem.info/methodology/solved-problems/">What issues BEM solves</a></li>
+					<li><a href="https://en.bem.info/methodology/naming-convention/">Naming convention</a></li>
+					<li><a href="https://en.bem.info/">The whole stack</a></li>
+					<li><a href="https://github.com/werty1001/bemgo">Unofficial tool to build files from html classes</a></li>
+					<li><a href="https://en.bem.info/tutorials/classic/">Tutorials</a></li>
+					<li><a href="https://en.bem.info/forum/">Forum</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>QnA (auto translated)</h3>
+				<ul>
+					<li><a href="https://translate.yandex.ru/translate?url=https%3A%2F%2Fru.bem.info%2Fforum%2F656%2F&lang=ru-en">About wrappers</a></li>
+					<li><a href="https://ru-bem-info.translate.goog/forum/158/?_x_tr_sl=ru&_x_tr_tl=en&_x_tr_hl=ru&_x_tr_pto=wapp#%D0%A7%D1%82%D0%BE-%D0%B2%D1%8B-%D1%81%D0%BA%D0%B0%D0%B6%D0%B5%D1%82%D0%B5-%D0%BD%D0%B0-nav__item__link-%D0%92%D1%81%D0%B5-%D1%80%D0%B0%D0%B2%D0%BD%D0%BE-%D0%B4%D0%BB%D0%B8%D0%BD%D0%BD%D0%BE">NEsting BEM elements in elements</a></li>
+					<li><a href="https://ru-bem-info.translate.goog/forum/1495/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ru&_x_tr_pto=wapp">Pseudo-classes vs modifiers</a></li>
+				</ul>
+			</section>
+		</article>
+		<article class="js">
+			<h2 id="js">JavaScript 🚀</h2>
+			<ul>
+				<li>
+					<a href="https://javascript.info/">JavaScript Tutorials</a>
+				</li>
+				<li>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JS docs on MDN</a>
+				</li>
+			</ul>
+		</article>
+		<article class="build">
+			<h2 id="build">Building 🏗️</h2>
+			<ul>
+				<li>
+					<a href="https://developers.google.com/web/updates/2019/02/rendering-on-the-web?hl=en">Websites/apps building (rendering) types</a>
+				</li>
+				<li>
+					<a href="https://jekyllrb.com/docs/">Jekyll static sites generator</a>
+				</li>
+				<li>
+					<a href="https://www.npmjs.com/">NPM packet manager</a> and <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">docs</a>
+				</li>
+				<li>
+					<a href="https://nodejs.org/en/">Node.js (needed for npm)</a>
+				</li>
+				<li>
+					<a href="https://rubygems.org/pages/download">RubyGems packet manager for Jekyll</a> and <a href="https://guides.rubygems.org/command-reference/">docs</a>
+				</li>
+				<li>
+					<a href="https://github.com/RehanSaeed/Bash-Cheat-Sheet">Bash CLI cheat sheet</a> and <a href="http://www.cs.columbia.edu/~sedwards/classes/2017/1102-spring/Command%20Prompt%20Cheatsheet.pdf">Windows cmd.exe</a>
+				</li>
+			</ul>
+		</article>
+		<article class="seo">
+			<h2 id="seo">SEO 📈</h2>
+			<ul>
+				<li><a href="https://searchengines.guru/en">SEO News</a></li>
+				<li><a href="https://developers.google.com/search/docs/beginner/seo-starter-guide?visit_id=637822674831853242-16488094&rd=1">Руководство по поисковой оптимизации для начинающих от Гугл</a></li>
+				<li><a href="https://moz.com/google-algorithm-change">Google Search History Log</a></li>
+				<li><a href="https://www.google.com/webmasters/tools/home?hl=ru">google Webmasters Tools</a></li>
+				<li><a href="https://yandex.ru/support/webmaster/recommendations/intro.html?lang=en">Yandex Recommendations</a></li>
+				<li><a href="https://yandex.ru/support/webmaster/schema-org/what-is-schema-org.html">Yandex on Schema microformats</a></li>
+				<li><a href="https://webmaster.yandex.ru/#welcome">Yandex webmasters tools</a></li>
+			</ul>
+		</article>
+		<article class="other">
+			<h2 id="other">Other topics (design, text, marketing)</h2>
+			<ul>
+				<li><a href="https://www.sitepoint.com/css-printer-friendly-pages/">Optimization for print</a></li>
+			</ul>
+		</article> 
+	</main>
+</body>
+</html>
