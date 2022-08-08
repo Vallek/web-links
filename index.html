@@ -60,6 +60,9 @@
 			padding-left: 1em;
 			font-size: 0.9rem;	
 		}
+		.contents-list a {
+			display: block;
+		}
 		main {
 			display: contents;
 			max-width: 80ch;
@@ -204,6 +207,11 @@
 		section:last-of-type {
 			margin-bottom: 0;
 		}
+		a {
+			font-size: 1em;
+			text-decoration: none;
+			line-height: 1.4;
+		}
 		h2, h3 {
 			font-weight: normal;
 			line-height: 1;
@@ -212,6 +220,9 @@
 			font-size: 1.5em;
 			margin-top: 0;
 			margin-bottom: 0.4em;
+		}
+		h2 > a {
+			line-height: initial;
 		}
 		h2:target {
 			background-color: rgba(132, 207, 250, 0.5);
@@ -227,11 +238,6 @@
 		}
 		p:last-child {
 			margin-bottom: 0;
-		}
-		a {
-			font-size: 1em;
-			text-decoration: none;
-			line-height: 1.4;
 		}
 		a:hover {
 			text-decoration: underline;
@@ -405,14 +411,14 @@
 			</aside>
 		</div>
 		<article class="specs">
-			<h2 id="specs">Официальная документация 🧙‍♂️</h2>
+			<h2 id="specs"><a href="#specs">Официальная документация 🧙‍♂️</a></h2>
 			<ul>
 				<li><a href="https://html.spec.whatwg.org/multipage/">Всегда актуальная версия спецификации HTML</a></li>
 				<li><a href="https://www.w3.org/TR/CSS/">Спецификации CSS</a></li>
 			</ul>
 		</article>
 		<article class="reference">
-			<h2 id="reference">Общие справочные материалы 📖</h2>
+			<h2 id="reference"><a href="#reference">Общие справочные материалы 📖</a></h2>
 			<ul>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Learn#where_to_start">Учебник на MDN</a></li>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML элементы на MDN</a></li>
@@ -423,7 +429,7 @@
 			</ul>
 		</article>
 		<article class="html">
-			<h2 id="html">Разметка 📃</h2>
+			<h2 id="html"><a href="#html">Разметка 📃</a></h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
@@ -440,7 +446,7 @@
 			</section>
 		</article>
 		<article class="layout">
-			<h2 id="layout">Верстка</h2>
+			<h2 id="layout"><a href="#layout">Верстка</a></h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
@@ -481,7 +487,7 @@
 			</section>
 		</article>
 		<article class="news">
-			<h2 id="news">Новости, статьи и подборки 🔖</h2>
+			<h2 id="news"><a href="#">Новости, статьи и подборки 🔖</a></h2>
 			<ul>
 				<li><a href="https://bespoyasov.ru/front-not-pain/">Фронтенд — это не больно!</a></li>
 				<li><a href="https://habr.com/ru/users/nikolayshabalin/posts/">Новости фронтенда</a></li>
@@ -495,7 +501,7 @@
 			</ul>
 		</article>
 		<article class="tools">
-			<h2 id="tools">Инструменты и другие материалы 🛠️</h2>
+			<h2 id="tools"><a href="#">Инструменты и другие материалы 🛠️</a></h2>
 			<section>
 				<h3>Главное ✔️</h3>
 				<ul>
@@ -525,7 +531,7 @@
 			<p>Для онлайн подбора цвета погуглите "color picker".</p>
 		</article>
 		<article class="qna">
-			<h2 id="qna">Найти ответы на вопросы и задать их самому 🦉</h2>
+			<h2 id="qna"><a href="#qna">Найти ответы на вопросы и задать их самому 🦉</a></h2>
 			<p>На эти сайты часто можно попасть, погуглив какую-то задачу:</p>
 			<ul>
 				<li><a href="https://stackoverflow.com/">Stackoverflow</a> (<a href="https://ru.stackoverflow.com/">русская версия</a>)</li>
@@ -535,7 +541,7 @@
 			</ul>	
 		</article>
 		<article class="fonts">
-			<h2 id="fonts">Типографика и шрифты 🗛</h2>
+			<h2 id="fonts"><a href="#fonts">Типографика и шрифты 🗛</a></h2>
 			<ul>
 				<li><a href="http://www.quickandlazy.appspot.com/">Введение в Типографику</a></li>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">О веб-шрифтах на MDN</a></li>
@@ -544,7 +550,7 @@
 			</ul>
 		</article>
 		<article class="access">
-			<h2 id="access">Доступность 😊</h2>
+			<h2 id="access"><a href="#access">Доступность 😊</a></h2>
 			<section>
 				<h3>Теория</h3>
 				<ul>
@@ -564,7 +570,7 @@
 			</section>
 		</article>
 		<article class="js">
-			<h2 id="js">JavaScript 🚀</h2>
+			<h2 id="js"><a href="#js">JavaScript 🚀</a></h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
@@ -585,7 +591,7 @@
 			</section>
 		</article>
 		<article class="qa">
-			<h2 id="qa">Тестирование, отладка, поиск ошибок 🔬</h2>
+			<h2 id="qa"><a href="#qa">Тестирование, отладка, поиск ошибок 🔬</a></h2>
 			<section>
 				<h3>Инструменты разработчика</h3>
 				<ul>
@@ -614,7 +620,7 @@
 			<p>Также можете погуглить установку MacOS на виртуальную машину</p>
 		</article>
 		<article class="git">
-			<h2 id="git">Система контроля версий Git 🐙</h2>
+			<h2 id="git"><a href="#git">Система контроля версий Git 🐙</a></h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
@@ -636,7 +642,7 @@
 			</section>
 		</article>
 		<article class="bem">
-			<h2 id="bem">Методология БЭМ 🧰</h2>
+			<h2 id="bem"><a href="#bem">Методология БЭМ 🧰</a></h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
@@ -659,7 +665,7 @@
 			</section>
 		</article>
 		<article class="backend">
-			<h2 id="backend">Бэкенд ⚙️</h2>
+			<h2 id="backend"><a href="#backend">Бэкенд ⚙️</a></h2>
 			<section>
 				<h3>Серверы</h3>
 				<ul>
@@ -680,7 +686,7 @@
 			</section>
 		</article>
 		<article class="build">
-			<h2 id="build">Сборка 🏗️</h2>
+			<h2 id="build"><a href="#build">Сборка 🏗️</a></h2>
 			<ul>
 				<li>
 					<a href="https://developers.google.com/web/updates/2019/02/rendering-on-the-web?hl=en">Способы сборки (рендеринга) сайтов</a> и <a href="https://tproger.ru/translations/rendering-on-the-web/">перевод</a>
@@ -704,7 +710,7 @@
 			</ul>
 		</article>
 		<article class="soft">
-			<h2 id="soft">Софт 💻</h2>
+			<h2 id="soft"><a href="#soft">Софт 💻</a></h2>
 			<section>
 				<h3>Редакторы кода</h3>
 				<ul>
@@ -724,7 +730,7 @@
 			</section>
 		</article>
 		<article class="resources">
-			<h2 id="resources">Официально бесплатные ресурсы 🧱</h2>
+			<h2 id="resources"><a href="#resources">Официально бесплатные ресурсы 🧱</a></h2>
 			<ul>
 				<li><a href="https://www.flaticon.com/">Иконки на flaticon</a></li>
 				<li><a href="https://www.svgrepo.com/">Иконки на svgrepo</a></li>
@@ -736,7 +742,7 @@
 			</ul>
 		</article>
 		<article class="video">
-			<h2 id="video">Видео 📺</h2>
+			<h2 id="video"><a href="#video">Видео 📺</a></h2>
 			<ul>
 				<li><a href="https://www.youtube.com/channel/UCMtlICYxr6Dz_PG9_SVqRYQ">Академия Яндекса про фронтенд</a></li>
 				<li><a href="https://www.youtube.com/user/wstdays">Подкаст Веб-стандарты и записи с конференций</a></li>
@@ -744,7 +750,7 @@
 			</ul>
 		</article>
 		<article class="seo">
-			<h2 id="seo">SEO верстка 📈</h2>
+			<h2 id="seo"><a href="#seo">SEO верстка 📈</a></h2>
 			<ul>
 				<li><a href="https://www.searchengines.ru/">Новости SEO</a></li>
 				<li><a href="https://yandex.ru/support/webmaster/recommendations/intro.xml">Рекомендации от Яндекс</a></li>
@@ -757,7 +763,7 @@
 			</ul>
 		</article>
 		<article class="other">
-			<h2 id="other">Другое (дизайн, текст, маркетинг)</h2>
+			<h2 id="other"><a href="#other">Другое (дизайн, текст, маркетинг)</a></h2>
 			<ul>
 				<li><a href="https://bureau.ru/bb/soviet/20140324/">Якорные объекты</a></li>
 				<li><a href="https://bureau.ru/bb/soviet/20150517/">Верстка+редактура</a></li>
