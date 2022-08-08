@@ -6,163 +6,37 @@ body {
 	padding-bottom: 2em;
 	font-family: sans-serif;
 }
-header {	
-	padding: 2em 0;
-	grid-column: 2 / 4;
-	   grid-row: 1 / 2;
-}
-@media (max-width: 855px) {
-	header {
-		padding: 2em 2vw;
-	}
-}
-header a {
-	text-decoration: underline;
-}
-.contents {
-	box-sizing: border-box;
-	padding-left: 1.5em;
-	min-width: 20ch;
-	grid-column: 3 / 4;
-	grid-row: 2 / 50;
-	justify-self: left;
-	align-self: start;
-}
+
 @supports (display:grid) {
 	body {
 		display: grid;
 		grid-template-columns: 1fr minmax(auto, 50rem) minmax(auto, 12.6rem) 1fr;
 	}
-	.contents {
-		position: sticky;
-		top: 1em;
+}
+
+@media screen and (max-width: 76.25rem) {
+	body {
+		grid-template-columns: 1fr minmax(auto, 50rem) 2fr 1fr;
 	}
 }
-.contents-heading {
-	font-size: 1.3em;
+
+/* Header */
+header {	
+	padding: 2em 0;
+	grid-column: 2 / 4;
+	   grid-row: 1 / 2;
 }
-.contents-heading-link:hover::after {
-	position: absolute;
-	content: '\23EB';
+
+@media (max-width: 855px) {
+	header {
+		padding: 2em 2vw;
+	}
 }
-.contents-list {
-	padding-left: 1em;
-	font-size: 0.9rem;	
+
+header a {
+	text-decoration: underline;
 }
-.contents-list a {
-	display: block;
-}
-main {
-	display: contents;
-	max-width: 80ch;
-	margin: 0 auto;
-	position: relative;
-	box-sizing: border-box;
-	padding: 2em 2em 1px;
-	border-radius: 5px;
-	box-shadow: 8px 10px 20px 0 #b3b3b3;
-	margin-bottom: 0.4em;
-	grid-column: 2 / 3;
-	position: relative;
-}
-main::before {
-	content: '';
-	display: block;
-	box-shadow: 8px 10px 20px 0 #b3b3b3;
-	position: absolute;
-	width: 100%;
-	left: 50%;
-	transform: translateX(-50%);
-	max-width: 80ch;
-	top: 0;
-	bottom: 0;
-	z-index: -1;
-	grid-column: 2 / 3;
-	grid-row: 2 / 22;
-}
-article {
-	position: relative;
-	margin-bottom: 1.5em;
-	padding: 0 2vw;
-	grid-column: 2 / 3;
-}
-article:first-of-type {
-	margin-top: 2em;
-}
-article:last-of-type {
-	margin-bottom: 2em;
-}
-.my-lectures {
-	display: contents;
-}
-.my-lecture {
-	box-sizing: border-box;
-	grid-column: 1 / 2;
-	margin-right: 2em;
-	max-width: 250px;
-	min-width: 200px;
-	height: 200px;
-	background-repeat: no-repeat;
-	background-position: 50%;
-	background-size: cover;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	justify-self: right;
-	border: 2px solid #eab4b4;
-}
-.my-lecture__heading,
-.my-lecture__strong {
-	margin: 0;
-	color: white;
-	background-color: rgb(26 52 148);
-	text-align: center;
-	font-size: 1em;
-}
-.my-lecture__heading {
-	padding: 0.2em;
-	line-height: 1.2;
-}
-.my-lecture__text {
-	text-align: center;
-	margin: 0;
-	background-color: white;
-}
-.my-lecture > a {
-	text-align: center;
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-}
-.my-lecture > a:first-of-type {
-	flex-grow: 1;
-}
-.my-lecture > a:first-of-type:hover {
-	text-decoration-color: white;
-}
-.lecture-pop {
-	background-image: url('https://vallek.github.io/Portfolio/img/projects/pop-mistakes-min.svg');
-	grid-row: 7 / 8;
-}
-.lecture-search {
-	background-image: url('https://vallek.github.io/Portfolio/img/projects/search.png');
-	grid-row: 5 / 6;
-}
-.lecture-devtools {
-	background-image: url('https://vallek.github.io/Portfolio/img/projects/devtools.png');
-	grid-row: 8 / 9;
-}
-.lecture-git {
-	background-image: url('../img/git.png');
-	background-size: contain;
-	background-position: 100% 20%;
-	grid-row: 14 / 15;
-}
-.lecture-bem {
-	background-image: url('../img/blocks.svg');
-	background-size: contain;
-	grid-row: 15 / 16;
-}
+
 h1 {
 	font-size: 2.5em;
 	margin-top: 0;
@@ -170,118 +44,40 @@ h1 {
 	word-wrap: break-word;
 	hyphens: auto;
 }
+
+header > span {
+	font-size: 1em;
+}
+
 .sub-heading {
 	display: block;
 	font-size: 1.5em;
 	margin-bottom: 0.3em;
 }
-.version {
-	display: block;
-	margin-top: 1em;
-	margin-bottom: 1em;
-}
+
 .author,
 .feedback {
 	display: block;
 }
+
 .author {
 	margin-bottom: 0.1em;
 }
+
 .feedback {
 	margin-bottom: 0.5em;
 }
-section {
-	margin-bottom: 1em;
-}
-section:last-of-type {
-	margin-bottom: 0;
-}
-a {
-	font-size: 1em;
-	text-decoration: none;
-	line-height: 1.4;
-}
-h2, h3 {
-	font-weight: normal;
-}
-h2 {
-	font-size: 1.5em;
-	margin-top: 0;
-	margin-bottom: 0.4em;
-	line-height: 1.2;
-}
-h2 > a {
-	color: initial;
-	line-height: 1.2;
-}
-h2 > a:visited {
-	color: initial;
-}
-h2:target {
-	background-color: rgba(132, 207, 250, 0.5);
-	transition: 0.5s ease-out;
-}
-h3 {
-	font-size: 1.1em;
-	margin-top: 0;
-	margin-bottom: 0.4em;
-	line-height: 1;
-}
-p {
-	font-size: 1em;
-}
-p:last-child {
-	margin-bottom: 0;
-}
-a:hover {
-	text-decoration: underline;
-}
-span {
-	font-size: 1em;
-}
-ul {
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-left: 1em;
-}
-ol {
-	margin-top: 0;
-}
-@media screen and (max-width: 87.5rem) {
-	.my-lecture {
-		justify-self: left;
-		margin-right: 0;
-	}
-}
-@media screen and (max-width: 76.25rem) {
-	body {
-		grid-template-columns: 1fr minmax(auto, 50rem) 2fr 1fr;
-	}
-	.contents {
-		position: static;
-		grid-column: 2 / 3;
-		grid-row: 2 / 3;
-		padding: 2em 0 0 2em;
-	}
-	.my-lectures {
-		display: flex;
-		flex-wrap: wrap;
-		grid-column: 3 / 4;
-		grid-row: 20 / 21;
-	} 
-	.my-lecture {	
-		margin-left: 2em;
-		margin-bottom: 1em;
-	}
-}
+
 .locales__lang {
 	position: relative;
 	font-weight: 600;
 	text-decoration: none;
 }
+
 .locales__lang:hover {
 	text-decoration: none;
 }	
+
 .locales__lang:hover::before {
 	content: '';
 	display: inline-block;
@@ -317,9 +113,274 @@ ol {
 	height: 1em;
 	margin-left: 0.2em;
 }
+
+/* Contents */
+.contents {
+	box-sizing: border-box;
+	padding-left: 1.5em;
+	min-width: 20ch;
+	grid-column: 3 / 4;
+	grid-row: 2 / 50;
+	justify-self: left;
+	align-self: start;
+}
+
+@supports (display:grid) {
+	.contents {
+		position: sticky;
+		top: 1em;
+	}
+}
+
+@media screen and (max-width: 76.25rem) {
+	.contents {
+		position: static;
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+		padding: 2em 0 0 2em;
+	}
+}
+
+.contents-heading {
+	font-size: 1.3em;
+}
+
+.contents-heading-link:hover::after {
+	position: absolute;
+	content: '\23EB';
+}
+
+.contents-list {
+	margin-top: 0;
+	padding-left: 1em;
+	font-size: 0.9rem;	
+}
+
+.contents-list a {
+	display: block;
+}
+
+/* Main */
+main {
+	display: contents;
+	max-width: 80ch;
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+	padding: 2em 2em 1px;
+	border-radius: 5px;
+	box-shadow: 8px 10px 20px 0 #b3b3b3;
+	margin-bottom: 0.4em;
+	grid-column: 2 / 3;
+	position: relative;
+}
+
+main::before {
+	content: '';
+	display: block;
+	box-shadow: 8px 10px 20px 0 #b3b3b3;
+	position: absolute;
+	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 80ch;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	grid-column: 2 / 3;
+	grid-row: 2 / 22;
+}
+
+/* Banners */
+.my-lectures {
+	display: contents;
+}
+
+.my-lecture {
+	box-sizing: border-box;
+	grid-column: 1 / 2;
+	margin-right: 2em;
+	max-width: 250px;
+	min-width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	justify-self: right;
+	border: 2px solid #eab4b4;
+}
+
+@media screen and (max-width: 87.5rem) {
+	.my-lecture {
+		justify-self: left;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 76.25rem) {
+	.my-lectures {
+		display: flex;
+		flex-wrap: wrap;
+		grid-column: 3 / 4;
+		grid-row: 20 / 21;
+	} 
+	.my-lecture {	
+		margin-left: 2em;
+		margin-bottom: 1em;
+	}
+}
+
+.my-lecture__heading,
+.my-lecture__strong {
+	margin: 0;
+	color: white;
+	background-color: rgb(26 52 148);
+	text-align: center;
+	font-size: 1em;
+}
+
+.my-lecture__heading {
+	padding: 0.2em;
+	line-height: 1.2;
+}
+
+.my-lecture__text {
+	text-align: center;
+	margin: 0;
+	background-color: white;
+}
+
+.my-lecture > a {
+	text-align: center;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+}
+
+.my-lecture > a:first-of-type {
+	flex-grow: 1;
+}
+
+.my-lecture > a:first-of-type:hover {
+	text-decoration-color: white;
+}
+
+.lecture-pop {
+	background-image: url('https://vallek.github.io/Portfolio/img/projects/pop-mistakes-min.svg');
+	grid-row: 7 / 8;
+}
+
+.lecture-search {
+	background-image: url('https://vallek.github.io/Portfolio/img/projects/search.png');
+	grid-row: 5 / 6;
+}
+
+.lecture-devtools {
+	background-image: url('https://vallek.github.io/Portfolio/img/projects/devtools.png');
+	grid-row: 8 / 9;
+}
+
+.lecture-git {
+	background-image: url('../img/git.png');
+	background-size: contain;
+	background-position: 100% 20%;
+	grid-row: 14 / 15;
+}
+
+.lecture-bem {
+	background-image: url('../img/blocks.svg');
+	background-size: contain;
+	grid-row: 15 / 16;
+}
+
+/* Sections */
+article {
+	position: relative;
+	margin-bottom: 1.5em;
+	padding: 0 2vw;
+	grid-column: 2 / 3;
+}
+
+article:first-of-type {
+	margin-top: 2em;
+}
+
+article:last-of-type {
+	margin-bottom: 2em;
+}
+
+section {
+	margin-bottom: 1em;
+}
+
+section:last-of-type {
+	margin-bottom: 0;
+}
+
+p {
+	font-size: 1em;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+a {
+	font-size: 1em;
+	text-decoration: none;
+	line-height: 1.4;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h2, h3 {
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-top: 0;
+	margin-bottom: 0.4em;
+	line-height: 1.2;
+}
+
+h2 > a {
+	color: initial;
+	line-height: 1.2;
+}
+
+h2 > a:visited {
+	color: initial;
+}
+
+h2:target {
+	background-color: rgba(132, 207, 250, 0.5);
+	transition: 0.5s ease-out;
+}
+
+h3 {
+	font-size: 1.1em;
+	margin-top: 0;
+	margin-bottom: 0.4em;
+	line-height: 1;
+}
+
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 1em;
+}
+
+/* JS */
 .my-lectures {
 	display: none;
 }
+
 .visually-hidden {
 	border: 0;
 	clip: rect(0 0 0 0);
