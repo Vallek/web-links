@@ -8,329 +8,7 @@
 	<meta name="description" content="Frontend links compilation">
 	<meta name="keywords" content="education, courses, frontend, web, html, css, javascript, links, materials">
 	<meta name="author" content="Vallek">
-	<style>
-		body {
-			position: relative;
-			font-size: calc(18rem / 16);
-			margin: 0;
-			padding: 0 1vw;
-			padding-bottom: 2em;
-			font-family: sans-serif;
-		}
-		header {	
-			padding: 2em 0;
-			grid-column: 2 / 4;
-   			grid-row: 1 / 2;
-		}
-		@media (max-width: 855px) {
-			header {
-				padding: 2em 2vw;
-			}
-		}
-		header a {
-			text-decoration: underline;
-		}
-		.contents {
-			box-sizing: border-box;
-			padding-left: 1.5em;
-			min-width: 20ch;
-			grid-column: 3 / 4;
-    		grid-row: 2 / 50;
-			justify-self: left;
-			align-self: start;
-    	}
-		@supports (display:grid) {
-			body {
-				display: grid;
-    			grid-template-columns: 1fr minmax(auto, 50rem) minmax(auto, 12.6rem) 1fr;
-			}
-			.contents {
-				position: sticky;
-				top: 1em;
-			}
-		}
-		.contents-heading {
-			font-size: 1.3em;
-		}
-		.contents-heading-link:hover::after {
-			position: absolute;
-			content: '\23EB';
-		}
-		.contents-list {
-			padding-left: 1em;
-			font-size: 0.9rem;	
-		}
-		main {
-			display: contents;
-			max-width: 80ch;
-			margin: 0 auto;
-			position: relative;
-			box-sizing: border-box;
-			padding: 2em 2em 1px;
-			border-radius: 5px;
-			box-shadow: 8px 10px 20px 0 #b3b3b3;
-			margin-bottom: 0.4em;
-			grid-column: 2 / 3;
-			position: relative;
-		}
-		main::before {
-			content: '';
-			display: block;
-			box-shadow: 8px 10px 20px 0 #b3b3b3;
-			position: absolute;
-			width: 100%;
-			left: 50%;
-			transform: translateX(-50%);
-			max-width: 80ch;
-			top: 0;
-			bottom: 0;
-			z-index: -1;
-			grid-column: 2 / 3;
-			grid-row: 2 / 22;
-		}
-		article {
-			position: relative;
-			margin-bottom: 1.5em;
-			padding: 0 2vw;
-			grid-column: 2 / 3;
-		}
-		article:first-of-type {
-			margin-top: 2em;
-		}
-		article:last-of-type {
-			margin-bottom: 2em;
-		}
-		.my-lectures {
-			display: contents;
-		}
-		.my-lecture {
-			box-sizing: border-box;
-			grid-column: 1 / 2;
-			margin-right: 2em;
-			max-width: 250px;
-			min-width: 200px;
-			height: 200px;
-			background-repeat: no-repeat;
-			background-position: 50%;
-			background-size: cover;
-			display: flex;
-			flex-direction: column;
-    		justify-content: flex-end;
-			justify-self: right;
-			border: 2px solid #eab4b4;
-		}
-		.my-lecture__heading,
-		.my-lecture__strong {
-			margin: 0;
-			color: white;
-			background-color: rgb(26 52 148);
-			text-align: center;
-			font-size: 1em;
-		}
-		.my-lecture__heading {
-			padding: 0.2em;
-    		line-height: 1.2;
-		}
-		.my-lecture__text {
-			text-align: center;
-			margin: 0;
-			background-color: white;
-		}
-		.my-lecture > a {
-			text-align: center;
-			display: flex;
-			justify-content: flex-end;
-			flex-direction: column;
-		}
-		.my-lecture > a:first-of-type {
-			flex-grow: 1;
-		}
-		.my-lecture > a:first-of-type:hover {
-			text-decoration-color: white;
-		}
-		.lecture-pop {
-			background-image: url('https://vallek.github.io/Portfolio/img/projects/pop-mistakes-min.svg');
-			grid-row: 7 / 8;
-		}
-		.lecture-search {
-			background-image: url('https://vallek.github.io/Portfolio/img/projects/search.png');
-			grid-row: 5 / 6;
-		}
-		.lecture-devtools {
-			background-image: url('https://vallek.github.io/Portfolio/img/projects/devtools.png');
-			grid-row: 8 / 9;
-		}
-		.lecture-git {
-			background-image: url('img/git.png');
-			background-size: contain;
-			background-position: 100% 20%;
-			grid-row: 14 / 15;
-		}
-		.lecture-bem {
-			background-image: url('img/blocks.svg');
-			background-size: contain;
-			grid-row: 15 / 16;
-		}
-		h1 {
-			font-size: 2.5em;
-			margin-top: 0;
-			margin-bottom: 0.2em;
-			word-wrap: break-word;
-			hyphens: auto;
-		}
-		.sub-heading {
-			display: block;
-			font-size: 1.5em;
-			margin-bottom: 0.3em;
-		}
-		.version {
-			display: block;
-			margin-top: 1em;
-			margin-bottom: 1em;
-		}
-		.author,
-		.feedback {
-			display: block;
-		}
-		.author {
-			margin-bottom: 0.1em;
-		}
-		.feedback {
-			margin-bottom: 0.5em;
-		}
-		section {
-			margin-bottom: 1em;
-		}
-		section:last-of-type {
-			margin-bottom: 0;
-		}
-		h2, h3 {
-			font-weight: normal;
-			line-height: 1;
-		}
-		h2 {
-			font-size: 1.5em;
-			margin-top: 0;
-			margin-bottom: 0.4em;
-		}
-		h2:target {
-			background-color: rgba(132, 207, 250, 0.5);
-			transition: 0.5s ease-out;
-		}
-		h3 {
-			font-size: 1.1em;
-			margin-top: 0;
-			margin-bottom: 0.4em;
-		}
-		p {
-			font-size: 1em;
-		}
-		p:last-child {
-			margin-bottom: 0;
-		}
-		a {
-			font-size: 1em;
-			text-decoration: none;
-			line-height: 1.4;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
-		span {
-			font-size: 1em;
-		}
-		ul {
-			margin-top: 0;
-			margin-bottom: 0;
-			padding-left: 1em;
-		}
-		ol {
-			margin-top: 0;
-		}
-		@media screen and (max-width: 87.5rem) {
-			.my-lecture {
-				justify-self: left;
-				margin-right: 0;
-			}
-		}
-		@media screen and (max-width: 76.25rem) {
-			body {
-				grid-template-columns: 1fr minmax(auto, 50rem) 2fr 1fr;
-			}
-			.contents {
-				position: static;
-				grid-column: 2 / 3;
-				grid-row: 2 / 3;
-				padding: 2em 0 0 2em;
-			}
-			.my-lectures {
-				display: flex;
-				flex-wrap: wrap;
-				grid-column: 3 / 4;
-				grid-row: 20 / 21;
-			} 
-			.my-lecture {	
-				margin-left: 2em;
-				margin-bottom: 1em;
-			}
-		}
-		.locales__lang {
-			position: relative;
-			font-weight: 600;
-			text-decoration: none;
-		}
-		.locales__lang:hover {
-			text-decoration: none;
-		}	
-		.locales__lang:hover::before {
-			content: '';
-			display: inline-block;
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			height: 2px;
-			background-color: black;
-		}
-		
-		.locales__lang:not(:last-of-type) {
-			margin-right: 0.7em;
-		}
-		
-		.locales__lang_ru::after {
-			content: '';
-			display: inline-block;
-			background-image: url('../img/flag-ru.png');
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 1em;
-			height: 1em;
-			margin-left: 0.2em;
-		}
-		
-		.locales__lang_en::after {
-			content: '';
-			display: inline-block;
-			background-image: url('../img/flag-uk.png');
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 1em;
-			height: 1em;
-			margin-left: 0.2em;
-		}
-		.my-lectures {
-			display: none;
-		}
-		.visually-hidden {
-			border: 0;
-			clip: rect(0 0 0 0);
-			height: 1px;
-			margin: -1px;
-			overflow: hidden;
-			padding: 0;
-			position: absolute;
-			left: 0;
-		}
-	</style>
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 	<header>
@@ -349,21 +27,22 @@
 		<ol class="contents-list">
 			<li><a href="#specs">Specs</a></li>
 			<li><a href="#reference">Reference </a></li>
+			<li><a href="#markup">HTML Markup</a></li>
 			<li><a href="#layout">CSS Layouts</a></li>
 			<li><a href="#news">News</a></li>
 			<li><a href="#tools">Tools</a></li>
 			<li><a href="#qna">QnA</a></li>
-			<li><a href="#qa">Debugging</a></li>
 			<li><a href="#fonts">Fonts</a></li>
 			<li><a href="#access">Accessibility</a></li>
-			<li><a href="#video">Video</a></li>
-			<li><a href="#cms">CMS ans servers</a></li>
-			<li><a href="#resources">Resources</a></li>
-			<li><a href="#soft">Soft</a></li>
+			<li><a href="#js">JavaScript</a></li>
+			<li><a href="#qa">Debugging</a></li>
 			<li><a href="#git">Git</a></li>
 			<li><a href="#bem">BEM</a></li>
-			<li><a href="#js">JavaScript</a></li>
+			<li><a href="#backend">Backend</a></li>
 			<li><a href="#build">Building</a></li>
+			<li><a href="#soft">Soft</a></li>
+			<li><a href="#resources">Resources</a></li>
+			<li><a href="#video">Video</a></li>
 			<li><a href="#seo">SEO</a></li>
 			<li><a href="#other">Other</a></li>
 		</ol>
@@ -402,36 +81,51 @@
 			</aside>
 		</div>
 		<article class="specs">
-			<h2 id="specs">Official specification 🧙‍♂️</h2>
+			<h2 id="specs"><a href="#specs">Official specification 🧙‍♂️</a></h2>
 			<ul>
 				<li><a href="https://html.spec.whatwg.org/multipage/">HTML specs (always up to date)</a></li>
 				<li><a href="https://www.w3.org/TR/CSS/">CSS specs</a></li>
 			</ul>
 		</article>
 		<article class="reference">
-			<h2 id="reference">Reference 📖</h2>
+			<h2 id="reference"><a href="#reference">Reference 📖</a></h2>
 			<ul>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Learn#where_to_start">MDN Guides</a></li>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML elements on MDN</a></li>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS properties on MDN</a></li>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">CSS Units</a></li>
 				<li>CSS Colors <a href="https://web.dev/learn/css/color/">on web.dev</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">on MDN</a></li>
 			</ul>
 		</article>
+		<article class="markup">
+			<h2 id="markup"><a href="#markup">HTML Markup 📃</a></h2>
+			<section>
+				<h3>Basics</h3>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML Guide on MDN</a></li>
+					<li><a href="https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content">HTML Content Models</a></li>
+					<li>Can I nest one html element into another? <a href="https://caninclude.glitch.me/">This online tool will help</a></li>
+					<li><a href="https://css-tricks.com/dom/">What is DOM</a> and <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">detail dive from Google</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Best practices 👍</h3>
+				<ul>
+					<li><a href="https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines">Creating headings recommendations</a></li>
+				</ul>
+			</section>
+		</article>
 		<article class="layout">
-			<h2 id="layout">Layouts</h2>
+			<h2 id="layout"><a href="#layout">CSS Layouts</a></h2>
 			<section>
 				<h3>Basics 🏷️</h3>
 				<ul>
-					<li><a href="https://developer.mozilla.org/ru/docs/Learn">MDN Manual</a></li>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories">HTML Content Models</a></li>
-					<li><a href="https://css-tricks.com/dom/">What is DOM</a> and <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">detail dive from Google</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS Guide on MDN</a></li>
 					<li><a href="https://web.dev/learn/css/selectors/">CSS Selectors</a></li>
 					<li><a href="https://github.com/ChiragKushwaha/common-words/blob/master/README_EN.md">Common CSS classes names</a></li>
-					<li><a href="https://web-standards.ru/articles/css-architecture/">More detailed article about CSS naming</a></li>
 					<li><a href="https://web.dev/learn/css/layout/">CSS Layouts</a></li>
 					<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">Positioning</a></li>
 					<li>Backgrounds reference <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">on MDN</a> and <a href="https://css-tricks.com/almanac/properties/b/background/">CSS-tricks</a></li>
-					<li>Can I nest one html element into another? <a href="https://caninclude.glitch.me/">This online tool will help</a></li>
 				</ul>
 			</section>
 			<section>
@@ -456,12 +150,12 @@
 				<h3>Best Practices 👍</h3>
 				<ul>
 					<li><a href="https://ishadeed.com/article/viewport-units/#2-second-solution-flexbox-and-viewport-units-recommended">Modern way to press down footer</a></li>
-					<li><a href="https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines">Creating headings recommendations</a></li>
+					<li><a href="https://philipwalton.com/articles/css-architecture/">More detailed article about CSS naming</a></li>
 				</ul>
 			</section>
 		</article>
 		<article class="news">
-			<h2 id="news">News, articles and digests 🔖</h2>
+			<h2 id="news"><a href="#news">News, articles and digests 🔖</a></h2>
 			<ul>
 				<li><a href="https://frontendfoc.us/latest">Frontend Digest</a></li>
 				<li><a href="https://css-tricks.com/">Guides and articles on css-tricks</a></li>
@@ -475,7 +169,7 @@
 			</ul>
 		</article>
 		<article class="tools">
-			<h2 id="tools">Tools</h2>
+			<h2 id="tools"><a href="#tools">Tools 🛠️</a></h2>
 			<section>
 				<h3>Essentials ✔️</h3>
 				<ul>
@@ -507,7 +201,7 @@
 			<p>To pick different colors google "color picker".</p>
 		</article>
 		<article class="qna">
-			<h2 id="qna">Find answers and ask questions 🦉</h2>
+			<h2 id="qna"><a href="#qna">Find answers and ask questions 🦉</a></h2>
 			<p>You can often get to these sites by googling a task:</p>
 			<ul>
 				<li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
@@ -515,8 +209,56 @@
 				<li><a href="https://dev.to/">DEV.to community</a></li>
 			</ul>	
 		</article>
+		<article class="fonts">
+			<h2 id="fonts"><a href="#fonts">Fonts and Typography 🗛</a></h2>
+			<ul>
+				<li><a href="https://creativecloud.adobe.com/ru/discover/article/typography-101-a-crash-course-of-terms-to-know">Introduction to Typography</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">MDN on web fonts</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"> About @font-face rule (including file format types)</a></li>
+				<li><a href="https://fonts.google.com/">Free Google Fonts</a> and <a href="https://google-webfonts-helper.herokuapp.com/fonts">service to download modern formats</a></li>
+			</ul>
+		</article>
+		<article class="access">
+			<h2 id="access"><a href="#access">Accessibility 😊</a></h2>
+			<section>
+				<h3>Theory</h3>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility</a></li>
+					<li><a href="https://a11y-101.com/">Site on accessibility</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Practice</h3>
+				<ul>
+					<li><a href="https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements">How to hide elements</a></li>
+					<li><a href="https://www.w3.org/TR/using-aria/">Using ARIA attributes</a></li>
+					<li><a href="https://www.a11yproject.com/checklist/">Accessibility checklist</a></li>	
+				</ul>
+			</section>
+		</article>
+		<article class="js">
+			<h2 id="js"><a href="#js">JavaScript 🚀</a></h2>
+			<section>
+				<h3>Basics</h3>
+				<ul>
+					<li>
+						<a href="https://javascript.info/">JavaScript Tutorials</a>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JS docs on MDN</a>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Best practices 👍</h3>
+				<ul>
+					<li><a href="https://www.bram.us/2022/04/22/progressive-enhancement-and-html-forms-use-formdata/">Getting form data</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">User browser detection</a></li>
+				</ul>
+			</section>
+		</article>
 		<article class="qa">
-			<h2 id="qa">Testing and debugging 🔬</h2>
+			<h2 id="qa"><a href="qa">Testing and debugging 🔬</a></h2>
 			<section>
 				<h3>Devtools</h3>
 				<ul>
@@ -542,94 +284,8 @@
 			</section>
 			<p>You can also google installing MacOS on virtual machine if you don't have a mac</p>
 		</article>
-		<article class="fonts">
-			<h2 id="fonts">Fonts and Typography 🗛</h2>
-			<ul>
-				<li><a href="https://creativecloud.adobe.com/ru/discover/article/typography-101-a-crash-course-of-terms-to-know">Introduction to Typography</a></li>
-				<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">MDN on web fonts</a></li>
-				<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"> About @font-face rule (including file format types)</a></li>
-				<li><a href="https://fonts.google.com/">Free Google Fonts</a> and <a href="https://google-webfonts-helper.herokuapp.com/fonts">service to download modern formats</a></li>
-			</ul>
-		</article>
-		<article class="access">
-			<h2 id="access">Accessibility 😊</h2>
-			<section>
-				<h3>Theory</h3>
-				<ul>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility</a></li>
-					<li><a href="https://a11y-101.com/">Site on accessibility</a></li>
-				</ul>
-			</section>
-			<section>
-				<h3>Practice</h3>
-				<ul>
-					<li><a href="https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements">How to hide elements</a></li>
-					<li><a href="https://www.w3.org/TR/using-aria/">Using ARIA attributes</a></li>
-					<li><a href="https://www.a11yproject.com/checklist/">Accessibility checklist</a></li>	
-				</ul>
-			</section>
-		</article>
-		<article class="video">
-			<h2 id="video">Video</h2>
-			<ul>
-				<li><a href="https://www.youtube.com/c/TraversyMedia/featured">Tutorials on TraversyMedia</a></li>
-			</ul>
-		</article>
-		<article class="cms">
-			<h2 id="cms">CMS and servers ⚙️</h2>
-			<section>
-				<h3>Servers</h3>
-				<ul>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">How to upload files</a></li>
-					<li><a href="https://filezilla-project.org/">Filezilla FTP client</a></li>
-					<li><a href="https://sourceforge.net/projects/wampserver/">Local server for testing sites with backend (for example on WordPress)</a></li>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">How sending data through forms work</a></li>
-				</ul>
-			</section>
-			<section>
-				<h3>CMS</h3>
-				<ul>
-					<li><a href="https://wordpress.org/">WordPress CMS</a></li>
-					<li><a href="https://codex.wordpress.org/">WordPress docs</a></li>
-					<li><a href="https://codex.wordpress.org/Theme_Development">Creating WP Themes</a></li>
-					<li><a href="https://wordpress.org/support/article/how-to-install-wordpress/">Installing WordPress</a></li>
-				</ul>
-			</section>
-		</article>
-		<article class="resources">
-			<h2 id="resources">Officially free resources 🧱</h2>
-			<ul>
-				<li><a href="https://www.flaticon.com/">Icons</a></li>
-				<li><a href="https://www.freepik.com/home">Illustrations</a></li>
-				<li><a href="https://www.pexels.com/">Photos and videos on pexels</a></li>
-				<li><a href="https://pixabay.com/">Photos, videos and images on pixabay</a></li>
-				<li><a href="https://unsplash.com/">Photos on unsplash</a></li>
-				<li><a href="https://www.figma.com/community/web_design">Figma Templates</a></li>
-			</ul>
-		</article>
-		<article class="soft">
-			<h2 id="soft">Soft 💻</h2>
-			<section>
-				<h3>Code Editors</h3>
-				<ul>
-					<li><a href="https://code.visualstudio.com/">Microsoft Visual Studio Code Editor</a></li>
-					<li><a href="https://code.visualstudio.com/docs/getstarted/themes#_customizing-a-color-theme">Customizing a Color Theme</a></li>
-					<li><a href="https://code.visualstudio.com/docs">VS Code Docs</a></li>
-					<li><a href="https://www.sublimetext.com/">Sublime Text Editor</a></li>
-					<li><a href="https://www.sublimetext.com/docs/3/">Sublime Text Docs</a></li>
-					<li><a href="https://packagecontrol.io/">Sublime Text Packages (extensions)</a>, <a href="https://packagecontrol.io/packages/Emmet">Emmet to speed up writing code</a>, <a href="https://docs.emmet.io/">Emmet Docs</a></li>
-				</ul>
-			</section>
-			<section>
-				<h3>Graphic Editors for working with web templates</h3>
-				<ul>
-					<li><a href="https://www.figma.com">Figma</a></li>
-					<li><a href="https://helpx.adobe.com/ru/photoshop/user-guide.html">Photoshop Docs</a></li>
-				</ul>
-			</section>
-		</article>
 		<article class="git">
-			<h2 id="git">Git Version Control 🐙</h2>
+			<h2 id="git"><a href="#git">Git Version Control 🐙</a></h2>
 			<section>
 				<h3>Basics</h3>
 				<ul>
@@ -650,7 +306,7 @@
 			</section>
 		</article>
 		<article class="bem">
-			<h2 id="bem">BEM Methodology</h2>
+			<h2 id="bem"><a href="#bem">BEM Methodology 🧰</a></h2>
 			<section>
 				<h3>Basics</h3>
 				<ul>
@@ -672,19 +328,29 @@
 				</ul>
 			</section>
 		</article>
-		<article class="js">
-			<h2 id="js">JavaScript 🚀</h2>
-			<ul>
-				<li>
-					<a href="https://javascript.info/">JavaScript Tutorials</a>
-				</li>
-				<li>
-					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JS docs on MDN</a>
-				</li>
-			</ul>
+		<article class="backend">
+			<h2 id="backend"><a href="#backend">Backend ⚙️</a></h2>
+			<section>
+				<h3>Servers</h3>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">How to upload files</a></li>
+					<li><a href="https://filezilla-project.org/">Filezilla FTP client</a></li>
+					<li><a href="https://www.apachefriends.org/ru/index.html">Local server with php for testing sites with backend (for example on WordPress)</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">How sending data through forms work</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>CMS</h3>
+				<ul>
+					<li><a href="https://wordpress.org/">WordPress CMS</a></li>
+					<li><a href="https://codex.wordpress.org/">WordPress docs</a></li>
+					<li><a href="https://codex.wordpress.org/Theme_Development">Creating WP Themes</a></li>
+					<li><a href="https://wordpress.org/support/article/how-to-install-wordpress/">Installing WordPress</a></li>
+				</ul>
+			</section>
 		</article>
 		<article class="build">
-			<h2 id="build">Building 🏗️</h2>
+			<h2 id="build"><a href="#build">Building 🏗️</a></h2>
 			<ul>
 				<li>
 					<a href="https://developers.google.com/web/updates/2019/02/rendering-on-the-web?hl=en">Websites/apps building (rendering) types</a>
@@ -706,8 +372,45 @@
 				</li>
 			</ul>
 		</article>
+		<article class="soft">
+			<h2 id="soft"><a href="#soft">Soft 💻</a></h2>
+			<section>
+				<h3>Code Editors</h3>
+				<ul>
+					<li><a href="https://code.visualstudio.com/">Microsoft Visual Studio Code Editor</a></li>
+					<li><a href="https://code.visualstudio.com/docs/getstarted/themes#_customizing-a-color-theme">Customizing a Color Theme</a></li>
+					<li><a href="https://code.visualstudio.com/docs">VS Code Docs</a></li>
+					<li><a href="https://www.sublimetext.com/">Sublime Text Editor</a></li>
+					<li><a href="https://www.sublimetext.com/docs/3/">Sublime Text Docs</a></li>
+					<li><a href="https://packagecontrol.io/">Sublime Text Packages (extensions)</a>, <a href="https://packagecontrol.io/packages/Emmet">Emmet to speed up writing code</a>, <a href="https://docs.emmet.io/">Emmet Docs</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Graphic Editors for working with web templates</h3>
+				<ul>
+					<li><a href="https://www.figma.com">Figma</a></li>
+				</ul>
+			</section>
+		</article>
+		<article class="resources">
+			<h2 id="resources"><a href="#resources">Officially free resources 🧱</a></h2>
+			<ul>
+				<li><a href="https://www.flaticon.com/">Icons</a></li>
+				<li><a href="https://www.freepik.com/home">Illustrations</a></li>
+				<li><a href="https://www.pexels.com/">Photos and videos on pexels</a></li>
+				<li><a href="https://pixabay.com/">Photos, videos and images on pixabay</a></li>
+				<li><a href="https://unsplash.com/">Photos on unsplash</a></li>
+				<li><a href="https://www.figma.com/community/web_design">Figma Templates</a></li>
+			</ul>
+		</article>
+		<article class="video">
+			<h2 id="video"><a href="#video">Video 📺</a></h2>
+			<ul>
+				<li><a href="https://www.youtube.com/c/TraversyMedia/featured">Tutorials on TraversyMedia</a></li>
+			</ul>
+		</article>
 		<article class="seo">
-			<h2 id="seo">SEO 📈</h2>
+			<h2 id="seo"><a href="#seo">SEO 📈</a></h2>
 			<ul>
 				<li><a href="https://searchengines.guru/en">SEO News</a></li>
 				<li><a href="https://developers.google.com/search/docs/beginner/seo-starter-guide?visit_id=637822674831853242-16488094&rd=1">SEO Starter Guide from Google</a></li>
@@ -719,7 +422,7 @@
 			</ul>
 		</article>
 		<article class="other">
-			<h2 id="other">Other topics (design, text, marketing)</h2>
+			<h2 id="other"><a href="#other">Other topics (design, text, marketing)</a></h2>
 			<ul>
 				<li><a href="https://www.sitepoint.com/css-printer-friendly-pages/">Optimization for print</a></li>
 			</ul>

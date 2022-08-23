@@ -5,310 +5,9 @@
 	<title>Материалы для самостоятельного обучения</title>
 	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%20%3E%3Ctext%20y=%22.9em%22%20font-size=%2290%22%20%3E✊%3C/text%20%3E%3C/svg%20%3E">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Ссылки на материалы по фронтенду с курса Валеры Хаслера">
-	<meta name="keywords" content="образование, курсы, фронтенд, веб-верстка, html, css, javascript, ссылки, материалы, дизайн, веб-дизайн">
+	<meta name="description" content="Ссылки на материалы по фронтенду с курсов Валеры Хаслера">
 	<meta name="author" content="Валерий Хаслер">
-	<style>
-		body {
-			position: relative;
-			font-size: calc(18rem / 16);
-			margin: 0;
-			padding: 0 1vw;
-			padding-bottom: 2em;
-			font-family: sans-serif;
-		}
-
-		header {	
-			padding: 2em 0;
-			grid-column: 2 / 4;
-   			grid-row: 1 / 2;
-		}
-		@media (max-width: 855px) {
-			header {
-				padding: 2em 2vw;
-			}
-		}
-		header a {
-			text-decoration: underline;
-		}
-		.contents {
-			box-sizing: border-box;
-			padding-left: 1.5em;
-			min-width: 20ch;
-			grid-column: 3 / 4;
-    		grid-row: 2 / 50;
-			justify-self: left;
-			align-self: start;
-    	}
-		@supports (display:grid) {
-			body {
-				display: grid;
-    			grid-template-columns: 1fr minmax(auto, 50rem) minmax(auto, 12.6rem) 1fr;
-			}
-			.contents {
-				position: sticky;
-				top: 1em;
-			}
-		}
-		.contents-heading {
-			font-size: 1.3em;
-		}
-		.contents-heading-link:hover::after {
-			position: absolute;
-			content: '\23EB';
-		}
-		.contents-list {
-			padding-left: 1em;
-			font-size: 0.9rem;	
-		}
-		main {
-			display: contents;
-			max-width: 80ch;
-			margin: 0 auto;
-			position: relative;
-			box-sizing: border-box;
-			padding: 2em 2em 1px;
-			border-radius: 5px;
-			box-shadow: 8px 10px 20px 0 #b3b3b3;
-			margin-bottom: 0.4em;
-			grid-column: 2 / 3;
-			position: relative;
-		}
-		main::before {
-			content: '';
-			display: block;
-			box-shadow: 8px 10px 20px 0 #b3b3b3;
-			position: absolute;
-			width: 100%;
-			left: 50%;
-			transform: translateX(-50%);
-			max-width: 80ch;
-			top: 0;
-			bottom: 0;
-			z-index: -1;
-			grid-column: 2 / 3;
-			grid-row: 2 / 22;
-		}
-		article {
-			position: relative;
-			margin-bottom: 1.5em;
-			padding: 0 2vw;
-			grid-column: 2 / 3;
-		}
-		article:first-of-type {
-			margin-top: 2em;
-		}
-		article:last-of-type {
-			margin-bottom: 2em;
-		}
-		.my-lectures {
-			display: contents;
-		}
-		.my-lecture {
-			box-sizing: border-box;
-			grid-column: 1 / 2;
-			margin-right: 2em;
-			max-width: 250px;
-			min-width: 200px;
-			height: 200px;
-			background-repeat: no-repeat;
-			background-position: 50%;
-			background-size: cover;
-			display: flex;
-			flex-direction: column;
-    		justify-content: flex-end;
-			justify-self: right;
-			border: 2px solid #eab4b4;
-		}
-		.my-lecture__heading,
-		.my-lecture__strong {
-			margin: 0;
-			color: white;
-			background-color: rgb(26 52 148);
-			text-align: center;
-			font-size: 1em;
-		}
-		.my-lecture__heading {
-			padding: 0.2em;
-    		line-height: 1.2;
-		}
-		.my-lecture__text {
-			text-align: center;
-			margin: 0;
-			background-color: white;
-		}
-		.my-lecture > a {
-			text-align: center;
-			display: flex;
-			justify-content: flex-end;
-			flex-direction: column;
-		}
-		.my-lecture > a:first-of-type {
-			flex-grow: 1;
-		}
-		.my-lecture > a:first-of-type:hover {
-			text-decoration-color: white;
-		}
-		h1 {
-			font-size: 2.5em;
-			margin-top: 0;
-			margin-bottom: 0.2em;
-			word-wrap: break-word;
-			hyphens: auto;
-		}
-		.sub-heading {
-			display: block;
-			font-size: 1.5em;
-			margin-bottom: 0.3em;
-		}
-		.version {
-			display: block;
-			margin-top: 1em;
-			margin-bottom: 1em;
-		}
-		.author,
-		.feedback {
-			display: block;
-		}
-		.author {
-			margin-bottom: 0.1em;
-		}
-		.feedback {
-			margin-bottom: 0.5em;
-		}
-		section {
-			margin-bottom: 1em;
-		}
-		section:last-of-type {
-			margin-bottom: 0;
-		}
-		h2, h3 {
-			font-weight: normal;
-			line-height: 1;
-		}
-		h2 {
-			font-size: 1.5em;
-			margin-top: 0;
-			margin-bottom: 0.4em;
-		}
-		h2:target {
-			background-color: rgba(132, 207, 250, 0.5);
-			transition: 0.5s ease-out;
-		}
-		h3 {
-			font-size: 1.1em;
-			margin-top: 0;
-			margin-bottom: 0.4em;
-		}
-		p {
-			font-size: 1em;
-		}
-		p:last-child {
-			margin-bottom: 0;
-		}
-		a {
-			font-size: 1em;
-			text-decoration: none;
-			line-height: 1.4;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
-		span {
-			font-size: 1em;
-		}
-		ul {
-			margin-top: 0;
-			margin-bottom: 0;
-			padding-left: 1em;
-		}
-		ol {
-			margin-top: 0;
-		}
-		@media screen and (max-width: 87.5rem) {
-			.my-lecture {
-				justify-self: left;
-				margin-right: 0;
-			}
-		}
-		@media screen and (max-width: 76.25rem) {
-			body {
-				grid-template-columns: 1fr minmax(auto, 50rem) 2fr 1fr;
-			}
-			.contents {
-				position: static;
-				grid-column: 2 / 3;
-				grid-row: 2 / 3;
-				padding: 2em 0 0 2em;
-			}
-			.my-lectures {
-				display: flex;
-				flex-wrap: wrap;
-				grid-column: 3 / 4;
-				grid-row: 20 / 21;
-			} 
-			.my-lecture {	
-				margin-left: 2em;
-				margin-bottom: 1em;
-			}
-		}
-		.locales__lang {
-			position: relative;
-			font-weight: 600;
-			text-decoration: none;
-		}
-		.locales__lang:hover {
-			text-decoration: none;
-		}	
-		.locales__lang:hover::before {
-			content: '';
-			display: inline-block;
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			height: 2px;
-			background-color: black;
-		}
-		
-		.locales__lang:not(:last-of-type) {
-			margin-right: 0.7em;
-		}
-		
-		.locales__lang_ru::after {
-			content: '';
-			display: inline-block;
-			background-image: url('img/flag-ru.png');
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 1em;
-			height: 1em;
-			margin-left: 0.2em;
-		}
-		
-		.locales__lang_en::after {
-			content: '';
-			display: inline-block;
-			background-image: url('img/flag-uk.png');
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 1em;
-			height: 1em;
-			margin-left: 0.2em;
-		}
-		.my-lectures {
-			display: none;
-		}
-		.visually-hidden {
-			border: 0;
-			clip: rect(0 0 0 0);
-			height: 1px;
-			margin: -1px;
-			overflow: hidden;
-			padding: 0;
-			position: absolute;
-			left: 0;
-		}
-	</style>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header>
@@ -336,11 +35,11 @@
 			<li><a href="#access">Доступность</a></li>
 			<li><a href="#js">JavaScript</a></li>
 			<li><a href="#qa">Тестирование</a></li>
-			<li><a href="#soft">Софт</a></li>
-			<li><a href="#cms">CMS и серверы</a></li>
 			<li><a href="#git">Git</a></li>
 			<li><a href="#bem">БЭМ</a></li>
+			<li><a href="#backend">Бэкенд</a></li>
 			<li><a href="#build">Сборка</a></li>
+			<li><a href="#soft">Софт</a></li>
 			<li><a href="#resources">Ресурсы</a></li>
 			<li><a href="#seo">SEO</a></li>
 			<li><a href="#other">Другое</a></li>
@@ -348,14 +47,14 @@
 	</aside>
 	<main class="shadow-box">
 		<article class="specs">
-			<h2 id="specs">Официальная документация 🧙‍♂️</h2>
+			<h2 id="specs"><a href="#specs">Официальная документация 🧙‍♂️</a></h2>
 			<ul>
 				<li><a href="https://html.spec.whatwg.org/multipage/">Всегда актуальная версия спецификации HTML</a></li>
 				<li><a href="https://www.w3.org/TR/CSS/">Спецификации CSS</a></li>
 			</ul>
 		</article>
 		<article class="reference">
-			<h2 id="reference">Общие справочные материалы 📖</h2>
+			<h2 id="reference"><a href="#reference">Общие справочные материалы 📖</a></h2>
 			<ul>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Learn#where_to_start">Учебник на MDN</a></li>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML элементы на MDN</a></li>
@@ -366,13 +65,14 @@
 			</ul>
 		</article>
 		<article class="html">
-			<h2 id="html">Разметка 📃</h2>
+			<h2 id="html"><a href="#html">Разметка 📃</a></h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
 					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">Учебник по HTML на MDN</a></li>
 					<li><a href="https://html5book.ru/kontentnaya-model-html5/">Модели контента HTML5</a></li>
 					<li><a href="https://youtu.be/7w9K34oL_LE">Как понять, можно ли вложить один HTML элемент в другой</a> и <a href="https://caninclude.glitch.me/">онлайн-инструмент</a></li>
+					<li><a href="https://frontender.info/dom/">Что такое DOM</a> и <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">более детальное погружение от Google</a></li>
 				</ul>
 			</section>
 			<section>
@@ -383,7 +83,7 @@
 			</section>
 		</article>
 		<article class="layout">
-			<h2 id="layout">Верстка</h2>
+			<h2 id="layout"><a href="#layout">Верстка</a></h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
@@ -392,6 +92,7 @@
 					<li><a href="https://web.dev/learn/css/layout/">CSS раскладки</a></li>
 					<li><a href="https://developer.mozilla.org/ru/docs/Web/CSS/position">Позиционирование</a></li>
 					<li><a href="https://html5book.ru/css-background/">Фоновое изображение</a></li>
+					<li><a href="https://svgontheweb.com/ru/#implementation">Как подключать SVG изображения</a></li>
 					<li><a href="https://github.com/yoksel/common-words">Популярные названия классов</a></li>
 				</ul>
 			</section>
@@ -419,12 +120,11 @@
 				<ul>
 					<li><a href="https://web-standards.ru/articles/css-architecture/">Методы именования классов</a></li>
 					<li><a href="https://ishadeed.com/article/viewport-units/#2-second-solution-flexbox-and-viewport-units-recommended">Современный способ прижать футер</a></li>
-					<li><a href="https://svgontheweb.com/ru/#implementation">Как подключать SVG изображения</a></li>
 				</ul>
 			</section>
 		</article>
 		<article class="news">
-			<h2 id="news">Новости, статьи и подборки 🔖</h2>
+			<h2 id="news"><a href="#news">Новости, статьи и подборки 🔖</a></h2>
 			<ul>
 				<li><a href="https://bespoyasov.ru/front-not-pain/">Фронтенд — это не больно!</a></li>
 				<li><a href="https://habr.com/ru/users/nikolayshabalin/posts/">Новости фронтенда</a></li>
@@ -438,7 +138,7 @@
 			</ul>
 		</article>
 		<article class="tools">
-			<h2 id="tools">Инструменты и другие материалы</h2>
+			<h2 id="tools"><a href="#tools">Инструменты и другие материалы 🛠️</a></h2>
 			<section>
 				<h3>Главное ✔️</h3>
 				<ul>
@@ -459,7 +159,7 @@
 					<li><a href="https://specificity.keegan.st/">Калькулятор специфичности</a></li>
 					<li><a href="https://www.cssfontstack.com/">Безопасные для веба шрифты (самые распространенные на разных системах)</a></li>
 					<li><a href="https://csstriggers.com/">Как свойства CSS влияют на рендеринг страницы</a></li>
-					<li><a href="https://html5book.ru/specsimvoly-html/">HTML спецсимволы</a></li>
+					<li><a href="https://unicode-table.com/ru/">Спецсимволы</a></li>
 					<li><a href="https://realfavicongenerator.net/">Генератор фавиконок</a></li>
 					<li><a href="https://htmlacademy.ru/blog/64-about-normalize-css">О нормализации CSS</a></li>
 					<li><a href="http://yoksel.github.io/html-tree/">Генератор HTML-дерева</a></li>
@@ -468,7 +168,7 @@
 			<p>Для онлайн подбора цвета погуглите "color picker".</p>
 		</article>
 		<article class="qna">
-			<h2 id="qna">Найти ответы на вопросы и задать их самому 🦉</h2>
+			<h2 id="qna"><a href="#qna">Найти ответы на вопросы и задать их самому 🦉</a></h2>
 			<p>На эти сайты часто можно попасть, погуглив какую-то задачу:</p>
 			<ul>
 				<li><a href="https://stackoverflow.com/">Stackoverflow</a> (<a href="https://ru.stackoverflow.com/">русская версия</a>)</li>
@@ -478,7 +178,7 @@
 			</ul>	
 		</article>
 		<article class="fonts">
-			<h2 id="fonts">Типографика и шрифты 🗛</h2>
+			<h2 id="fonts"><a href="#fonts">Типографика и шрифты 🗛</a></h2>
 			<ul>
 				<li><a href="http://www.quickandlazy.appspot.com/">Введение в Типографику</a></li>
 				<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">О веб-шрифтах на MDN</a></li>
@@ -487,7 +187,7 @@
 			</ul>
 		</article>
 		<article class="access">
-			<h2 id="access">Доступность 😊</h2>
+			<h2 id="access"><a href="#access">Доступность 😊</a></h2>
 			<section>
 				<h3>Теория</h3>
 				<ul>
@@ -507,7 +207,7 @@
 			</section>
 		</article>
 		<article class="js">
-			<h2 id="js">JavaScript 🚀</h2>
+			<h2 id="js"><a href="#js">JavaScript 🚀</a></h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
@@ -528,7 +228,7 @@
 			</section>
 		</article>
 		<article class="qa">
-			<h2 id="qa">Тестирование, отладка, поиск ошибок 🔬</h2>
+			<h2 id="qa"><a href="#qa">Тестирование, отладка, поиск ошибок 🔬</a></h2>
 			<section>
 				<h3>Инструменты разработчика</h3>
 				<ul>
@@ -556,50 +256,8 @@
 			</section>
 			<p>Также можете погуглить установку MacOS на виртуальную машину</p>
 		</article>
-		<article class="soft">
-			<h2 id="soft">Софт 💻</h2>
-			<section>
-				<h3>Редакторы кода</h3>
-				<ul>
-					<li><a href="https://code.visualstudio.com/">Редактор кода Microsoft Visual Studio Code</a></li>
-					<li><a href="https://vallek.github.io/2018/08/26/vs-code-syntax-highlight.html">Как поменять цвета подсветки VS Code</a></li>
-					<li><a href="https://code.visualstudio.com/docs">Документация по VS Code</a></li>
-					<li><a href="https://www.sublimetext.com/">Редактор кода Sublime Text</a></li>
-					<li><a href="https://www.sublimetext.com/docs/3/">Документация по Sublime Text</a></li>
-					<li><a href="https://packagecontrol.io/">Пакеты (расширения) для Sublime Text</a>, <a href="https://packagecontrol.io/packages/Emmet">пакет Emmet для ускорения работы</a>, <a href="https://docs.emmet.io/">документация по Emmet</a></li>
-				</ul>
-			</section>
-			<section>
-				<h3>Графические редакторы для работы с макетами</h3>
-				<ul>
-					<li><a href="https://www.figma.com">Онлайн редактор для макетов Фигма (бесплатно для верстальщика)</a></li>
-					<li><a href="https://helpx.adobe.com/ru/photoshop/user-guide.html">Справка по Фотошопу</a></li>
-				</ul>
-			</section>
-		</article>
-		<article class="cms">
-			<h2 id="cms">CMS и серверы ⚙️</h2>
-			<section>
-				<h3>Серверы</h3>
-				<ul>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">Способы заливки файлов на сервер</a></li>
-					<li><a href="https://filezilla-project.org/">FTP клиент Filezilla</a></li>
-					<li><a href="https://sourceforge.net/projects/wampserver/">Локальный сервер для тестирования сайтов с бэкендом (например на WordPress)</a></li>
-					<li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Forms/%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0_%D0%B8_%D0%9F%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85_%D1%84%D0%BE%D1%80%D0%BC%D1%8B">Про отправку данных на сервер через формы</a></li>
-				</ul>
-			</section>
-			<section>
-				<h3>CMS</h3>
-				<ul>
-					<li><a href="https://ru.wordpress.org/">WordPress CMS</a></li>
-					<li><a href="https://codex.wordpress.org/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Справка по WordPress на русском</a></li>
-					<li><a href="https://codex.wordpress.org/Theme_Development">Создание своей темы для Wordpress</a></li>
-					<li><a href="https://codex.wordpress.org/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_WordPress">Установка WordPress</a></li>
-				</ul>
-			</section>
-		</article>
 		<article class="git">
-			<h2 id="git">Система контроля версий Git 🐙</h2>
+			<h2 id="git"><a href="#git">Система контроля версий Git 🐙</a></h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
@@ -621,7 +279,7 @@
 			</section>
 		</article>
 		<article class="bem">
-			<h2 id="bem">Методология БЭМ</h2>
+			<h2 id="bem"><a href="#bem">Методология БЭМ 🧰</a></h2>
 			<section>
 				<h3>Основы</h3>
 				<ul>
@@ -643,8 +301,29 @@
 				</ul>
 			</section>
 		</article>
+		<article class="backend">
+			<h2 id="backend"><a href="#backend">Бэкенд ⚙️</a></h2>
+			<section>
+				<h3>Серверы</h3>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server">Способы заливки файлов на сервер</a></li>
+					<li><a href="https://filezilla-project.org/">FTP клиент Filezilla</a></li>
+					<li><a href="https://www.apachefriends.org/ru/index.html">Локальный сервер с php для тестирования сайтов с бэкендом (например на WordPress)</a></li>
+					<li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Forms/%D0%9E%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0_%D0%B8_%D0%9F%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85_%D1%84%D0%BE%D1%80%D0%BC%D1%8B">Про отправку данных на сервер через формы</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>CMS</h3>
+				<ul>
+					<li><a href="https://ru.wordpress.org/">WordPress CMS</a></li>
+					<li><a href="https://codex.wordpress.org/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Справка по WordPress на русском</a></li>
+					<li><a href="https://codex.wordpress.org/Theme_Development">Создание своей темы для Wordpress</a></li>
+					<li><a href="https://codex.wordpress.org/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_WordPress">Установка WordPress</a></li>
+				</ul>
+			</section>
+		</article>
 		<article class="build">
-			<h2 id="build">Сборка 🏗️</h2>
+			<h2 id="build"><a href="#build">Сборка 🏗️</a></h2>
 			<ul>
 				<li>
 					<a href="https://developers.google.com/web/updates/2019/02/rendering-on-the-web?hl=en">Способы сборки (рендеринга) сайтов</a> и <a href="https://tproger.ru/translations/rendering-on-the-web/">перевод</a>
@@ -667,8 +346,28 @@
 				<li><a href="https://chrisant996.github.io/clink/">Расширение clink для cmd</a></li>
 			</ul>
 		</article>
+		<article class="soft">
+			<h2 id="soft"><a href="#soft">Софт 💻</a></h2>
+			<section>
+				<h3>Редакторы кода</h3>
+				<ul>
+					<li><a href="https://code.visualstudio.com/">Редактор кода Microsoft Visual Studio Code</a></li>
+					<li><a href="https://vallek.github.io/2018/08/26/vs-code-syntax-highlight.html">Как поменять цвета подсветки VS Code</a></li>
+					<li><a href="https://code.visualstudio.com/docs">Документация по VS Code</a></li>
+					<li><a href="https://www.sublimetext.com/">Редактор кода Sublime Text</a></li>
+					<li><a href="https://www.sublimetext.com/docs/3/">Документация по Sublime Text</a></li>
+					<li><a href="https://packagecontrol.io/">Пакеты (расширения) для Sublime Text</a>, <a href="https://packagecontrol.io/packages/Emmet">пакет Emmet для ускорения работы</a>, <a href="https://docs.emmet.io/">документация по Emmet</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Макеты</h3>
+				<ul>
+					<li><a href="https://www.figma.com">Онлайн редактор для макетов Фигма (бесплатно для верстальщика)</a></li>
+				</ul>
+			</section>
+		</article>
 		<article class="resources">
-			<h2 id="resources">Официально бесплатные ресурсы 🧱</h2>
+			<h2 id="resources"><a href="#resources">Официально бесплатные ресурсы 🧱</a></h2>
 			<ul>
 				<li><a href="https://www.flaticon.com/">Иконки на flaticon</a></li>
 				<li><a href="https://www.svgrepo.com/">Иконки на svgrepo</a></li>
@@ -680,7 +379,7 @@
 			</ul>
 		</article>
 		<article class="seo">
-			<h2 id="seo">SEO верстка 📈</h2>
+			<h2 id="seo"><a href="#seo">SEO верстка 📈</a></h2>
 			<ul>
 				<li><a href="https://www.searchengines.ru/">Новости SEO</a></li>
 				<li><a href="https://yandex.ru/support/webmaster/recommendations/intro.xml">Рекомендации от Яндекс</a></li>
@@ -693,7 +392,7 @@
 			</ul>
 		</article>
 		<article class="other">
-			<h2 id="other">Другое (дизайн, текст, маркетинг)</h2>
+			<h2 id="other"><a href="#other">Другое (дизайн, текст, маркетинг)</a></h2>
 			<ul>
 				<li><a href="https://bureau.ru/bb/soviet/20140324/">Якорные объекты</a></li>
 				<li><a href="https://bureau.ru/bb/soviet/20150517/">Верстка+редактура</a></li>
