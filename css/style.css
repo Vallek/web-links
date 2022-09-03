@@ -188,7 +188,7 @@ main::before {
 	bottom: 0;
 	z-index: -1;
 	grid-column: 2 / 3;
-	grid-row: 2 / 22;
+	grid-row: 2 / 23;
 }
 
 /* Banners */
