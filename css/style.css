@@ -1,3 +1,7 @@
+:root {
+	scroll-behavior: smooth;
+}
+
 body {
 	position: relative;
 	font-size: calc(18rem / 16);
