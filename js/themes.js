@@ -3,7 +3,7 @@
 const lightThemeLink = document.querySelector('.themes__link_light');
 const darkThemeLink = document.querySelector('.themes__link_dark');
 const styleTag = document.createElement('style');
-styleTag.innerText = '.page{background-color:#002B36;} header,a,p,li{color:#b1c5c8;} h2>a,h2>a:visited,h3{color:#268BD2;} ';
+styleTag.innerText = '.page{background-color:#002B36;} header,a,p,li{color:#b1c5c8;} h2>a,h2>a:visited,h3{color:#268BD2;} h2:target{background-color:initial;outline: 2px solid rgba(132, 207, 250, 0.5);}';
 console.log();
 if (localStorage.getItem('themeIs') == 'Dark') {
 	document.head.appendChild(styleTag);
