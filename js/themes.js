@@ -13,7 +13,6 @@ darkThemeLink.addEventListener('click', setDark);
 function setDark(el) {
 	el.preventDefault();
 	let style = document.querySelector('style');
-	document.head.appendChild(styleTag);
 	if (style == null) {
 		document.head.appendChild(styleTag);
 		localStorage.setItem('themeIs', 'Dark');
@@ -26,6 +25,6 @@ function setLight(el) {
 	let style = document.querySelector('style');
 	if (style != null) {
 		document.head.removeChild(style);
+		localStorage.setItem('themeIs', 'Light');
 	}
-	localStorage.setItem('themeIs', 'Light');
 }
