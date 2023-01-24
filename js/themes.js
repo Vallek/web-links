@@ -7,6 +7,9 @@ styleTag.innerText = '.page{background-color:#002B36;} header,a,p,li{color:#b1c5
 if (localStorage.getItem('themeIs') == 'Dark') {
 	document.head.appendChild(styleTag);
 }
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	document.head.appendChild(styleTag);
+}
 
 darkThemeLink.addEventListener('click', setDark);
 function setDark(el) {
