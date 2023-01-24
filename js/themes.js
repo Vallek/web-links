@@ -10,6 +10,15 @@ if (localStorage.getItem('themeIs') == 'Dark') {
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 	document.head.appendChild(styleTag);
 }
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+	const newColorScheme = event.matches ? 'dark' : 'light';
+	if (newColorScheme == 'dark') {
+		document.head.appendChild(styleTag);
+	}
+	if (newColorScheme == 'light') {
+		document.head.removeChild(styleTag);
+	} 
+});
 
 darkThemeLink.addEventListener('click', setDark);
 function setDark(el) {
