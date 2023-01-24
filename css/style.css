@@ -1,13 +1,14 @@
-:root {
-	scroll-behavior: smooth;
-}
-
-.page,
-.header,
-header,a,p,li,
-h2>a,h2>a:visited,h3,
-h2:target {
-	transition: background-color 0.3s ease-in;
+@media (prefers-reduced-motion: no-preference) {
+	:root {
+		scroll-behavior: smooth;
+	}
+	.page,
+	.header,
+	header,a,p,li,
+	h2>a,h2>a:visited,h3,
+	h2:target {
+		transition: background-color 0.3s ease-in;
+	}
 }
 
 .page {
