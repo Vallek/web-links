@@ -4,6 +4,16 @@
 	}
 }
 
+.dark.page{background-color:#002B36;} 
+.dark header,
+.dark a,
+.dark p,
+.dark li{color:#b1c5c8;} 
+.dark h2>a,
+.dark h2>a:visited,
+.dark h3{color:#268BD2;} 
+.dark h2:target{background-color:initial;outline: 2px solid rgba(132, 207, 250, 0.5);}
+
 .page {
 	position: relative;
 	font-size: calc(18rem / 16);
