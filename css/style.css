@@ -133,7 +133,7 @@ h1 {
 }
 
 .themes__link_dark::before {
-	content: '🌑 ';
+	content: '🌘 ';
 	display: inline-block;
 }
 
