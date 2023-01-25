@@ -82,21 +82,7 @@ h1 {
 	font-weight: 600;
 	text-decoration: none;
 }
-
-.locales__lang:hover {
-	text-decoration: none;
-}	
-
-.locales__lang:hover::before {
-	content: '';
-	display: inline-block;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 2px;
-	background-color: black;
-}
-
+	
 .locales__lang:not(:last-of-type) {
 	margin-right: 0.7em;
 }
