@@ -133,8 +133,6 @@ h1 {
 	display: inline-block;
 }
 
-
-
 /* Contents */
 .contents {
 	box-sizing: border-box;
@@ -347,6 +345,10 @@ p {
 
 p:last-child {
 	margin-bottom: 0;
+}
+
+.idea {
+	cursor: help;
 }
 
 a {
