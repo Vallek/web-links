@@ -172,11 +172,16 @@ h1 {
 .contents-list {
 	margin-top: 0;
 	padding-left: 1em;
-	font-size: 0.9rem;	
+	font-size: 1rem;	
+}
+
+.contents-list > li {
+	margin-bottom: 0.6em;
 }
 
 .contents-list a {
 	display: block;
+	line-height: 1.4;
 }
 
 /* Main */
