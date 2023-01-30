@@ -211,6 +211,91 @@ main::before {
 	grid-row: 2 / 23;
 }
 
+/* Sections */
+article {
+	position: relative;
+	margin-bottom: 1.5em;
+	padding: 0 2vw;
+	grid-column: 2 / 3;
+}
+
+article:first-of-type {
+	margin-top: 2em;
+}
+
+article:last-of-type {
+	margin-bottom: 2em;
+}
+
+section {
+	margin-bottom: 1em;
+}
+
+section:last-of-type {
+	margin-bottom: 0;
+}
+
+p {
+	font-size: 1em;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+.idea {
+	cursor: help;
+}
+
+a {
+	font-size: 1em;
+	text-decoration: none;
+	line-height: 1.4;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h2, h3 {
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-top: 0;
+	margin-bottom: 0.4em;
+	line-height: 1.2;
+}
+
+h2 > a {
+	color: initial;
+	line-height: 1.2;
+}
+
+h2 > a:visited {
+	color: initial;
+}
+
+h2:target {
+	background-color: rgba(132, 207, 250, 0.5);
+	transition: 0.5s ease-out;
+}
+
+h3 {
+	font-size: 1.1em;
+	margin-top: 0;
+	margin-bottom: 0.4em;
+	line-height: 1;
+}
+
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 1em;
+}
+
+
 /* Banners */
 .my-lectures {
 	display: contents;
@@ -314,90 +399,6 @@ main::before {
 	background-image: url('../img/blocks.svg');
 	background-size: contain;
 	grid-row: 15 / 16;
-}
-
-/* Sections */
-article {
-	position: relative;
-	margin-bottom: 1.5em;
-	padding: 0 2vw;
-	grid-column: 2 / 3;
-}
-
-article:first-of-type {
-	margin-top: 2em;
-}
-
-article:last-of-type {
-	margin-bottom: 2em;
-}
-
-section {
-	margin-bottom: 1em;
-}
-
-section:last-of-type {
-	margin-bottom: 0;
-}
-
-p {
-	font-size: 1em;
-}
-
-p:last-child {
-	margin-bottom: 0;
-}
-
-.idea {
-	cursor: help;
-}
-
-a {
-	font-size: 1em;
-	text-decoration: none;
-	line-height: 1.4;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-h2, h3 {
-	font-weight: normal;
-}
-
-h2 {
-	font-size: 1.5em;
-	margin-top: 0;
-	margin-bottom: 0.4em;
-	line-height: 1.2;
-}
-
-h2 > a {
-	color: initial;
-	line-height: 1.2;
-}
-
-h2 > a:visited {
-	color: initial;
-}
-
-h2:target {
-	background-color: rgba(132, 207, 250, 0.5);
-	transition: 0.5s ease-out;
-}
-
-h3 {
-	font-size: 1.1em;
-	margin-top: 0;
-	margin-bottom: 0.4em;
-	line-height: 1;
-}
-
-ul {
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-left: 1em;
 }
 
 /* JS */
