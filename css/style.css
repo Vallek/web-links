@@ -6,9 +6,9 @@
 
 .dark.page{background-color:#002B36;} 
 .dark header,
-.dark a,
+.dark a {color:#c3d5d9;} 
 .dark p,
-.dark li{color:#b1c5c8;} 
+.dark li {color:#a0b2b5;}
 .dark h2>a,
 .dark h2>a:visited,
 .dark h3{color:#2f93da;} 
