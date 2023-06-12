@@ -208,7 +208,7 @@ main::before {
 	bottom: 0;
 	z-index: -1;
 	grid-column: 2 / 3;
-	grid-row: 2 / 23;
+	grid-row: 2 / 25;
 }
 
 /* Sections */
