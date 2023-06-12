@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"emmet.syntaxProfiles": {
+			"html": {
+				"inline_break": 0
+			}
+		}
+	}
+}
