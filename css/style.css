@@ -106,10 +106,6 @@ h1 {
 	font-weight: 600;
 	text-decoration: none;
 }
-	
-.locales__lang:not(:last-of-type) {
-	/* margin-right: 0.7em; */
-}
 
 .locales__lang_ru {
 	order: 1;
