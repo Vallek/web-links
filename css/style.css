@@ -87,6 +87,20 @@ h1 {
 	justify-content: space-between;
 }
 
+.locales {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+}
+
+.locales::after {
+	order: 2;
+	content: '/';
+	display: inline-block;
+	font-weight: bold;
+	margin: 0 0.5em;
+}
+
 .locales__lang {
 	position: relative;
 	font-weight: 600;
@@ -94,29 +108,15 @@ h1 {
 }
 	
 .locales__lang:not(:last-of-type) {
-	margin-right: 0.7em;
+	/* margin-right: 0.7em; */
 }
 
-.locales__lang_ru::after {
-	content: '';
-	display: inline-block;
-	background-image: url('../img/flag-ru.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 1em;
-	height: 1em;
-	margin-left: 0.2em;
+.locales__lang_ru {
+	order: 1;
 }
 
-.locales__lang_en::after {
-	content: '';
-	display: inline-block;
-	background-image: url('../img/flag-uk.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	width: 1em;
-	height: 1em;
-	margin-left: 0.2em;
+.locales__lang_en {
+	order: 3;
 }
 
 .themes__link_light {
