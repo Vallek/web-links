@@ -397,6 +397,14 @@ ul {
 	grid-row: 15 / 16;
 }
 
+/* Footer */
+.footer {
+	grid-column: 2 / 3;
+	padding: 2em 0 1em;
+	color: #c3d5d9;
+	text-align: center;
+}
+
 /* JS */
 .my-lectures {
 	display: none;
