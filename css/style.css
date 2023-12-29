@@ -6,6 +6,7 @@
 
 .dark.page{background-color:#002B36;} 
 .dark header,
+.dark footer,
 .dark a {color:#c3d5d9;} 
 .dark p,
 .dark li {color:#a0b2b5;}
@@ -401,7 +402,6 @@ ul {
 .footer {
 	grid-column: 2 / 3;
 	padding: 2em 0 1em;
-	color: #c3d5d9;
 	text-align: center;
 }
 
