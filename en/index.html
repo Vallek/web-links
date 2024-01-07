@@ -25,6 +25,18 @@
 	</script>
 </head>
 <body class="page">
+	<script>
+		const thisPage = document.querySelector('.page');
+	
+		// Check if user set dark theme before
+		if (localStorage.getItem('weblinks-theme') == 'dark') {
+			thisPage.classList.add('dark');
+		}
+		// Check if user prefers dark theme
+		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			thisPage.classList.add('dark');
+		}
+	</script>
 	<header class="header">
 		<h1>Frontend Basics</h1>
 		<span class="sub-heading">Links for "<a href="https://vallek.github.io/pages/courses/web.html">Frontend Basics Course</a>" students</span>
