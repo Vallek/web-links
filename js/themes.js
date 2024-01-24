@@ -28,5 +28,5 @@ lightThemeLink.addEventListener('click', setLight);
 function setLight(el) {
 	el.preventDefault();
 	page.classList.remove('dark');
-		localStorage.setItem('weblinks-theme', 'light');
+	localStorage.setItem('weblinks-theme', 'light');
 }

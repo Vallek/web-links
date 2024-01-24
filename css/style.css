@@ -1,27 +1,27 @@
-@media (prefers-reduced-motion: no-preference) {
-	:root {
-		scroll-behavior: smooth;
-	}
-}
-
-.dark.page{background-color:#002B36;} 
-.dark header,
-.dark footer,
-.dark a {color:#c3d5d9;} 
-.dark p,
-.dark li {color:#a0b2b5;}
-.dark h2>a,
-.dark h2>a:visited,
-.dark h3{color:#2f93da;} 
-.dark h2:target{background-color:initial;outline: 2px solid rgba(132, 207, 250, 0.5);}
-
+/* Page */
 .page {
+	--back-color: #ffffff;
+	--prime-color: initial;
+	--second-color: initial;
+	--accent-color: #000000;
+	--accent-color-2: #84cffa80;
+	color: var(--prime-color, revert);
+	background-color: var(--back-color);
 	position: relative;
 	font-size: calc(18rem / 16);
 	margin: 0;
 	padding: 0 1vw;
 	padding-bottom: 2em;
 	font-family: sans-serif;
+}
+
+/* Dark Theme */
+.page.dark {
+	--back-color: #002B36;
+	--prime-color: #c3d5d9;
+	--second-color: #a0b2b5;
+	--accent-color: #2f93da;
+	--accent-color-2: #84cffa80;
 }
 
 @supports (display:grid) {
@@ -37,8 +37,9 @@
 	}
 }
 
-/* .header */
+/* Header */
 .header {
+	color: var(--prime-color, revert);
 	display: grid;
 	grid-template-columns: subgrid;	
 	padding: 2em 0 1em;
@@ -246,6 +247,7 @@ section:last-of-type {
 }
 
 p {
+	color: var(--second-color, revert);
 	font-size: 1em;
 }
 
@@ -258,6 +260,7 @@ p:last-child {
 }
 
 a {
+	color: var(--prime-color, revert);
 	font-size: 1em;
 	text-decoration: none;
 	line-height: 1.4;
@@ -279,20 +282,26 @@ h2 {
 }
 
 h2 > a {
-	color: initial;
+	color: var(--accent-color);
 	line-height: 1.2;
 }
 
 h2 > a:visited {
-	color: initial;
+	color: var(--accent-color);
 }
 
 h2:target {
-	background-color: rgba(132, 207, 250, 0.5);
-	transition: 0.5s ease-out;
+	background-color: var(--accent-color-2);
+	transition: scroll-behavior 0.3s ease-out;
+}
+
+.dark h2:target {
+	background-color: initial;
+	outline: 2px solid var(--accent-color-2);
 }
 
 h3 {
+	color: var(--accent-color);
 	font-size: 1.1em;
 	margin-top: 0;
 	margin-bottom: 0.4em;
@@ -303,6 +312,10 @@ ul {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 1em;
+}
+
+li {
+	color: var(--second-color, revert);
 }
 
 /* Banners */
@@ -412,6 +425,7 @@ ul {
 
 /* Footer */
 .footer {
+	color: var(--prime-color, revert);
 	grid-column: 2 / 3;
 	padding: 1em 0;
 	text-align: center;
