@@ -318,111 +318,6 @@ li {
 	color: var(--second-color, revert);
 }
 
-/* Banners */
-.my-lectures {
-	display: contents;
-}
-
-.my-lecture {
-	box-sizing: border-box;
-	grid-column: 1 / 2;
-	margin-right: 2em;
-	max-width: 250px;
-	min-width: 200px;
-	height: 200px;
-	background-repeat: no-repeat;
-	background-position: 50%;
-	background-size: cover;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	justify-self: right;
-	border: 2px solid #eab4b4;
-}
-
-@media screen and (max-width: 87.5rem) {
-	.my-lecture {
-		justify-self: left;
-		margin-right: 0;
-	}
-}
-
-@media screen and (max-width: 76.25rem) {
-	.my-lectures {
-		display: flex;
-		flex-wrap: wrap;
-		grid-column: 3 / 4;
-		grid-row: 20 / 21;
-	} 
-	.my-lecture {	
-		margin-left: 2em;
-		margin-bottom: 1em;
-	}
-}
-
-.my-lecture__heading,
-.my-lecture__strong {
-	margin: 0;
-	color: white;
-	background-color: rgb(26 52 148);
-	text-align: center;
-	font-size: 1em;
-}
-
-.my-lecture__heading {
-	padding: 0.2em;
-	line-height: 1.2;
-}
-
-.my-lecture__text {
-	text-align: center;
-	margin: 0;
-	background-color: white;
-}
-
-.my-lecture > a {
-	text-align: center;
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-}
-
-.my-lecture > a:first-of-type {
-	flex-grow: 1;
-}
-
-.my-lecture > a:first-of-type:hover {
-	text-decoration-color: white;
-}
-
-.lecture-pop {
-	background-image: url('https://vallek.github.io/img/projects/pop-mistakes-min.svg');
-	grid-row: 7 / 8;
-}
-
-.lecture-search {
-	background-image: url('https://vallek.github.io/img/projects/search.png');
-	grid-row: 5 / 6;
-}
-
-.lecture-devtools {
-	background-image: url('https://vallek.github.io/img/projects/devtools.png');
-	grid-row: 8 / 9;
-}
-
-.lecture-git {
-	background-image: url('../img/git.png');
-	background-size: contain;
-	background-position: 100% 20%;
-	grid-row: 14 / 15;
-}
-
-.lecture-bem {
-	background-image: url('../img/blocks.svg');
-	background-size: contain;
-	grid-row: 15 / 16;
-}
-
 /* Footer */
 .footer {
 	color: var(--prime-color, revert);
@@ -432,10 +327,6 @@ li {
 }
 
 /* JS */
-.my-lectures {
-	display: none;
-}
-
 .visually-hidden {
 	border: 0;
 	clip: rect(0 0 0 0);
