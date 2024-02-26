@@ -245,14 +245,18 @@
 	grid-column: 2 / 3;
 }
 
+.part:first-of-type {
+	padding-top: 1.5em;
+}
+
 .part__heading {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 1em;
 	letter-spacing: 0.1em;
 	padding: 0 2vw;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-top: 0;
+	margin-bottom: 1.5em;
 	scroll-margin-top: 1em;
 	scroll-snap-margin-top: 1em;
 }
@@ -270,7 +274,7 @@
 }
 
 .topic:last-of-type {
-	margin-bottom: 2em;
+	/* margin-bottom: 2em; */
 }
 
 .topic__heading {
