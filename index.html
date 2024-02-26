@@ -59,17 +59,40 @@
 			<a class="contents-heading-link" href="#">Содержание</a>
 		</h2>
 		<ol class="contents-list">
-			<li><a href="#specs">Спецификации</a></li>
-			<li><a href="#reference">Справка </a></li>
-			<li><a href="#roadmap">Roadmaps</a></li>
-			<li><a href="#html">Разметка</a></li>
-			<li><a href="#layout">Верстка</a></li>
+			<li><a href="">Начало
+				<ul>
+					<li><a href="#roadmap">Roadmaps</a></li>
+					<li><a href="#reference">Учебники </a></li>
+					<li><a href="#reference">Справка </a></li>
+				</ul>
+			</a></li>
+			<li><a href="">Основы
+				<ul>
+					<li><a href="#html">Разметка</a></li>
+					<li><a href="#layout">Верстка</a></li>
+					<li><a href="#js">JavaScript</a></li>
+				</ul>
+			</a></li>
+			<li><a href="">Тестирование
+				<ul></ul>
+			</a></li>
+			<li><a href="">Архитектура
+				<ul></ul>
+			</a></li>
+			<li><a href="">Быть в курсе
+				<ul></ul>
+			</a></li>
+			<li><a href="">Ресурсы
+				<ul></ul>
+			</a></li>
+			<li><a href="">Продвинутые темы
+				<ul></ul>
+			</a></li>
 			<li><a href="#news">Новости</a></li>
 			<li><a href="#tools">Инструменты</a></li>
 			<li><a href="#qna">Ответы на вопросы</a></li>
 			<li><a href="#fonts">Шрифты</a></li>
 			<li><a href="#access">Доступность</a></li>
-			<li><a href="#js">JavaScript</a></li>
 			<li><a href="#qa">Тестирование</a></li>
 			<li><a href="#git">Git</a></li>
 			<li><a href="#bem">БЭМ</a></li>
@@ -83,108 +106,286 @@
 		</ol>
 	</aside>
 	<main class="main shadow-box">
+		<section class="part main__part">
+			<h2 class="part__heading">Начало</h2>
+			<article class="topic roadmap">
+				<h2 class="topic__heading" id="roadmap"><a href="#roadmap">Учебный план 📅</a></h2>
+				<section class="topic__section">
+					<h3>Общее</h3>
+					<ul>
+						<li><a href="https://bespoyasov.ru/front-not-pain/">Фронтенд — это не больно!</a> (хороший посыл, ссылки могли устареть)</li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Roadmaps 🗺️</h3>
+					<ul>
+						<li><a href="https://vallek.github.io/frontend-roadmap-ru/">Путь Фронтендера - роадмап на русском</a></li>
+						<li><a href="https://roadmap.sh/frontend?r=frontend-beginner">Roadmap для новчиков от roadmap.sh</a> и <a href="https://roadmap.sh/frontend">продвинутая версия</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Могло устареть, но еще может быть полезным 📚</h3>
+					<ul>
+						<li><a href="http://crecotun.com/level-up/">Как HTML-верстальщику поднять свой уровень</a></li>
+					</ul>
+				</section>
+			</article>
+			<article class="topic manuals">
+				<h2 class="topic__heading" id="manuals"><a href="#manuals">Учебники 📖</a></h2>
+				<ul>
+					<li><a href="https://developer.mozilla.org/ru/docs/Learn">Учебники на MDN</a></li>
+					<li><a href="https://web.dev/learn/">Учебники от Гугл на web.dev</a></li>
+					<li><a href="https://learn.javascript.ru/">Учебник javascript.info</a></li>
+				</ul>
+			</article>
+			<article class="topic reference">
+				<h2 class="topic__heading" id="reference"><a href="#reference">Справочные материалы 📖</a></h2>
+				<ul>
+					<li><a href="https://doka.guide/">Справка по вебу Дока</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web#web_technology_references">Справка по вебу на MDN</a></li>
+					<li><a href="https://github.com/web-standards-ru/dictionary/blob/master/dictionary.md">Словарь терминов по фронтенду</a></li>
+					<li><a href="https://learn.javascript.ru/css-units">Единицы измерения</a></li>
+					<li><a href="http://css.yoksel.ru/tsveta/">Цвета в CSS</a></li>
+					<li><a href="https://vallek.github.io/webdevtips/">Моя база знаний</a></li>
+				</ul>
+			</article>			
+		</section>
+		<section class="part main__part">
+			<h2 class="part__heading">Основы</h2>
+			<article class="topic html">
+				<h2 class="topic__heading" id="html"><a href="#html">HTML Разметка 📃</a></h2>
+				<section class="topic__section">
+					<h3>Официальная документация 🧙‍♂️</h3>
+					<ul>
+						<li><a href="https://html.spec.whatwg.org/multipage/">Всегда актуальная версия спецификации HTML</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Основы</h3>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">Учебник по HTML на MDN</a></li>
+						<li><a href="https://html5book.ru/kontentnaya-model-html5/">Контентная модель HTML</a></li>
+						<li><a href="https://youtu.be/7w9K34oL_LE">Как понять, можно ли вложить один HTML элемент в другой</a> и <a href="https://caninclude.glitch.me/">онлайн-инструмент</a></li>
+						<li><a href="https://frontender.info/dom/">Что такое DOM</a> и <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">более детальное погружение от Google</a></li>
+						<li><a href="https://svgontheweb.com/ru/#implementation">Как подключать SVG изображения</a></li>
+						<li><a href="https://symbl.cc/ru/">Спецсимволы</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Лучшие практики 👍</h3>
+					<ul>
+						<li><a href="https://www.w3.org/TR/2021/NOTE-html53-20210128/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines">Советы по созданию подзаголовков</a> (также рекомендуется использовать <a href="https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element">hgroup</a>)</li>
+					</ul>
+				</section>
+			</article>
+			<article class="topic layout">
+				<h2 class="topic__heading" id="layout"><a href="#layout">CSS Верстка 📱</a></h2>
+				<section class="topic__section">
+					<h3>Официальная документация 🧙‍♂️</h3>
+					<ul>
+						<li><a href="https://www.w3.org/TR/CSS/">Спецификации CSS</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Основы</h3>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">Учебник по CSS на MDN</a></li>
+						<li><a href="https://learn.javascript.ru/css-selectors">Какие бывают селекторы CSS</a></li>
+						<li><a href="https://web.dev/learn/css/layout/">CSS раскладки</a></li>
+						<li><a href="https://developer.mozilla.org/ru/docs/Web/CSS/position">Позиционирование</a></li>
+						<li><a href="https://html5book.ru/css-background/">Фоновое изображение</a></li>
+						<li><a href="https://github.com/yoksel/common-words">Популярные названия классов</a></li>
+						<li><a href="https://htmlacademy.ru/blog/64-about-normalize-css">О нормализации CSS</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Флексбокс</h3>
+					<ul>
+						<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Флексбокс шпаргалка</a></li>
+						<li><a href="https://www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/">Как работает флексбокс в гифках</a></li>
+						<li><a href="https://coding.imweb.io/demo/flex/">Интерактивная демонстрация свойств флексбокса</a></li>
+						<li><a href="https://www.freecodecamp.org/news/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af/">Большой гайд по флексам</a></li>
+						<li><a href="https://www.freecodecamp.org/news/the-ultimate-guide-to-flexbox-learning-through-examples-8c90248d4676/">Гайд по верстке флексами</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Гриды</h3>
+					<ul>
+						<li><a href="https://www.freecodecamp.org/news/learn-css-grid-in-5-minutes-f582e87b1228/">Быстрый гайд по гридам</a></li>
+						<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Шпаргалка по гридам от css-tricks</a></li>
+						<li><a href="https://www.freecodecamp.org/news/how-to-make-your-html-responsive-by-adding-a-single-line-of-css-2a62de81e431/">Как сделать адаптивные гриды</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">Гайд по гридам от Мозиллы</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Лучшие практики 👍</h3>
+					<ul>
+						<li><a href="https://web-standards.ru/articles/css-architecture/">Методы именования классов</a></li>
+						<li><a href="https://ishadeed.com/article/viewport-units/#2-second-solution-flexbox-and-viewport-units-recommended">Современный способ прижать футер</a></li>
+					</ul>
+				</section>
+				<article class="topic fonts">
+				</article>
+				<h2 class="topic__heading" id="fonts"><a href="#fonts">Веб-шрифты 🅱️</a></h2>
+				<section class="topic__section">
+					<h3>Типографика 🗛</h3>
+					<ul>
+						<li><a href="http://www.quickandlazy.appspot.com/">Введение в Типографику</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Основы</h3>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">О веб-шрифтах на MDN</a></li>
+						<li><a href="https://html5book.ru/css-shrifty/">О веб-шрифтах на html5book</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"> @font-face (там же можно найти про форматы файлов)</a></li>
+						<li><a href="https://fonts.google.com/">Бесплатные Гугл Шрифты</a> и <a href="https://gwfh.mranftl.com/fonts">сервис для скачивания современных форматов оттуда</a></li>
+						<li><a href="https://fonts.google.com/knowledge">Статьи на Google Fonts</a></li>
+						<li><a href="https://www.cssfontstack.com/">Безопасные для веба шрифты (самые распространенные на разных системах)</a></li>
+					</ul>
+				</section>		
+				<section class="topic__section">
+					<h3>Вариативные шрифты</h3>
+					<ul>
+						<li><a href="https://web.dev/variable-fonts/">Введение в вариативные шрифты</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Как подключать и использовать вариативные шрифты</a></li>
+						<li><a href="https://webfontloader.altmann.de/">Альтернативный сервис для скачивания вариативных шрифтов с Google Fonts</a></li>
+					</ul>
+				</section>
+			</article>
+			<article class="topic js">
+				<h2 class="topic__heading" id="js"><a href="#js">JavaScript 🚀</a></h2>
+				<section class="topic__section">
+					<h3>Основы</h3>
+					<ul>
+						<li>
+							<a href="https://javascript.info/">Учебник javascript.info</a> и <a href="https://learn.javascript.ru/">русская версия</a>
+						</li>
+						<li>
+							<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript">Справка по JS на MDN</a>
+						</li>
+						<li><a href="https://doka.guide/js/">Справка по JS на Доке</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Лучшие практики 👍</h3>
+					<ul>
+						<li><a href="https://www.bram.us/2022/04/22/progressive-enhancement-and-html-forms-use-formdata/">Сбор данных формы</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">Определение версии браузера пользователя</a></li>
+					</ul>
+				</section>
+			</article>
+		</section>
+		<section class="part main__part">
+			<h2 class="part__heading">Тестирование</h2>
+			<article class="topic tools">
+				<h2 class="topic__heading" id="tools"><a href="#tools">Инструменты 🛠️</a></h2>
+				<section class="topic__section">
+					<h3>Главное ✔️</h3>
+					<ul>
+						<li><a href="https://validator.w3.org/nu/">Валидатор от w3c</a> (может проверять HTML и CSS)</li>
+						<li><a href="https://caniuse.com/">Проверка поддержки фич браузером</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Код онлайн (редактор + результат)</h3>
+					<ul>
+						<li><a href="https://codepen.io/pen/">codepen</a></li>
+						<li><a href="https://jsbin.com">jsbin</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Другое</h3>
+					<ul>	
+						<li><a href="https://specificity.keegan.st/">Калькулятор специфичности</a></li>
+						<li><a href="https://csstriggers.com/">Как свойства CSS влияют на рендеринг страницы</a></li>
+						<li><a href="https://realfavicongenerator.net/">Генератор фавиконок</a></li>
+						<li><a href="http://yoksel.github.io/html-tree/">Генератор HTML-дерева</a></li>
+					</ul>
+				</section>
+				<p><span class="tip" title="Совет" aria-label="Совет">💡 </span>Для онлайн подбора цвета погуглите "color picker"</p>
+			</article>
+			<article class="topic qa">
+				<h2 class="topic__heading" id="qa"><a href="#qa">Тестирование, отладка, поиск ошибок 🔬</a></h2>
+				<section class="topic__section">
+					<h3>Инструменты разработчика</h3>
+					<ul>
+						<li><a href="https://developer.chrome.com/docs/devtools/">Документация по девтулзам в Хроме</a></li>
+						<li><a href="https://developer.mozilla.org/ru/docs/Tools">Документация по девтулзам в Лисе</a></li>
+						<li><a href="https://code.visualstudio.com/docs/editor/debugging">Отладка в VS Code</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Онлайн-тесты</h3>
+					<ul>
+						<li><a href="https://pagespeed.web.dev/">Гугловский сервис для проверки скорости сайта</a></li>
+						<li><a href="https://webpagetest.org/">Тесты webpagetest</a></li>
+						<li><a href="https://tools.pingdom.com">Тесты pingdom</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Тестирование на разных устройствах</h3>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Учебник по кросс-браузерному тестированию на MDN</a></li>
+						<li><a href="https://joyofcode.xyz/test-your-site-in-every-browser">Как тестировать в WebKit браузере на Windows (инструмент Playwright)</a></li>
+						<li><a href="https://www.browserstack.com/">Сервис browserstack</a></li>
+						<li><a href="https://www.lambdatest.com/">Альтернатива browserstack подешевле</a></li>
+						<li><a href="https://youtu.be/71qnSzSjCyY">Как тестировать верстку на мобильных</a></li>
+						<li><a href="https://twitter.com/_vallek/status/1617843709852405760">Как тестировать на мобильном локально</a></li>
+					</ul>
+				</section>
+				<p><span class="tip" title="Совет" aria-label="Совет">💡 </span>Также можете погуглить установку MacOS на виртуальную машину</p>
+			</article>
+			<article class="topic access">
+				<h2 class="topic__heading" id="access"><a href="#access">Доступность 😊</a></h2>
+				<section class="topic__section">
+					<h3>Теория</h3>
+					<ul>
+						<li><a href="https://developer.mozilla.org/ru/docs/Learn/%D0%94%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%BE%D1%81%D1%82%D1%8C/What_is_accessibility">Что такое доступность</a></li>
+						<li><a href="https://doka.guide/a11y/">Дока про доступность</a></li>
+						<li><a href="http://yoksel.github.io/easy-markup/accessibility/">Йоксель про доступность</a></li>
+					</ul>
+				</section>
+				<section class="topic__section">
+					<h3>Практика</h3>
+					<ul>
+						<li><a href="https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements">Как скрывать элементы</a></li>
+						<li><a href="https://www.w3.org/TR/using-aria/#NOTES">Как использовать aria атрибуты</a></li>
+						<li><a href="https://youtu.be/ssJsjGZE2sc">Доклад Вадима Макеева про доступность</a> и про <a href="https://youtu.be/MWJKwn_gKR4">ссылки</a></li>
+						<li><a href="https://www.a11yproject.com/checklist/">Чеклист доступности</a></li>	
+					</ul>
+				</section>
+			</article>
+			<article class="topic safe">
+				<h2 class="topic__heading" id="safe"><a href="#safe">Безопасность</a></h2>
+			</article>
+			<article class="topic speed">
+				<h2 class="topic__heading" id="speed"><a href="#speed">Производительность</a></h2>
+			</article>
+		</section>
+		<section class="part main__part">
+			<h2 class="part__heading">Архитектура</h2>
+		</section>
+		<section class="part main__part">
+			<h2 class="part__heading">Быть в курсе</h2>
+		</section>
+		<section class="part main__part">
+			<h2 class="part__heading">Ресурсы</h2>
+		</section>
+		<section class="part main__part">
+			<h2 class="part__heading">Продвинутые темы</h2>
+		</section>
 		<article class="topic specs">
-			<h2 class="topc__heading" id="specs"><a href="#specs">Официальная документация 🧙‍♂️</a></h2>
+			<h2 class="topic__heading" id="specs"><a href="#specs">Официальная документация 🧙‍♂️</a></h2>
 			<ul>
 				<li><a href="https://html.spec.whatwg.org/multipage/">Всегда актуальная версия спецификации HTML</a></li>
 				<li><a href="https://www.w3.org/TR/CSS/">Спецификации CSS</a></li>
 			</ul>
 		</article>
-		<article class="topic reference">
-			<h2 class="topc__heading" id="reference"><a href="#reference">Общие справочные материалы 📖</a></h2>
-			<ul>
-				<li><a href="https://developer.mozilla.org/ru/docs/Learn">Учебники на MDN</a></li>
-				<li><a href="https://web.dev/learn/">Гайды от Гугл на web.dev</a></li>
-				<li><a href="https://doka.guide/">Документация Дока</a></li>
-				<li><a href="https://github.com/web-standards-ru/dictionary/blob/master/dictionary.md">Словарь терминов по фронтенду</a></li>
-				<li><a href="https://learn.javascript.ru/css-units">Единицы измерения</a></li>
-				<li><a href="http://css.yoksel.ru/tsveta/">Цвета в CSS</a></li>
-				<li><a href="https://vallek.github.io/webdevtips/">Моя база знаний</a></li>
-			</ul>
-		</article>
-		<article class="topic roadmap">
-			<h2 class="topc__heading" id="roadmap"><a href="#roadmap">Учебный план 📅</a></h2>
-			<section class="topic__section">
-				<h3>Общее</h3>
-				<ul>
-					<li><a href="https://bespoyasov.ru/front-not-pain/">Фронтенд — это не больно!</a> (тут хороший посыл, а ссылки могли устареть)</li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Roadmaps 🗺️</h3>
-				<ul>
-					<li><a href="https://vallek.github.io/frontend-roadmap-ru/">Путь Фронтендера - роадмап на русском</a></li>
-					<li><a href="https://roadmap.sh/frontend?r=frontend-beginner">Roadmap для новчиков от roadmap.sh</a> и <a href="https://roadmap.sh/frontend">продвинутая версия</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Могло устареть, но еще может быть полезным 📚</h3>
-				<ul>
-					<li><a href="http://crecotun.com/level-up/">Как HTML-верстальщику поднять свой уровень</a></li>
-				</ul>
-			</section>
-		</article>
-		<article class="topic html">
-			<h2 class="topc__heading" id="html"><a href="#html">Разметка 📃</a></h2>
-			<section class="topic__section">
-				<h3>Основы</h3>
-				<ul>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">Учебник по HTML на MDN</a></li>
-					<li><a href="https://html5book.ru/kontentnaya-model-html5/">Контентная модель HTML</a></li>
-					<li><a href="https://youtu.be/7w9K34oL_LE">Как понять, можно ли вложить один HTML элемент в другой</a> и <a href="https://caninclude.glitch.me/">онлайн-инструмент</a></li>
-					<li><a href="https://frontender.info/dom/">Что такое DOM</a> и <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">более детальное погружение от Google</a></li>
-					<li><a href="https://svgontheweb.com/ru/#implementation">Как подключать SVG изображения</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Лучшие практики 👍</h3>
-				<ul>
-					<li><a href="https://www.w3.org/TR/2021/NOTE-html53-20210128/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines">Советы по созданию подзаголовков</a> (также рекомендуется использовать <a href="https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element">hgroup</a>)</li>
-				</ul>
-			</section>
-		</article>
-		<article class="topic layout">
-			<h2 class="topc__heading" id="layout"><a href="#layout">Верстка</a></h2>
-			<section class="topic__section">
-				<h3>Основы</h3>
-				<ul>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">Учебник по CSS на MDN</a></li>
-					<li><a href="https://learn.javascript.ru/css-selectors">Какие бывают селекторы CSS</a></li>
-					<li><a href="https://web.dev/learn/css/layout/">CSS раскладки</a></li>
-					<li><a href="https://developer.mozilla.org/ru/docs/Web/CSS/position">Позиционирование</a></li>
-					<li><a href="https://html5book.ru/css-background/">Фоновое изображение</a></li>
-					<li><a href="https://github.com/yoksel/common-words">Популярные названия классов</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Флексбокс 🟩🟨🟧</h3>
-				<ul>
-					<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Флексбокс шпаргалка</a></li>
-					<li><a href="https://www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/">Как работает флексбокс в гифках</a></li>
-					<li><a href="https://coding.imweb.io/demo/flex/">Интерактивная демонстрация свойств флексбокса</a></li>
-					<li><a href="https://www.freecodecamp.org/news/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af/">Большой гайд по флексам</a></li>
-					<li><a href="https://www.freecodecamp.org/news/the-ultimate-guide-to-flexbox-learning-through-examples-8c90248d4676/">Гайд по верстке флексами</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Гриды &#9638;</h3>
-				<ul>
-					<li><a href="https://www.freecodecamp.org/news/learn-css-grid-in-5-minutes-f582e87b1228/">Быстрый гайд по гридам</a></li>
-					<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Шпаргалка по гридам от css-tricks</a></li>
-					<li><a href="https://www.freecodecamp.org/news/how-to-make-your-html-responsive-by-adding-a-single-line-of-css-2a62de81e431/">Как сделать адаптивные гриды</a></li>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">Гайд по гридам от Мозиллы</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Лучшие практики 👍</h3>
-				<ul>
-					<li><a href="https://web-standards.ru/articles/css-architecture/">Методы именования классов</a></li>
-					<li><a href="https://ishadeed.com/article/viewport-units/#2-second-solution-flexbox-and-viewport-units-recommended">Современный способ прижать футер</a></li>
-				</ul>
-			</section>
-		</article>
+		
+		
 		<article class="topic news">
-			<h2 class="topc__heading" id="news"><a href="#news">Новости, статьи и подборки 🔖</a></h2>
+			<h2 class="topic__heading" id="news"><a href="#news">Новости, статьи и подборки 🔖</a></h2>
 			<section class="topic__section">
 				<h3>Новости и дайджесты</h3>
 				<ul>
@@ -206,37 +407,9 @@
 			</section>
 			<p><span class="tip" title="Совет" aria-label="Совет">💡 </span>Вы можете найти больше новостей, погуглив "frontend news" или "новости фротенда"</p>
 		</article>
-		<article class="topic tools">
-			<h2 class="topc__heading" id="tools"><a href="#tools">Инструменты и другие материалы 🛠️</a></h2>
-			<section class="topic__section">
-				<h3>Главное ✔️</h3>
-				<ul>
-					<li><a href="https://validator.w3.org/nu/">Валидатор от w3c</a> (может проверять HTML и CSS)</li>
-					<li><a href="https://caniuse.com/">Проверка поддержки фич браузером</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Код онлайн (редактор + результат)</h3>
-				<ul>
-					<li><a href="https://codepen.io/pen/">codepen</a></li>
-					<li><a href="https://jsbin.com">jsbin</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Другое</h3>
-				<ul>	
-					<li><a href="https://specificity.keegan.st/">Калькулятор специфичности</a></li>
-					<li><a href="https://csstriggers.com/">Как свойства CSS влияют на рендеринг страницы</a></li>
-					<li><a href="https://symbl.cc/ru/">Спецсимволы</a></li>
-					<li><a href="https://realfavicongenerator.net/">Генератор фавиконок</a></li>
-					<li><a href="https://htmlacademy.ru/blog/64-about-normalize-css">О нормализации CSS</a></li>
-					<li><a href="http://yoksel.github.io/html-tree/">Генератор HTML-дерева</a></li>
-				</ul>
-			</section>
-			<p><span class="tip" title="Совет" aria-label="Совет">💡 </span>Для онлайн подбора цвета погуглите "color picker"</p>
-		</article>
+		
 		<article class="topic qna">
-			<h2 class="topc__heading" id="qna"><a href="#qna">Найти ответы на вопросы и задать их самому 🦉</a></h2>
+			<h2 class="topic__heading" id="qna"><a href="#qna">Найти ответы на вопросы и задать их самому 🦉</a></h2>
 			<p>На эти сайты часто можно попасть, погуглив какую-то задачу:</p>
 			<ul>
 				<li><a href="https://stackoverflow.com/">Stackoverflow</a> (<a href="https://ru.stackoverflow.com/">русская версия</a>)</li>
@@ -245,109 +418,12 @@
 				<li>Комментарии на <a href="https://habr.com/">хабре</a></li>
 			</ul>	
 		</article>
-		<article class="topic fonts">
-			<h2 class="topc__heading" id="fonts"><a href="#fonts">Веб-шрифты 🅱️</a></h2>
-			<section class="topic__section">
-				<h3>Типографика 🗛</h3>
-				<ul>
-					<li><a href="http://www.quickandlazy.appspot.com/">Введение в Типографику</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Основы</h3>
-				<ul>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">О веб-шрифтах на MDN</a></li>
-					<li><a href="https://html5book.ru/css-shrifty/">О веб-шрифтах на html5book</a></li>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"> @font-face (там же можно найти про форматы файлов)</a></li>
-					<li><a href="https://fonts.google.com/">Бесплатные Гугл Шрифты</a> и <a href="https://gwfh.mranftl.com/fonts">сервис для скачивания современных форматов оттуда</a></li>
-					<li><a href="https://fonts.google.com/knowledge">Статьи на Google Fonts</a></li>
-					<li><a href="https://www.cssfontstack.com/">Безопасные для веба шрифты (самые распространенные на разных системах)</a></li>
-				</ul>
-			</section>		
-			<section class="topic__section">
-				<h3>Вариативные шрифты</h3>
-				<ul>
-					<li><a href="https://web.dev/variable-fonts/">Введение в вариативные шрифты</a></li>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Как подключать и использовать вариативные шрифты</a></li>
-					<li><a href="https://webfontloader.altmann.de/">Альтернативный сервис для скачивания вариативных шрифтов с Google Fonts</a></li>
-				</ul>
-			</section>
-		</article>
-		<article class="topic access">
-			<h2 class="topc__heading" id="access"><a href="#access">Доступность 😊</a></h2>
-			<section class="topic__section">
-				<h3>Теория</h3>
-				<ul>
-					<li><a href="https://developer.mozilla.org/ru/docs/Learn/%D0%94%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%BE%D1%81%D1%82%D1%8C/What_is_accessibility">Что такое доступность</a></li>
-					<li><a href="https://doka.guide/a11y/">Дока про доступность</a></li>
-					<li><a href="http://yoksel.github.io/easy-markup/accessibility/">Йоксель про доступность</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Практика</h3>
-				<ul>
-					<li><a href="https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements">Как скрывать элементы</a></li>
-					<li><a href="https://www.w3.org/TR/using-aria/#NOTES">Как использовать aria атрибуты</a></li>
-					<li><a href="https://youtu.be/ssJsjGZE2sc">Доклад Вадима Макеева про доступность</a> и про <a href="https://youtu.be/MWJKwn_gKR4">ссылки</a></li>
-					<li><a href="https://www.a11yproject.com/checklist/">Чеклист доступности</a></li>	
-				</ul>
-			</section>
-		</article>
-		<article class="topic js">
-			<h2 class="topc__heading" id="js"><a href="#js">JavaScript 🚀</a></h2>
-			<section class="topic__section">
-				<h3>Основы</h3>
-				<ul>
-					<li>
-						<a href="https://javascript.info/">Учебник javascript.info</a> и <a href="https://learn.javascript.ru/">русская версия</a>
-					</li>
-					<li>
-						<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript">Справка по JS на MDN</a>
-					</li>
-					<li><a href="https://doka.guide/js/">Справка по JS на Доке</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Лучшие практики 👍</h3>
-				<ul>
-					<li><a href="https://www.bram.us/2022/04/22/progressive-enhancement-and-html-forms-use-formdata/">Сбор данных формы</a></li>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">Определение версии браузера пользователя</a></li>
-				</ul>
-			</section>
-		</article>
-		<article class="topic qa">
-			<h2 class="topc__heading" id="qa"><a href="#qa">Тестирование, отладка, поиск ошибок 🔬</a></h2>
-			<section class="topic__section">
-				<h3>Инструменты разработчика</h3>
-				<ul>
-					<li><a href="https://developer.chrome.com/docs/devtools/">Документация по девтулзам в Хроме</a></li>
-					<li><a href="https://developer.mozilla.org/ru/docs/Tools">Документация по девтулзам в Лисе</a></li>
-					<li><a href="https://code.visualstudio.com/docs/editor/debugging">Отладка в VS Code</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Онлайн-тесты</h3>
-				<ul>
-					<li><a href="https://pagespeed.web.dev/">Гугловский сервис для проверки скорости сайта</a></li>
-					<li><a href="https://webpagetest.org/">Тесты webpagetest</a></li>
-					<li><a href="https://tools.pingdom.com">Тесты pingdom</a></li>
-				</ul>
-			</section>
-			<section class="topic__section">
-				<h3>Тестирование на разных устройствах</h3>
-				<ul>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Учебник по кросс-браузерному тестированию на MDN</a></li>
-					<li><a href="https://joyofcode.xyz/test-your-site-in-every-browser">Как тестировать в WebKit браузере на Windows (инструмент Playwright)</a></li>
-					<li><a href="https://www.browserstack.com/">Сервис browserstack</a></li>
-					<li><a href="https://www.lambdatest.com/">Альтернатива browserstack подешевле</a></li>
-					<li><a href="https://youtu.be/71qnSzSjCyY">Как тестировать верстку на мобильных</a></li>
-					<li><a href="https://twitter.com/_vallek/status/1617843709852405760">Как тестировать на мобильном локально</a></li>
-				</ul>
-			</section>
-			<p><span class="tip" title="Совет" aria-label="Совет">💡 </span>Также можете погуглить установку MacOS на виртуальную машину</p>
-		</article>
+		
+		
+		
+		
 		<article class="topic git">
-			<h2 class="topc__heading" id="git"><a href="#git">Система контроля версий Git 🐙</a></h2>
+			<h2 class="topic__heading" id="git"><a href="#git">Система контроля версий Git 🐙</a></h2>
 			<section class="topic__section">
 				<h3>Основы</h3>
 				<ul>
@@ -369,7 +445,7 @@
 			</section>
 		</article>
 		<article class="topic bem">
-			<h2 class="topc__heading" id="bem"><a href="#bem">Методология БЭМ 🧰</a></h2>
+			<h2 class="topic__heading" id="bem"><a href="#bem">Методология БЭМ 🧰</a></h2>
 			<section class="topic__section">
 				<h3>Основы</h3>
 				<ul>
@@ -391,7 +467,7 @@
 			</section>
 		</article>
 		<article class="topic backend">
-			<h2 class="topc__heading" id="backend"><a href="#backend">Бэкенд ⚙️</a></h2>
+			<h2 class="topic__heading" id="backend"><a href="#backend">Бэкенд ⚙️</a></h2>
 			<section class="topic__section">
 				<h3>Серверы</h3>
 				<ul>
@@ -412,7 +488,7 @@
 			</section>
 		</article>
 		<article class="topic build">
-			<h2 class="topc__heading" id="build"><a href="#build">Сборка 🏗️</a></h2>
+			<h2 class="topic__heading" id="build"><a href="#build">Сборка 🏗️</a></h2>
 			<section class="topic__section">
 				<h3>Общее</h3>
 				<ul>
@@ -462,7 +538,7 @@
 			</section>
 		</article>
 		<article class="topic soft">
-			<h2 class="topc__heading" id="soft"><a href="#soft">Софт 💻</a></h2>
+			<h2 class="topic__heading" id="soft"><a href="#soft">Софт 💻</a></h2>
 			<section class="topic__section">
 				<h3>Общее</h3>
 				<ul>
@@ -500,7 +576,7 @@
 			</section>
 		</article>
 		<article class="topic resources">
-			<h2 class="topc__heading" id="resources"><a href="#resources">Официально бесплатные ресурсы 🧱</a></h2>
+			<h2 class="topic__heading" id="resources"><a href="#resources">Официально бесплатные ресурсы 🧱</a></h2>
 			<ul>
 				<li><a href="https://www.flaticon.com/">Иконки на flaticon</a></li>
 				<li><a href="https://www.svgrepo.com/">Иконки на svgrepo</a></li>
@@ -512,7 +588,7 @@
 			</ul>
 		</article>
 		<article class="topic video">
-			<h2 class="topc__heading" id="video"><a href="#video">Видео 📺</a></h2>
+			<h2 class="topic__heading" id="video"><a href="#video">Видео 📺</a></h2>
 			<ul>
 				<li><a href="https://www.youtube.com/channel/UCMtlICYxr6Dz_PG9_SVqRYQ">Академия Яндекса про фронтенд</a></li>
 				<li><a href="https://www.youtube.com/user/wstdays">Подкаст Веб-стандарты и записи с конференций</a></li>
@@ -523,7 +599,7 @@
 			</ul>
 		</article>
 		<article class="topic seo">
-			<h2 class="topc__heading" id="seo"><a href="#seo">SEO верстка 📈</a></h2>
+			<h2 class="topic__heading" id="seo"><a href="#seo">SEO верстка 📈</a></h2>
 			<ul>
 				<li><a href="https://www.searchengines.ru/">Новости SEO</a></li>
 				<li><a href="https://yandex.ru/support/webmaster/recommendations/intro.xml">Рекомендации от Яндекс</a></li>
@@ -535,7 +611,7 @@
 			</ul>
 		</article>
 		<article class="topic other">
-			<h2 class="topc__heading" id="other"><a href="#other">Другое 🤹</a></h2>
+			<h2 class="topic__heading" id="other"><a href="#other">Другое 🤹</a></h2>
 			<section class="topic__section">
 				<h3>Дизайн</h3>
 				<ul>

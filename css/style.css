@@ -227,6 +227,17 @@
 	grid-row: 2 / 25; /* Update grid-row-end to sections number */
 }
 
+/* Parts */
+.part {
+	grid-column: 2 / 3;
+}
+
+.part__heading {
+	padding: 0 2vw;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 /* Sections */
 .topic {
 	position: relative;
@@ -236,7 +247,7 @@
 }
 
 .topic:first-of-type {
-	margin-top: 2em;
+	/* margin-top: 2em; */
 }
 
 .topic:last-of-type {
@@ -275,7 +286,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-.topc__heading {
+.topic__heading {
 	font-weight: normal;
 	font-size: 1.5em;
 	margin-top: 0;
@@ -283,21 +294,21 @@ a:hover {
 	line-height: 1.2;
 }
 
-.topc__heading > a {
+.topic__heading > a {
 	color: var(--accent-color);
 	line-height: 1.2;
 }
 
-.topc__heading > a:visited {
+.topic__heading > a:visited {
 	color: var(--accent-color);
 }
 
-.topc__heading:target {
+.topic__heading:target {
 	background-color: var(--accent-color-2);
 	transition: scroll-behavior 0.3s ease-out;
 }
 
-.dark .topc__heading:target {
+.dark .topic__heading:target {
 	background-color: initial;
 	outline: 2px solid var(--accent-color-2);
 }
