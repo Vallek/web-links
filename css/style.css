@@ -43,8 +43,9 @@
 	display: grid;
 	grid-template-columns: subgrid;	
 	padding: 2em 0 1em;
-	grid-column: 2 / 4;
+	grid-column: 2 / 3;
 	grid-row: 1 / 2;
+	text-align: center;
 }
 
 @media (max-width: 855px) {
@@ -68,7 +69,7 @@
 
 @media (max-width: 855px) {
 	.header__heading {
-		font-size: clamp(2rem, 9.2vw, 5rem);
+		font-size: clamp(2rem, 9.1vw, 5rem);
 	}
 }
 
@@ -213,15 +214,16 @@
 	display: block;
 	width: 1em;
 	height: 1em;
-	font-size: 2.5rem;
+	font-size: 2rem;
+	margin-top: 1px;
 	margin-right: 0.2em;
-	background-image: url('../img/toggle_off_black_24dp.svg');
+	background-image: url('../img/eye-open.svg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
 .contents__fold_fold::before {
-	background-image: url('../img/toggle_on_black_24dp.svg');
+	background-image: url('../img/eye-close.svg');
 }
 
 .contents-list {
@@ -250,9 +252,23 @@
 }
 
 .contents-list__topics {
-	list-style: disc;
+	list-style: none;
 	font-size: 0.9em;
 	padding-left: 1.9em;
+	margin-left: 11px;
+}
+
+/* Contents - emoji */
+.contents-list__topics a {
+	position: relative;
+	padding-left: 0.2em;
+}
+
+.contents-list__topics a::before {
+	position: absolute;
+	left: -1.5em;
+	display: inline-block;
+	width: 100%;
 }
 
 /* Main */
@@ -342,11 +358,15 @@
 	color: var(--accent-color);
 }
 
+h2:target,
+h4:target,
 .topic__heading:target {
 	background-color: var(--accent-color-2);
 	transition: scroll-behavior 0.3s ease-out;
 }
 
+.dark h2:target,
+.dark h4:target,
 .dark .topic__heading:target {
 	background-color: initial;
 	outline: 2px solid var(--accent-color-2);
@@ -424,4 +444,93 @@ a:hover {
 	padding: 0;
 	position: absolute;
 	left: 0;
+}
+
+/* Emojis */
+.contents-list__topics a[href="#roadmap"]::before {
+	content: '🗺️';
+}
+.contents-list__topics a[href="#manuals"]::before {
+	content: '📖';
+}
+.contents-list__topics a[href="#reference"]::before {
+	content: '📒';
+}
+.contents-list__topics a[href="#resources"]::before {
+	content: '🧱';
+}
+.contents-list__topics a[href="#html"]::before {
+	content: '📄';
+}
+.contents-list__topics a[href="#layout"]::before {
+	content: '📱';
+}
+.contents-list__topics a[href="#fonts"]::before {
+	content: '🅱️';
+}
+.contents-list__topics a[href="#js"]::before {
+	content: '🚀';
+}
+.contents-list__topics a[href="#backend"]::before {
+	content: '⚙️';
+}
+.contents-list__topics a[href="#soft"]::before {
+	content: '💻';
+}
+.contents-list__topics a[href="#tools"]::before {
+	content: '🛠️';
+}
+.contents-list__topics a[href="#qa"]::before {
+	content: '🔬';
+}
+.contents-list__topics a[href="#access"]::before {
+	content: '😊';
+}
+.contents-list__topics a[href="#safe"]::before {
+	content: '🔒';
+}
+.contents-list__topics a[href="#speed"]::before {
+	content: '⏱️';
+}
+.contents-list__topics a[href="#git"]::before {
+	content: '🐙';
+}
+.contents-list__topics a[href="#bem"]::before {
+	content: '🧰';
+}
+.contents-list__topics a[href="#build"]::before {
+	content: '🏗️';
+}
+.contents-list__topics a[href="#auto"]::before {
+	content: '🤖';
+}
+.contents-list__topics a[href="#linters"]::before {
+	content: '☑️';
+}
+.contents-list__topics a[href="#news"]::before {
+	content: '🔖';
+}
+.contents-list__topics a[href="#video"]::before {
+	content: '📺';
+}
+.contents-list__topics a[href="#qna"]::before {
+	content: '🦉';
+}
+.contents-list__topics a[href="#work"]::before {
+	content: '🗂️';
+}
+.contents-list__topics a[href="#seo"]::before {
+	content: '🤹';
+}
+.contents-list__topics a[href="#design"]::before {
+	content: '🔖';
+}
+.contents-list__topics a[href="#text"]::before {
+	content: '📝';
+}
+.contents-list__topics a[href="#bad"]::before {
+	content: '💩';
+}
+.contents-list__topics_default {
+	list-style: disc;
 }
