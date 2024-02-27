@@ -9,6 +9,7 @@
 	<meta name="author" content="Валерий Хаслер">
 	<link rel="stylesheet" href="css/style.css">
 	<script defer src="js/themes.js"></script>
+	<script defer src="js/folding.js"></script>
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="vallek.github.io">
 	<meta name="twitter:title" content="Подборка ссылок по фронтенду">
@@ -55,20 +56,24 @@
 		</div>
 	</header>
 	<aside class="contents">
-		<h2 class="contents-heading" title="В начало">
-			<a class="contents-heading-link" href="#">Содержание</a>
+		<h2 class="contents__heading" title="В начало">
+			<a class="contents__heading-link" href="#">Содержание</a>
 		</h2>
+		<label class="contents__fold" for="fold-contents">
+			Свернуть
+			<input class="contents__fold-input visually-hidden" type="checkbox" name="fold-contents" id="fold-contents">
+		</label>
 		<ol class="contents-list">
-			<li><a href="#begin">Начало</a>
-				<ul>
+			<li><a class="contents-list__link" href="#begin">Начало</a>
+				<ul class="contents-list__topics">
 					<li><a href="#roadmap">Roadmaps</a></li>
 					<li><a href="#manuals">Учебники </a></li>
 					<li><a href="#reference">Справка </a></li>
 					<li><a href="#resources">Ресурсы</a></li>
 				</ul>
 			</li>
-			<li><a href="#base">Основы</a>
-				<ul>
+			<li><a class="contents-list__link" href="#base">Основы</a>
+				<ul class="contents-list__topics">
 					<li><a href="#html">HTML</a></li>
 					<li><a href="#layout">CSS</a></li>
 					<li><a href="#fonts">Шрифты</a></li>
@@ -76,8 +81,8 @@
 					<li><a href="#backend">Бэкенд</a></li>
 				</ul>
 			</li>
-			<li><a href="#test">Тестирование</a>
-				<ul>
+			<li><a class="contents-list__link" href="#test">Тестирование</a>
+				<ul class="contents-list__topics">
 					<li><a href="#soft">Софт</a></li>
 					<li><a href="#tools">Инструменты</a></li>
 					<li><a href="#qa">Тестирование</a></li>
@@ -86,8 +91,8 @@
 					<li><a href="#speed">Скорость</a></li>
 				</ul>
 			</li>
-			<li><a href="#arch">Архитектура</a>
-				<ul>
+			<li><a class="contents-list__link" href="#arch">Архитектура</a>
+				<ul class="contents-list__topics">
 					<li><a href="#git">Git</a></li>
 					<li><a href="#bem">БЭМ</a></li>
 					<li><a href="#build">Сборка</a></li>
@@ -95,15 +100,15 @@
 					<li><a href="#linters">Линтеры</a></li>
 				</ul>
 			</li>
-			<li><a href="#pulse">Быть в курсе</a>
-				<ul>
+			<li><a class="contents-list__link" href="#pulse">Быть в курсе</a>
+				<ul class="contents-list__topics">
 					<li><a href="#news">Новости</a></li>
 					<li><a href="#video">Видео</a></li>
 					<li><a href="#qna">Ответы</a></li>
 				</ul>
 			</li>
-			<li><a href="#other">Другое</a>
-				<ul>
+			<li><a class="contents-list__link" href="#other">Другое</a>
+				<ul class="contents-list__topics">
 					<li><a href="#work">Работа</a></li>
 					<li><a href="#seo">SEO</a></li>
 					<li><a href="#design">Дизайн</a></li>
@@ -111,8 +116,8 @@
 					<li><a href="#bad">Плохие</a></li>
 				</ul>
 			</li>
-			<li><a href="#advanced">Продвинутые темы</a>
-				<ul>
+			<li><a class="contents-list__link" href="#advanced">Дальше</a>
+				<ul class="contents-list__topics">
 					<li><a href="#csr">Фреймворки</a></li>
 					<li><a href="#ssr">SSR</a></li>
 					<li><a href="#headless">Headless CMS</a></li>
