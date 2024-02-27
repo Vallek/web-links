@@ -334,6 +334,8 @@ h3, h4 {
 	margin-top: 0;
 	margin-bottom: 0.4em;
 	line-height: 1;
+	scroll-margin-top: 0.5em;
+	scroll-snap-margin-top: 0.5em;
 }
 
 ul {
