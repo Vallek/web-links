@@ -59,22 +59,22 @@
 		<h2 class="contents__heading" title="В начало">
 			<a class="contents__heading-link" href="#">Содержание</a>
 		</h2>
-		<label class="contents__fold" for="fold-contents" aria-label="Кнопка, чтобы визуально свернуть и развернуть содержание">
-			<span class="contents__fold__title">Развернуть</span>
-			<span class="contents__fold__title contents__fold__title_show">Свернуть</span>
+		<label class="contents__fold fold" for="fold-contents" aria-label="Кнопка, чтобы визуально свернуть и развернуть содержание">
+			<span class="fold__title">Развернуть</span>
+			<span class="fold__title fold__title_show">Свернуть</span>
+			<input class="fold__input visually-hidden" type="checkbox" name="fold-contents" id="fold-contents">
 		</label>
-		<input class="contents__fold-input visually-hidden" type="checkbox" name="fold-contents" id="fold-contents">
-		<ol class="contents-list">
-			<li><a class="contents-list__link" href="#begin">Начало</a>
-				<ol class="contents-list__topics">
+		<ol class="contents__list list">
+			<li><a class="contents__link" href="#begin">Начало</a>
+				<ol class="contents__topics">
 					<li><a href="#roadmap">Roadmaps</a></li>
 					<li><a href="#manuals">Учебники </a></li>
 					<li><a href="#reference">Справка </a></li>
 					<li><a href="#resources">Ресурсы</a></li>
 				</ol>
 			</li>
-			<li><a class="contents-list__link" href="#base">Основы</a>
-				<ol class="contents-list__topics">
+			<li><a class="contents__link" href="#base">Основы</a>
+				<ol class="contents__topics">
 					<li><a href="#html">HTML</a></li>
 					<li><a href="#layout">CSS</a></li>
 					<li><a href="#fonts">Шрифты</a></li>
@@ -82,8 +82,8 @@
 					<li><a href="#backend">Бэкенд</a></li>
 				</ol>
 			</li>
-			<li><a class="contents-list__link" href="#test">Тестирование</a>
-				<ol class="contents-list__topics">
+			<li><a class="contents__link" href="#test">Тестирование</a>
+				<ol class="contents__topics">
 					<li><a href="#soft">Софт</a></li>
 					<li><a href="#tools">Инструменты</a></li>
 					<li><a href="#qa">Тестирование</a></li>
@@ -92,8 +92,8 @@
 					<li><a href="#speed">Скорость</a></li>
 				</ol>
 			</li>
-			<li><a class="contents-list__link" href="#arch">Архитектура</a>
-				<ol class="contents-list__topics">
+			<li><a class="contents__link" href="#arch">Архитектура</a>
+				<ol class="contents__topics">
 					<li><a href="#git">Git</a></li>
 					<li><a href="#bem">БЭМ</a></li>
 					<li><a href="#build">Сборка</a></li>
@@ -101,15 +101,15 @@
 					<li><a href="#linters">Линтеры</a></li>
 				</ol>
 			</li>
-			<li><a class="contents-list__link" href="#pulse">Быть в курсе</a>
-				<ol class="contents-list__topics">
+			<li><a class="contents__link" href="#pulse">Быть в курсе</a>
+				<ol class="contents__topics">
 					<li><a href="#news">Новости</a></li>
 					<li><a href="#video">Видео</a></li>
 					<li><a href="#qna">Ответы</a></li>
 				</ol>
 			</li>
-			<li><a class="contents-list__link" href="#other">Другое</a>
-				<ol class="contents-list__topics">
+			<li><a class="contents__link" href="#other">Другое</a>
+				<ol class="contents__topics">
 					<li><a href="#work">Работа</a></li>
 					<li><a href="#seo">SEO</a></li>
 					<li><a href="#design">Дизайн</a></li>
@@ -117,8 +117,8 @@
 					<li><a href="#bad">Плохие</a></li>
 				</ol>
 			</li>
-			<li><a class="contents-list__link" href="#advanced">Дальше</a>
-				<ol class="contents-list__topics contents-list__topics_default">
+			<li><a class="contents__link" href="#advanced">Дальше</a>
+				<ol class="contents__topics contents__topics_default">
 					<li><a href="#csr">Фреймворки</a></li>
 					<li><a href="#ssr">SSR</a></li>
 					<li><a href="#headless">Headless CMS</a></li>
@@ -253,33 +253,33 @@
 						<li><a href="https://ishadeed.com/article/viewport-units/#2-second-solution-flexbox-and-viewport-units-recommended">Современный способ прижать футер</a></li>
 					</ul>
 				</section>
-				<article class="topic fonts">
-				</article>
-				<h3 class="topic__heading" id="fonts"><a href="#fonts">Веб-шрифты 🅱️</a></h3>
 				<section class="topic__section">
-					<h4>Типографика 🗛</h4>
-					<ul>
-						<li><a href="http://www.quickandlazy.appspot.com/">Введение в Типографику</a></li>
-					</ul>
-				</section>
-				<section class="topic__section">
-					<h4>Основы</h4>
-					<ul>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">О веб-шрифтах на MDN</a></li>
-						<li><a href="https://html5book.ru/css-shrifty/">О веб-шрифтах на html5book</a></li>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"> @font-face (там же можно найти про форматы файлов)</a></li>
-						<li><a href="https://fonts.google.com/">Бесплатные Гугл Шрифты</a> и <a href="https://gwfh.mranftl.com/fonts">сервис для скачивания современных форматов оттуда</a></li>
-						<li><a href="https://fonts.google.com/knowledge">Статьи на Google Fonts</a></li>
-						<li><a href="https://www.cssfontstack.com/">Безопасные для веба шрифты (самые распространенные на разных системах)</a></li>
-					</ul>
-				</section>		
-				<section class="topic__section">
-					<h4>Вариативные шрифты</h4>
-					<ul>
-						<li><a href="https://web.dev/variable-fonts/">Введение в вариативные шрифты</a></li>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Как подключать и использовать вариативные шрифты</a></li>
-						<li><a href="https://webfontloader.altmann.de/">Альтернативный сервис для скачивания вариативных шрифтов с Google Fonts</a></li>
-					</ul>
+					<h3 class="topic__heading" id="fonts"><a href="#fonts">Веб-шрифты 🅱️</a></h3>
+					<section class="topic__section">
+						<h4>Типографика 🗛</h4>
+						<ul>
+							<li><a href="http://www.quickandlazy.appspot.com/">Введение в Типографику</a></li>
+						</ul>
+					</section>
+					<section class="topic__section">
+						<h4>Основы</h4>
+						<ul>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">О веб-шрифтах на MDN</a></li>
+							<li><a href="https://html5book.ru/css-shrifty/">О веб-шрифтах на html5book</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"> @font-face (там же можно найти про форматы файлов)</a></li>
+							<li><a href="https://fonts.google.com/">Бесплатные Гугл Шрифты</a> и <a href="https://gwfh.mranftl.com/fonts">сервис для скачивания современных форматов оттуда</a></li>
+							<li><a href="https://fonts.google.com/knowledge">Статьи на Google Fonts</a></li>
+							<li><a href="https://www.cssfontstack.com/">Безопасные для веба шрифты (самые распространенные на разных системах)</a></li>
+						</ul>
+					</section>		
+					<section class="topic__section">
+						<h4>Вариативные шрифты</h4>
+						<ul>
+							<li><a href="https://web.dev/variable-fonts/">Введение в вариативные шрифты</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Как подключать и использовать вариативные шрифты</a></li>
+							<li><a href="https://webfontloader.altmann.de/">Альтернативный сервис для скачивания вариативных шрифтов с Google Fonts</a></li>
+						</ul>
+					</section>
 				</section>
 			</article>
 			<article class="topic js">

@@ -1,11 +1,11 @@
 'use strict';
 
 const foldContents = document.querySelector('.contents__fold');
-const foldContentsTitle = document.querySelector('.contents__fold__title');
-const foldedContentsTitle = document.querySelector('.contents__fold__title.contents__fold__title_show');
+const foldContentsTitle = document.querySelector('.fold__title');
+const foldedContentsTitle = document.querySelector('.fold__title.fold__title_show');
 const foldContentsInput = document.querySelector('#fold-contents');
-const topics = document.querySelectorAll('.contents-list__link');
-const topicsList = document.querySelectorAll('.contents-list__topics');
+const topics = document.querySelectorAll('.contents__link');
+const topicsList = document.querySelectorAll('.contents__topics');
 
 foldContentsInput.addEventListener('click', foldCOntents);
 
@@ -14,12 +14,12 @@ function foldCOntents() {
 		// Hide lists
 		el.classList.toggle('visually-hidden');
 		// Eye icon change
-		foldContents.classList.toggle('contents__fold_folded');
-		foldContentsTitle.classList.toggle('contents__fold__title_show');
-		foldedContentsTitle.classList.toggle('contents__fold__title_show');
+		foldContents.classList.toggle('fold_folded');
+		foldContentsTitle.classList.toggle('fold__title_show');
+		foldedContentsTitle.classList.toggle('fold__title_show');
 		// Contents arrows
 		topics.forEach(topic => {
-			topic.classList.toggle('contents-list__link_folded');
+			topic.classList.toggle('list__link_folded');
 		});
 	});
 }

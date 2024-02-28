@@ -221,39 +221,39 @@
 	background-size: 100% 100%;
 }
 
-.contents__fold_folded::before {
+.fold_folded::before {
 	background-image: url('../img/eye-close.svg');
 }
 
-.contents__fold__title {
+.fold__title {
 	display: none;
 }
 
-.contents-list {
+.contents__list {
 	list-style: none;
 	margin-top: 0;
 	padding-left: 0.4em;
 	font-size: 1rem;	
 }
 
-.contents-list a {
-	display: block;
+.contents__list a {
+	display: inline-block;
 	font-size: 1.1em;
 	line-height: 1.4;
 }
 
-.contents-list__link::before {
+/* .contents__link::before {
 	content: '> ';
 	transform: rotate(90deg);
 	display: inline-block;
 	margin-right: 0.3em;
-}
+} */
 
-.contents-list__link_folded:before {
+.list__link_folded:before {
 	transform: rotate(0deg);
 }
 
-.contents-list__topics {
+.contents__topics {
 	list-style: none;
 	font-size: 0.9em;
 	padding-left: 1.9em;
@@ -261,12 +261,12 @@
 }
 
 /* Contents - emoji */
-.contents-list__topics a {
+.contents__topics a {
 	position: relative;
 	padding-left: 0.2em;
 }
 
-.contents-list__topics a::before {
+.contents__topics a::before {
 	position: absolute;
 	left: -1.5em;
 	display: inline-block;
@@ -421,95 +421,95 @@ a:hover {
 	left: 0;
 }
 
-.contents__fold__title_show {
+.fold__title_show {
 	display: flex;
 }
 
 /* Emojis */
-.contents-list__topics a[href="#roadmap"]::before {
+.contents__topics a[href="#roadmap"]::before {
 	content: '🗺️';
 }
-.contents-list__topics a[href="#manuals"]::before {
+.contents__topics a[href="#manuals"]::before {
 	content: '📖';
 }
-.contents-list__topics a[href="#reference"]::before {
+.contents__topics a[href="#reference"]::before {
 	content: '📒';
 }
-.contents-list__topics a[href="#resources"]::before {
+.contents__topics a[href="#resources"]::before {
 	content: '🧱';
 }
-.contents-list__topics a[href="#html"]::before {
+.contents__topics a[href="#html"]::before {
 	content: '📄';
 }
-.contents-list__topics a[href="#layout"]::before {
+.contents__topics a[href="#layout"]::before {
 	content: '📱';
 }
-.contents-list__topics a[href="#fonts"]::before {
+.contents__topics a[href="#fonts"]::before {
 	content: '🅱️';
 }
-.contents-list__topics a[href="#js"]::before {
+.contents__topics a[href="#js"]::before {
 	content: '🚀';
 }
-.contents-list__topics a[href="#backend"]::before {
+.contents__topics a[href="#backend"]::before {
 	content: '⚙️';
 }
-.contents-list__topics a[href="#soft"]::before {
+.contents__topics a[href="#soft"]::before {
 	content: '💻';
 }
-.contents-list__topics a[href="#tools"]::before {
+.contents__topics a[href="#tools"]::before {
 	content: '🛠️';
 }
-.contents-list__topics a[href="#qa"]::before {
+.contents__topics a[href="#qa"]::before {
 	content: '🔬';
 }
-.contents-list__topics a[href="#access"]::before {
+.contents__topics a[href="#access"]::before {
 	content: '😊';
 }
-.contents-list__topics a[href="#safe"]::before {
+.contents__topics a[href="#safe"]::before {
 	content: '🔒';
 }
-.contents-list__topics a[href="#speed"]::before {
+.contents__topics a[href="#speed"]::before {
 	content: '⏱️';
 }
-.contents-list__topics a[href="#git"]::before {
+.contents__topics a[href="#git"]::before {
 	content: '🐙';
 }
-.contents-list__topics a[href="#bem"]::before {
+.contents__topics a[href="#bem"]::before {
 	content: '🧰';
 }
-.contents-list__topics a[href="#build"]::before {
+.contents__topics a[href="#build"]::before {
 	content: '🏗️';
 }
-.contents-list__topics a[href="#auto"]::before {
+.contents__topics a[href="#auto"]::before {
 	content: '🤖';
 }
-.contents-list__topics a[href="#linters"]::before {
+.contents__topics a[href="#linters"]::before {
 	content: '☑️';
 }
-.contents-list__topics a[href="#news"]::before {
+.contents__topics a[href="#news"]::before {
 	content: '🔖';
 }
-.contents-list__topics a[href="#video"]::before {
+.contents__topics a[href="#video"]::before {
 	content: '📺';
 }
-.contents-list__topics a[href="#qna"]::before {
+.contents__topics a[href="#qna"]::before {
 	content: '🦉';
 }
-.contents-list__topics a[href="#work"]::before {
+.contents__topics a[href="#work"]::before {
 	content: '🗂️';
 }
-.contents-list__topics a[href="#seo"]::before {
+.contents__topics a[href="#seo"]::before {
+	content: '📈';
+}
+.contents__topics a[href="#design"]::before {
 	content: '🤹';
 }
-.contents-list__topics a[href="#design"]::before {
-	content: '🔖';
-}
-.contents-list__topics a[href="#text"]::before {
+.contents__topics a[href="#text"]::before {
 	content: '📝';
 }
-.contents-list__topics a[href="#bad"]::before {
+.contents__topics a[href="#bad"]::before {
 	content: '💩';
 }
-.contents-list__topics_default {
+.contents__topics_default {
 	list-style: disc;
 }
