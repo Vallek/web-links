@@ -59,10 +59,11 @@
 		<h2 class="contents__heading" title="В начало">
 			<a class="contents__heading-link" href="#">Содержание</a>
 		</h2>
-		<label class="contents__fold" for="fold-contents" aria-label="Кнопка, чтобы визуально свернуть содержание">
-			Свернуть
-			<input class="contents__fold-input visually-hidden" type="checkbox" name="fold-contents" id="fold-contents">
+		<label class="contents__fold" for="fold-contents" aria-label="Кнопка, чтобы визуально свернуть и развернуть содержание">
+			<span class="contents__fold__title">Развернуть</span>
+			<span class="contents__fold__title contents__fold__title_show">Свернуть</span>
 		</label>
+		<input class="contents__fold-input visually-hidden" type="checkbox" name="fold-contents" id="fold-contents">
 		<ol class="contents-list">
 			<li><a class="contents-list__link" href="#begin">Начало</a>
 				<ol class="contents-list__topics">

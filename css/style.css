@@ -221,8 +221,12 @@
 	background-size: 100% 100%;
 }
 
-.contents__fold_fold::before {
+.contents__fold_folded::before {
 	background-image: url('../img/eye-close.svg');
+}
+
+.contents__fold__title {
+	display: none;
 }
 
 .contents-list {
@@ -415,6 +419,10 @@ a:hover {
 	padding: 0;
 	position: absolute;
 	left: 0;
+}
+
+.contents__fold__title_show {
+	display: flex;
 }
 
 /* Emojis */
