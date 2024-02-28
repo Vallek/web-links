@@ -1,39 +1,38 @@
 'use strict';
 
-const foldContents = document.querySelector('.contents__fold');
-
-const foldContentsInput = document.querySelector('#fold-contents');
+const fold = document.querySelector('.contents__fold');
+const foldInput = document.querySelector('#fold-contents');
 const topics = document.querySelectorAll('.list__fold-button');
-const listFoldButton  = document.querySelectorAll('.list__fold-button');
+const foldButton  = document.querySelectorAll('.list__fold-button');
 const topicsList = document.querySelectorAll('.contents__topics');
 
-foldContentsInput.addEventListener('click', foldCOntents);
-listFoldButton.forEach(el => {
+foldInput.addEventListener('click', foldCOntents);
+foldButton.forEach(el => {
 	el.addEventListener('click', foldList);
 });
 
 // Toggle all button
 function foldCOntents(event) {
 	// Change title
-	const unfoldContentsTitle = document.querySelector('.fold__title_show');
-	const foldContentsTitle = document.querySelector('.fold__title_hide');
-	unfoldContentsTitle.classList.toggle('visually-hidden');
-	foldContentsTitle.classList.toggle('visually-hidden');
+	const unfoldTitle = document.querySelector('.fold__title_show');
+	const foldTitle = document.querySelector('.fold__title_hide');
+	unfoldTitle.classList.toggle('visually-hidden');
+	foldTitle.classList.toggle('visually-hidden');
 	// Fold and unfold lists
-	if (foldContentsInput.value == 'show') {
+	if (foldInput.value == 'show') {
 		topicsList.forEach(el => {
 			el.classList.add('visually-hidden');
-			foldContentsInput.value = 'hide';
+			foldInput.value = 'hide';
 		});
 			// Contents arrows
 		topics.forEach(topic => {
 			topic.classList.add('list__fold-button_folded');
 		});
 	} 
-	else if (foldContentsInput.value == 'hide') {
+	else if (foldInput.value == 'hide') {
 		topicsList.forEach(el => {
 			el.classList.remove('visually-hidden');
-			foldContentsInput.value = 'show';
+			foldInput.value = 'show';
 		});
 			// Contents arrows
 		topics.forEach(topic => {
@@ -41,7 +40,7 @@ function foldCOntents(event) {
 		});
 	}
 	// Eye icon change
-	foldContents.classList.toggle('fold_folded');
+	fold.classList.toggle('fold_folded');
 }
 
 // Fold/unfold each
