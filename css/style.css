@@ -279,17 +279,9 @@
 	margin-left: 1.5em;
 }
 
-/* Contents - emoji */
 .contents__topics a {
 	position: relative;
 	padding-left: 0.2em;
-}
-
-.contents__topics a::before {
-	position: absolute;
-	left: -1.5em;
-	display: inline-block;
-	width: 100%;
 }
 
 /* Main */
@@ -454,91 +446,134 @@ a:hover {
 	display: flex;
 }
 
-/* Emojis */
+
+/* Contents - emoji */
+.contents__topics a::before {
+	position: absolute;
+	left: -1.5em;
+	display: inline-block;
+	width: 100%;
+}
+
+.topic__heading a::after {
+	margin-left: 0.2em;
+}
+
+.topic__heading a[href="#roadmap"]::after {
+	content: '📅';
+}
 .contents__topics a[href="#roadmap"]::before {
 	content: '🗺️';
 }
+.topic__heading a[href="#manuals"]::after,
 .contents__topics a[href="#manuals"]::before {
 	content: '📖';
 }
+.topic__heading a[href="#reference"]::after,
 .contents__topics a[href="#reference"]::before {
 	content: '📒';
 }
+.topic__heading a[href="#resources"]::after,
 .contents__topics a[href="#resources"]::before {
 	content: '🧱';
 }
+.topic__heading a[href="#html"]::after,
 .contents__topics a[href="#html"]::before {
 	content: '📄';
 }
+.topic__heading a[href="#layout"]::after,
 .contents__topics a[href="#layout"]::before {
 	content: '📱';
 }
+.topic__heading a[href="#fonts"]::after,
 .contents__topics a[href="#fonts"]::before {
 	content: '🅱️';
 }
+.topic__heading a[href="#js"]::after,
 .contents__topics a[href="#js"]::before {
 	content: '🚀';
 }
+.topic__heading a[href="#backend"]::after,
 .contents__topics a[href="#backend"]::before {
 	content: '⚙️';
 }
+.topic__heading a[href="#soft"]::after,
 .contents__topics a[href="#soft"]::before {
 	content: '💻';
 }
+.topic__heading a[href="#tools"]::after,
 .contents__topics a[href="#tools"]::before {
 	content: '🛠️';
 }
+.topic__heading a[href="#qa"]::after,
 .contents__topics a[href="#qa"]::before {
 	content: '🔬';
 }
+.topic__heading a[href="#access"]::after,
 .contents__topics a[href="#access"]::before {
 	content: '😊';
 }
+.topic__heading a[href="#safe"]::after,
 .contents__topics a[href="#safe"]::before {
 	content: '🔒';
 }
+.topic__heading a[href="#speed"]::after,
 .contents__topics a[href="#speed"]::before {
 	content: '⏱️';
 }
+.topic__heading a[href="#git"]::after,
 .contents__topics a[href="#git"]::before {
 	content: '🐙';
 }
+.topic__heading a[href="#bem"]::after,
 .contents__topics a[href="#bem"]::before {
 	content: '🧰';
 }
+.topic__heading a[href="#build"]::after,
 .contents__topics a[href="#build"]::before {
 	content: '🏗️';
 }
+.topic__heading a[href="#auto"]::after,
 .contents__topics a[href="#auto"]::before {
 	content: '🤖';
 }
+.topic__heading a[href="#linters"]::after,
 .contents__topics a[href="#linters"]::before {
 	content: '☑️';
 }
+.topic__heading a[href="#news"]::after,
 .contents__topics a[href="#news"]::before {
 	content: '🔖';
 }
+.topic__heading a[href="#video"]::after,
 .contents__topics a[href="#video"]::before {
 	content: '📺';
 }
+.topic__heading a[href="#qna"]::after,
 .contents__topics a[href="#qna"]::before {
 	content: '🦉';
 }
+.topic__heading a[href="#work"]::after,
 .contents__topics a[href="#work"]::before {
 	content: '🗂️';
 }
+.topic__heading a[href="#seo"]::after,
 .contents__topics a[href="#seo"]::before {
 	content: '📈';
 }
+.topic__heading a[href="#design"]::after,
 .contents__topics a[href="#design"]::before {
 	content: '🤹';
 }
+.topic__heading a[href="#text"]::after,
 .contents__topics a[href="#text"]::before {
 	content: '📝';
 }
+.topic__heading a[href="#bad"]::after,
 .contents__topics a[href="#bad"]::before {
 	content: '💩';
 }
+.topic__heading a[href="#roadmap"]::after,
 .contents__topics_default {
 	list-style: disc;
 }
