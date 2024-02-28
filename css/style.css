@@ -27,7 +27,7 @@
 @supports (display:grid) {
 	.page {
 		display: grid;
-		grid-template-columns: 1fr minmax(auto, 12.6rem) minmax(auto, 50rem) minmax(auto, 12.6rem) 1fr;
+		grid-template-columns: 1fr 1fr minmax(auto, 50rem) minmax(auto, 12.6rem) 2fr;
 	}
 }
 
