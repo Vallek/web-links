@@ -261,13 +261,6 @@
 	line-height: 1.4;
 }
 
-/* .contents__link::before {
-	content: '> ';
-	transform: rotate(90deg);
-	display: inline-block;
-	margin-right: 0.3em;
-} */
-
 .list__fold-button_folded {
 	transform: rotate(-90deg);
 }
@@ -441,11 +434,6 @@ a:hover {
 	position: absolute;
 	left: 0;
 }
-
-.fold__title_show {
-	/* display: flex; */
-}
-
 
 /* Contents - emoji */
 .contents__topics a::before {
