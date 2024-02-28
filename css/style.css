@@ -150,9 +150,8 @@
 
 /* Contents */
 .contents {
-	box-sizing: border-box;
 	padding-left: 1.5em;
-	min-width: 20ch;
+	padding-right: 0.1em;
 	grid-column: 4 / 5;
 	grid-row: 2 / 3;
 	justify-self: left;
@@ -236,11 +235,16 @@
 	font-size: 1rem;	
 }
 
+.contents__title {
+	display: flex;
+	align-items: center;
+}
+
 .list__fold-button {
 	display: inline-block;
 	padding: 0;
-	width: 1em;
-	height: 1.7em;
+	width: 1.6em;
+	height: 2em;
 	vertical-align: super;
 	margin-right: 0.2em;
 	background-color: transparent;
@@ -272,7 +276,7 @@
 	list-style: none;
 	font-size: 0.9em;
 	padding-left: 1.9em;
-	margin-left: 11px;
+	margin-left: 1.5em;
 }
 
 /* Contents - emoji */
@@ -422,6 +426,16 @@ a:hover {
 	grid-row: 3 / 4;
 	padding: 1em 0;
 	text-align: center;
+}
+
+@media screen and (max-width: 76.25rem) {
+	.footer {
+		grid-row: 4 / 5;
+	}
+}
+
+.copyright {
+	font-size: 0.8em;
 }
 
 /* JS */

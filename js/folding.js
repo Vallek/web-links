@@ -45,7 +45,7 @@ function foldCOntents(event) {
 // Fold/unfold each
 function foldList(el) {
 	let thisItem = el.target.parentNode;
-	let thisLIst = thisItem.querySelector('.contents__topics');
+	let thisLIst = thisItem.parentNode.querySelector('.contents__topics');
 	let thisButton = thisItem.querySelector('.list__fold-button');
 	thisLIst.classList.toggle('visually-hidden');
 	thisButton.classList.toggle('list__fold-button_folded');
