@@ -62,10 +62,10 @@
 		<label class="contents__fold fold" for="fold-contents" aria-label="Кнопка, чтобы визуально свернуть и развернуть содержание">
 			<span class="fold__title">Развернуть</span>
 			<span class="fold__title fold__title_show">Свернуть</span>
-			<input class="fold__input visually-hidden" type="checkbox" name="fold-contents" id="fold-contents">
+			<input class="fold__input visually-hidden" value="show" type="checkbox" name="fold-contents" id="fold-contents">
 		</label>
 		<ol class="contents__list list">
-			<li><a class="contents__link" href="#begin">Начало</a>
+			<li><button class="list__fold-button" aria-label="Свернуть/развернуть список"></button><a class="contents__link" href="#begin">Начало</a>
 				<ol class="contents__topics">
 					<li><a href="#roadmap">Roadmaps</a></li>
 					<li><a href="#manuals">Учебники </a></li>
@@ -73,7 +73,7 @@
 					<li><a href="#resources">Ресурсы</a></li>
 				</ol>
 			</li>
-			<li><a class="contents__link" href="#base">Основы</a>
+			<li><button class="list__fold-button" aria-label="Свернуть/развернуть список"></button><a class="contents__link" href="#base">Основы</a>
 				<ol class="contents__topics">
 					<li><a href="#html">HTML</a></li>
 					<li><a href="#layout">CSS</a></li>
@@ -82,7 +82,7 @@
 					<li><a href="#backend">Бэкенд</a></li>
 				</ol>
 			</li>
-			<li><a class="contents__link" href="#test">Тестирование</a>
+			<li><button class="list__fold-button" aria-label="Свернуть/развернуть список"></button><a class="contents__link" href="#test">Тестирование</a>
 				<ol class="contents__topics">
 					<li><a href="#soft">Софт</a></li>
 					<li><a href="#tools">Инструменты</a></li>
@@ -92,7 +92,7 @@
 					<li><a href="#speed">Скорость</a></li>
 				</ol>
 			</li>
-			<li><a class="contents__link" href="#arch">Архитектура</a>
+			<li><button class="list__fold-button" aria-label="Свернуть/развернуть список"></button><a class="contents__link" href="#arch">Архитектура</a>
 				<ol class="contents__topics">
 					<li><a href="#git">Git</a></li>
 					<li><a href="#bem">БЭМ</a></li>
@@ -101,14 +101,14 @@
 					<li><a href="#linters">Линтеры</a></li>
 				</ol>
 			</li>
-			<li><a class="contents__link" href="#pulse">Быть в курсе</a>
+			<li><button class="list__fold-button" aria-label="Свернуть/развернуть список"></button><a class="contents__link" href="#pulse">Быть в курсе</a>
 				<ol class="contents__topics">
 					<li><a href="#news">Новости</a></li>
 					<li><a href="#video">Видео</a></li>
 					<li><a href="#qna">Ответы</a></li>
 				</ol>
 			</li>
-			<li><a class="contents__link" href="#other">Другое</a>
+			<li><button class="list__fold-button" aria-label="Свернуть/развернуть список"></button><a class="contents__link" href="#other">Другое</a>
 				<ol class="contents__topics">
 					<li><a href="#work">Работа</a></li>
 					<li><a href="#seo">SEO</a></li>
@@ -117,7 +117,7 @@
 					<li><a href="#bad">Плохие</a></li>
 				</ol>
 			</li>
-			<li><a class="contents__link" href="#advanced">Дальше</a>
+			<li><button class="list__fold-button" aria-label="Свернуть/развернуть список"></button><a class="contents__link" href="#advanced">Дальше</a>
 				<ol class="contents__topics contents__topics_default">
 					<li><a href="#csr">Фреймворки</a></li>
 					<li><a href="#ssr">SSR</a></li>
@@ -723,6 +723,7 @@
 	</main>
 	<footer class="footer">
 		<a href="mailto:vwebdis@gmail.com">Vallek</a> &copy; 2018—<span class="current-year">2024</span>
+		<p>Icons from <a href="https://fonts.google.com/icons">Goole Fonts</a> under <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache license</a></p>
 		<script>
 			document.querySelector(".current-year").textContent = new Date().getFullYear();
 		</script>

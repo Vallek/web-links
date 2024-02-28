@@ -236,6 +236,21 @@
 	font-size: 1rem;	
 }
 
+.list__fold-button {
+	display: inline-block;
+	padding: 0;
+	width: 1em;
+	height: 1.7em;
+	vertical-align: super;
+	margin-right: 0.2em;
+	background-color: transparent;
+	border: none;
+	background-image: url('../img/fold-arrow.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
 .contents__list a {
 	display: inline-block;
 	font-size: 1.1em;
@@ -249,8 +264,8 @@
 	margin-right: 0.3em;
 } */
 
-.list__link_folded:before {
-	transform: rotate(0deg);
+.list__fold-button_folded {
+	transform: rotate(90deg);
 }
 
 .contents__topics {
