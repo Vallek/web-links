@@ -23,7 +23,7 @@ function foldCOntents(event) {
 		});
 			// Contents arrows
 		topics.forEach(topic => {
-			topic.classList.remove('list__fold-button_folded');
+			topic.classList.add('list__fold-button_folded');
 		});
 	} 
 	else if (foldContentsInput.value == 'hide') {
@@ -33,7 +33,7 @@ function foldCOntents(event) {
 		});
 			// Contents arrows
 		topics.forEach(topic => {
-			topic.classList.add('list__fold-button_folded');
+			topic.classList.remove('list__fold-button_folded');
 		});
 	}
 	// Eye icon change
