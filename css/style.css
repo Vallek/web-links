@@ -225,7 +225,7 @@
 }
 
 .fold__title {
-	display: none;
+	display: flex;
 }
 
 .contents__list {
@@ -443,7 +443,7 @@ a:hover {
 }
 
 .fold__title_show {
-	display: flex;
+	/* display: flex; */
 }
 
 

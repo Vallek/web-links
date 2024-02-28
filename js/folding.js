@@ -1,8 +1,7 @@
 'use strict';
 
 const foldContents = document.querySelector('.contents__fold');
-const foldContentsTitle = document.querySelector('.fold__title');
-const foldedContentsTitle = document.querySelector('.fold__title.fold__title_show');
+
 const foldContentsInput = document.querySelector('#fold-contents');
 const topics = document.querySelectorAll('.list__fold-button');
 const listFoldButton  = document.querySelectorAll('.list__fold-button');
@@ -15,6 +14,11 @@ listFoldButton.forEach(el => {
 
 // Toggle all button
 function foldCOntents(event) {
+	// Change title
+	const unfoldContentsTitle = document.querySelector('.fold__title_show');
+	const foldContentsTitle = document.querySelector('.fold__title_hide');
+	unfoldContentsTitle.classList.toggle('visually-hidden');
+	foldContentsTitle.classList.toggle('visually-hidden');
 	// Fold and unfold lists
 	if (foldContentsInput.value == 'show') {
 		topicsList.forEach(el => {
@@ -38,8 +42,6 @@ function foldCOntents(event) {
 	}
 	// Eye icon change
 	foldContents.classList.toggle('fold_folded');
-	foldContentsTitle.classList.toggle('fold__title_show');
-	foldedContentsTitle.classList.toggle('fold__title_show');
 }
 
 // Fold/unfold each
