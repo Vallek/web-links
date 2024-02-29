@@ -258,6 +258,10 @@
 	background-position: center;
 }
 
+.dark .list__fold-button {
+	filter: invert(1);
+}
+
 .contents__list a {
 	display: inline-block;
 	font-size: 1.1em;
