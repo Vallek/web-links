@@ -54,23 +54,23 @@ function foldListAll(el) {
 
 // Fold list for css transition with height detection
 function foldList(el, status) {
-	if (el.style.height === "0px" ||
+	if (el.style.height === '0px' ||
 		status === 'show') {
 		el.style.height = el.scrollHeight + 'px';
 	} else {
 		el.style.height = el.scrollHeight + 'px';
-		window.getComputedStyle(el, null).getPropertyValue("height");
-		el.style.height = "0";
+		window.getComputedStyle(el, null).getPropertyValue('height');
+		el.style.height = '0';
 	}
-	if (el.style.height === "auto" ||
+	if (el.style.height === 'auto' ||
 	status === 'hide') {
 		el.style.height = el.scrollHeight + 'px';
-		window.getComputedStyle(el, null).getPropertyValue("height");
-		el.style.height = "0";
+		window.getComputedStyle(el, null).getPropertyValue('height');
+		el.style.height = '0';
 	}
-	el.addEventListener("transitionend", () => {
-		if (el.style.height !== "0px") {
-				el.style.height = "auto";
+	el.addEventListener('transitionend', () => {
+		if (el.style.height !== '0px') {
+				el.style.height = 'auto';
 		}
 	});
 }
