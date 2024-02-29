@@ -1,5 +1,6 @@
 /* Page */
 .page {
+	--z-index: 0;
 	--back-color: #ffffff;
 	--prime-color: initial;
 	--second-color: initial;
@@ -181,9 +182,13 @@
 }
 
 .contents__heading {
+	position: relative;
+	z-index: 10;
+	background-color: var(--back-color);
 	font-size: 1.3em;
 	margin-top: 0;
-	margin-bottom: 0.4em;
+	margin-bottom: 0;
+	padding-bottom: 0.4em;
 }
 
 .contents__heading-link {
@@ -202,12 +207,15 @@
 }
 
 .contents__fold {
+	position: relative;
+	z-index: 10;
 	display: flex;
 	align-items: center;
-	margin-bottom: 0.4em;
+	padding-bottom: 0.4em;
 	font-size: 0.9em;
 	cursor: pointer;
 	user-select: none;
+	background-color: var(--back-color);
 }
 
 .contents__fold::before {
@@ -239,8 +247,11 @@
 }
 
 .contents__title {
+	position: relative;
+	z-index: 10;
 	display: flex;
 	align-items: center;
+	background-color: var(--back-color);
 }
 
 .list__fold-button {
@@ -277,6 +288,9 @@
 	font-size: 0.9em;
 	padding-left: 1.9em;
 	margin-left: 1.3em;
+	background-color: var(--back-color);
+	overflow: hidden;
+	transition: height 0.4s ease;
 }
 
 .contents__topics a {
