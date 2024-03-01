@@ -347,12 +347,14 @@
 }
 
 /* Parts */
-.part:first-of-type {
-	padding-top: 1.5em;
+.part {
+	background-color: var(--back-color);
+	position: relative;
+	z-index: 1;
 }
 
-.part__content {
-	background-color: var(--back-color);
+.part:first-of-type {
+	padding-top: 1.5em;
 }
 
 .part__heading {
@@ -363,8 +365,15 @@
 	padding: 0 2vw;
 	margin-top: 0;
 	margin-bottom: 1.5em;
+	background-color: var(--back-color);
 	scroll-margin-top: 1em;
 	scroll-snap-margin-top: 1em;
+}
+
+.part__content {
+	background-color: var(--back-color);
+	overflow: hidden;
+	transition: height 0.5s ease;
 }
 
 /* Sections */
