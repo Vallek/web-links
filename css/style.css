@@ -337,10 +337,18 @@
 }
 
 .settings__theme_dark,
-.settings__fold_folded,
 .settings__anim_on {
 	background-image: url('../img/toggle_on.svg');
 }
+
+.settings__fold {
+	background-image: url('../img/toggle_on.svg');
+}
+
+.settings__fold_folded {
+	background-image: url('../img/toggle_off.svg');
+}
+
 
 .settings__button::before {
 	display: inline-block;
