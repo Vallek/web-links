@@ -102,13 +102,13 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .locales {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
-	margin-bottom: 1em;
 }
 
 .locales::after {
@@ -247,6 +247,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	cursor: pointer;
 }
 
 .dark .list__fold-button {
