@@ -7,7 +7,7 @@
 	--accent-color: #000000;
 	--accent-color-2: #84cffa80;
 	display: grid;
-	grid-template-columns: 1fr 1fr minmax(auto, 50rem) minmax(auto, 12.6rem) 2fr;
+	grid-template-columns: 1fr auto minmax(auto, 50rem) minmax(auto, 12.6rem) 2fr;
 	color: var(--prime-color, revert);
 	background-color: var(--back-color);
 	position: relative;
@@ -16,6 +16,7 @@
 	padding: 0 1vw;
 	padding-bottom: 2em;
 	font-family: sans-serif;
+	transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 @media screen and (max-width: 76.25rem) {
@@ -132,22 +133,8 @@
 	order: 3;
 }
 
-.theme {
-	margin-bottom: 0;
-}
-
-.themes__link_light {
-	margin-right: 0.5em;
-}
-
-.themes__link_light::before {
-	content: '☀️ ';
-	display: inline-block;
-}
-
-.themes__link_dark::before {
-	content: '🌘 ';
-	display: inline-block;
+.themes {
+	/* margin-right: 1.5em; */
 }
 
 /* Contents */
@@ -180,7 +167,6 @@
 .contents__heading {
 	position: relative;
 	z-index: 10;
-	background-color: var(--back-color);
 	font-size: 1.3em;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -211,7 +197,6 @@
 	font-size: 0.9em;
 	cursor: pointer;
 	user-select: none;
-	background-color: var(--back-color);
 }
 
 .contents__fold::before {
@@ -247,7 +232,6 @@
 	z-index: 10;
 	display: flex;
 	align-items: center;
-	background-color: var(--back-color);
 }
 
 .list__fold-button {
@@ -284,7 +268,6 @@
 	font-size: 0.9em;
 	padding-left: 1.9em;
 	margin-left: 1.3em;
-	background-color: var(--back-color);
 	overflow: hidden;
 	transition: height 0.3s ease;
 }
@@ -297,7 +280,7 @@
 /* Settings */
 .settings {
 	position: sticky;
-	top: 1em;
+	top: 2em;
 	overflow: auto;
 	box-sizing: border-box;
 	grid-column: 2 / 3;
@@ -307,6 +290,7 @@
 	align-items: flex-end;
 	max-width: 100%;
 	width: 100%;
+	padding-top: 4em;
 	padding-left: 0.1em;
 	padding-right: 1.5em;
 	justify-self: left;
@@ -317,20 +301,63 @@
 	.settings {
 		position: static;
 		grid-column: 3 / 4;
-		padding: 2em 0 0 2em;
+		justify-self: end;
+		padding: 2em 2em 0 2em;
 		width: auto;
 		height: unset;
 	}
 }
 
 .settings__heading {
+	color: #e1b816;
 	font-weight: normal;
 	font-size: 1.3em;
 	line-height: 1.2;
-	background-color: var(--back-color);
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-bottom: 0.4em;
+}
+
+.settings__button {
+	position: relative;
+	width: 3.7em;
+	height: 1.7em;
+	border: none;
+	margin: 0.5em 0;
+	padding: 0;
+	background-image: url('../img/toggle_off.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-color: transparent;
+	box-sizing: content-box;
+}
+
+.settings__theme_dark,
+.settings__fold_folded,
+.settings__anim_on {
+	background-image: url('../img/toggle_on.svg');
+}
+
+.settings__button::before {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(-100%, -57%);
+	font-size: 1.5em;
+	padding-right: 0.2em;
+}
+
+.settings__theme::before {
+	content: '🌗';
+}
+
+.settings__fold::before {
+	content: '↕️';
+}
+
+.settings__anim::before {
+	content: '🎞️';
 }
 
 /* Main */

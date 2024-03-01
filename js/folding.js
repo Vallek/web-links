@@ -95,6 +95,7 @@ foldSwitch.addEventListener('click', () => {
 			foldList(partContent, 'hide');
 			partContent.classList.add('visually-hidden');
 			foldSwitch.value = 'hide';
+			foldSwitch.classList.add('settings__fold_folded');
 		});
 	}
 	else {
@@ -103,6 +104,7 @@ foldSwitch.addEventListener('click', () => {
 			foldList(partContent, 'show');
 			partContent.classList.remove('visually-hidden');
 			foldSwitch.value = 'show';
+			foldSwitch.classList.remove('settings__fold_folded');
 		});
 	}
 });

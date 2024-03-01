@@ -25,7 +25,7 @@
 		gtag('config', 'G-NK4QX9CK3G');
 	</script>
 </head>
-<body class="page">
+<body class="page no-animation">
 	<script>
 		const thisPage = document.querySelector('.page');
 		// Check if user set dark theme before
@@ -49,9 +49,10 @@
 				<a class="locales__lang locales__lang_en" href="https://vallek.github.io/web-links/en/index.html">EN</a>
 			</section>
 			<section class="themes">
-				<h2 class="themes__text visually-hidden">Выбор темы</h2>
-				<a class="themes__link themes__link_light" href="#">Светлая</a>
-				<a class="themes__link themes__link_dark" href="#">Темная</a>
+				<h2 class="themes__text visually-hidden">Выбор светлой или темной темы</h2>
+				<button class="settings__button settings__theme">
+					<span class="settings__label visually-hidden">Светлая/темная тема</span>
+				</button>
 			</section>
 		</div>
 	</header>
@@ -156,9 +157,15 @@
 	</aside>
 	<aside class="settings">
 		<h2 class="settings__heading">настройки</h2>
-		<button class="settings__theme">Переключение тем</button>
-		<button class="settings__fold" value="show">Свернуть разделы</button>
-		<button class="settings__anim">Вкл/выкл все анимации</button>
+		<button class="settings__button settings__theme settings__theme_dark">
+			<span class="settings__label visually-hidden">Переключение тем</span>
+		</button>
+		<button class="settings__button settings__fold" value="show">
+			<span class="settings__label visually-hidden">Свернуть/развернуть разделы</span>
+		</button>
+		<button class="settings__button settings__anim settings__anim_on">
+			<span class="settings__label visually-hidden">Включить/выключить анимации</span>
+		</button>
 	</aside>
 	<main class="main shadow-box">
 		<section class="part main__part">
