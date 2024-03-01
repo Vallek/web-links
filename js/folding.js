@@ -54,8 +54,7 @@ function foldListAll(el) {
 
 // Fold list for css transition with height detection
 function foldList(el, status) {
-	if (el !== null &&
-		el.style.height === '0px' ||
+	if (el.style.height === '0px' ||
 		status === 'show') {
 		el.style.height = el.scrollHeight + 'px';
 	} else {
@@ -90,11 +89,20 @@ partHeadings.forEach((el) => {
 // Fold main sections toggle
 const foldSwitch = document.querySelector('.settings__fold');
 foldSwitch.addEventListener('click', () => {
-	partHeadings.forEach((el) => {
-		let partContent = el.parentElement.querySelector('.part__content');
-		if (partContent !== null) {
-			foldList(partContent);
-			partContent.classList.toggle('visually-hidden');
-		}
-	});
+	if (foldSwitch.value === 'show') {
+		partHeadings.forEach((el) => {
+			let partContent = el.parentElement.querySelector('.part__content');
+			foldList(partContent, 'hide');
+			partContent.classList.add('visually-hidden');
+			foldSwitch.value = 'hide';
+		});
+	}
+	else {
+		partHeadings.forEach((el) => {
+			let partContent = el.parentElement.querySelector('.part__content');
+			foldList(partContent, 'show');
+			partContent.classList.remove('visually-hidden');
+			foldSwitch.value = 'show';
+		});
+	}
 });
