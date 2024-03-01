@@ -316,21 +316,23 @@
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-bottom: 0.4em;
+	user-select: none;
 }
 
 .settings__button {
 	position: relative;
-	width: 3.7em;
-	height: 1.7em;
+	width: 60px;
+	height: 22px;
 	border: none;
-	margin: 0.5em 0;
-	padding: 0;
+	margin: 0.3em 0;
+	padding: 1.4em;
 	background-image: url('../img/toggle_off.svg');
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 100% auto;
 	background-position: center;
 	background-color: transparent;
-	box-sizing: content-box;
+	box-sizing: border-box;
+	cursor: pointer;
 }
 
 .settings__theme_dark,
@@ -340,12 +342,16 @@
 }
 
 .settings__button::before {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	line-height: 1;
 	position: absolute;
 	left: 0;
 	top: 50%;
-	transform: translate(-100%, -57%);
+	transform: translate(-100%, -53%);
 	font-size: 1.5em;
-	padding-right: 0.2em;
+	padding-right: 0.5em;
 }
 
 .settings__theme::before {

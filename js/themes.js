@@ -52,6 +52,11 @@ animSwitch.addEventListener('click', (button) => {
 	topicsList.forEach((el) => {
 		el.classList.toggle('no-animation');
 	});
+	// Sections animation
+	const partWrapper = document.querySelectorAll('.part__content');
+	partWrapper.forEach((el) => {
+		el.classList.toggle('no-animation');
+	});
 	// Theme animation switch
 	page.classList.toggle('no-animation');
 });
