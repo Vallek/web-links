@@ -82,7 +82,6 @@ partHeadings.forEach((el) => {
 	el.addEventListener('click', () => {
 		let partContent = el.parentElement.querySelector('.part__content');
 		foldList(partContent);
-		partContent.classList.toggle('visually-hidden');
 	});
 });
 
@@ -93,7 +92,7 @@ foldSwitch.addEventListener('click', () => {
 		partHeadings.forEach((el) => {
 			let partContent = el.parentElement.querySelector('.part__content');
 			foldList(partContent, 'hide');
-			partContent.classList.add('visually-hidden');
+			// partContent.classList.add('visually-hidden');
 			foldSwitch.value = 'hide';
 			foldSwitch.classList.add('settings__fold_folded');
 		});
@@ -102,7 +101,7 @@ foldSwitch.addEventListener('click', () => {
 		partHeadings.forEach((el) => {
 			let partContent = el.parentElement.querySelector('.part__content');
 			foldList(partContent, 'show');
-			partContent.classList.remove('visually-hidden');
+			// partContent.classList.remove('visually-hidden');
 			foldSwitch.value = 'show';
 			foldSwitch.classList.remove('settings__fold_folded');
 		});
