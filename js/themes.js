@@ -28,25 +28,21 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 	const newColorScheme = event.matches ? 'dark' : 'light';
 	if (newColorScheme == 'dark') {
 		page.classList.add('dark');
-		themeSwitchTop.classList.add('toggle__theme_dark');
-		themeSwitchSide.classList.add('toggle__theme_dark');
+		themeSwitch('dark');
 	}
 	if (newColorScheme == 'light') {
 		page.classList.remove('dark');
-		themeSwitchTop.classList.remove('toggle__theme_dark');
-		themeSwitchSide.classList.remove('toggle__theme_dark');
+		themeSwitch('light');
 	} 
 });
 
 // Theme switch sync
 if (localStorage.getItem('weblinks-theme') == 'dark') {
-	themeSwitchTop.classList.add('toggle__theme_dark');
-	themeSwitchSide.classList.add('toggle__theme_dark');
+	themeSwitch('dark');
 }
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-	themeSwitchTop.classList.add('toggle__theme_dark');
-	themeSwitchSide.classList.add('toggle__theme_dark');
+	themeSwitch('dark');
 }
 
 themeSwitchTop.addEventListener('click', (el) => {
