@@ -10,13 +10,12 @@ window.addEventListener('load', () => {
 	page.classList.remove('no-animation');
 });
 
+// Switch state function
 function themeSwitch(state) {
-	// Enable dark theme function
 	if (state === 'dark') {
 		themeSwitchTop.classList.add('toggle__theme_dark');
 		themeSwitchSide.classList.add('toggle__theme_dark');
 	} 
-	// Enable light theme function
 	else if (state === 'light') {
 		themeSwitchTop.classList.remove('toggle__theme_dark');
 		themeSwitchSide.classList.remove('toggle__theme_dark');
