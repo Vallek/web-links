@@ -25,7 +25,7 @@
 	}
 }
 
-@media not (prefers-reduced-motion) {
+@media not (prefers-reduced-motion: reduce) {
 	:root {
 		scroll-behavior: smooth;
 	}
@@ -239,7 +239,6 @@
 	padding: 0;
 	width: 1.6em;
 	height: 2em;
-	vertical-align: super;
 	margin-right: 0.2em;
 	background-color: transparent;
 	border: none;

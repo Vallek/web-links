@@ -9,7 +9,7 @@ const animSwitch = document.querySelector('.settings__anim');
 window.addEventListener('load', () => {
 	if (!localStorage.getItem('weblinks-animation') ||
 	localStorage.getItem('weblinks-animation') === 'on') {
-		page.classList.remove('no-animation'); // anim ON
+		page.classList.remove('no-animation');
 	} else {
 		page.classList.add('no-animation');
 	}
@@ -99,6 +99,12 @@ function animToggle() {
 	// Theme animation switch
 	page.classList.toggle('no-animation');
 }
+
+if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+	animToggle();
+	animSwitch.classList.remove('settings__anim_on');
+	localStorage.setItem('weblinks-animation', 'off');
+} 
 
 // Check animation setting on start
 if (localStorage.getItem('weblinks-animation') === 'off') {
