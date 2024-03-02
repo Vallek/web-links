@@ -15,14 +15,14 @@ function switchTheme(state) {
 	if (state === 'dark') {
 		page.classList.add('dark');
 		localStorage.setItem('weblinks-theme', 'dark');
-		// Togle style state function
+		// Toggle style state
 		toggleSwitchTop.classList.add('toggle__theme_dark');
 		toggleSwitchSide.classList.add('toggle__theme_dark');
 	} 
 	else if (state === 'light') {
 		page.classList.remove('dark');
 		localStorage.setItem('weblinks-theme', 'light');
-		// Togle style state function
+		// Toggle style state
 		toggleSwitchTop.classList.remove('toggle__theme_dark');
 		toggleSwitchSide.classList.remove('toggle__theme_dark');
 	}
