@@ -1,7 +1,8 @@
 'use strict';
 
 const page = document.querySelector('.page');
-const themeSwitch = document.querySelector('.settings__theme');
+const themeSwitchTop = document.querySelector('.toggle__theme');
+const themeSwitchSide = document.querySelector('.settings__theme');
 const animSwitch = document.querySelector('.settings__anim');
 
 // No theme transition on start
@@ -9,34 +10,59 @@ window.addEventListener('load', () => {
 	page.classList.remove('no-animation');
 });
 
+// Enable dark theme
+function themeSwitchDark() {
+	themeSwitchTop.classList.add('toggle__theme_dark');
+	themeSwitchSide.classList.add('toggle__theme_dark');
+}
+// Enable light theme
+function themeSwitchLight() {
+	themeSwitchTop.classList.remove('toggle__theme_dark');
+	themeSwitchSide.classList.remove('toggle__theme_dark');
+}
+
 // Check theme preference switch real time
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
 	const newColorScheme = event.matches ? 'dark' : 'light';
 	if (newColorScheme == 'dark') {
 		page.classList.add('dark');
-		themeSwitch.classList.add('settings__theme_dark');
+		themeSwitchTop.classList.add('toggle__theme_dark');
+		themeSwitchSide.classList.add('toggle__theme_dark');
 	}
 	if (newColorScheme == 'light') {
 		page.classList.remove('dark');
-		themeSwitch.classList.remove('settings__theme_dark');
+		themeSwitchTop.classList.remove('toggle__theme_dark');
+		themeSwitchSide.classList.remove('toggle__theme_dark');
 	} 
 });
 
 // Theme switch
 if (localStorage.getItem('weblinks-theme') == 'dark') {
-	themeSwitch.classList.add('settings__theme_dark');
+	themeSwitchTop.classList.add('toggle__theme_dark');
+	themeSwitchSide.classList.add('toggle__theme_dark');
 }
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-	themeSwitch.classList.add('settings__theme_dark');
+	themeSwitchTop.classList.add('toggle__theme_dark');
+	themeSwitchSide.classList.add('toggle__theme_dark');
 }
-themeSwitch.addEventListener('click', (el) => {
+themeSwitchTop.addEventListener('click', (el) => {
 	page.classList.toggle('dark');
 	if (localStorage.getItem('weblinks-theme') == 'dark') {
 		localStorage.setItem('weblinks-theme', 'light');
-		el.target.classList.remove('settings__theme_dark');
+		themeSwitchLight();
 	} else if (localStorage.getItem('weblinks-theme') == 'light') {
 		localStorage.setItem('weblinks-theme', 'dark');
-		el.target.classList.add('settings__theme_dark');
+		themeSwitchDark();
+	}
+});
+themeSwitchSide.addEventListener('click', (el) => {
+	page.classList.toggle('dark');
+	if (localStorage.getItem('weblinks-theme') == 'dark') {
+		localStorage.setItem('weblinks-theme', 'light');
+		themeSwitchLight();
+	} else if (localStorage.getItem('weblinks-theme') == 'light') {
+		localStorage.setItem('weblinks-theme', 'dark');
+		themeSwitchDark();
 	}
 });
 

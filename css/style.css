@@ -320,7 +320,7 @@
 	user-select: none;
 }
 
-.settings__button {
+.toggle__button {
 	position: relative;
 	width: 60px;
 	height: 22px;
@@ -336,7 +336,7 @@
 	cursor: pointer;
 }
 
-.settings__theme_dark,
+.toggle__theme_dark,
 .settings__anim_on {
 	background-image: url('../img/toggle_on.svg');
 }
@@ -350,7 +350,7 @@
 }
 
 
-.settings__button::before {
+.toggle__button::before {
 	display: inline-block;
 	width: 1em;
 	height: 1em;
@@ -363,7 +363,7 @@
 	padding-right: 0.5em;
 }
 
-.settings__theme::before {
+.toggle__theme::before {
 	content: '🌗';
 }
 
