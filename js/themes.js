@@ -1,8 +1,8 @@
 'use strict';
 
 const page = document.querySelector('.page');
-const themeSwitchTop = document.querySelector('.toggle__theme');
-const themeSwitchSide = document.querySelector('.settings__theme');
+const toggleSwitchTop = document.querySelector('.toggle__theme');
+const toggleSwitchSide = document.querySelector('.settings__theme');
 const animSwitch = document.querySelector('.settings__anim');
 
 // No theme transition on start
@@ -10,60 +10,62 @@ window.addEventListener('load', () => {
 	page.classList.remove('no-animation');
 });
 
-// Switch state function
-function themeSwitch(state) {
+// Switch theme function
+function switchTheme(state) {
 	if (state === 'dark') {
-		themeSwitchTop.classList.add('toggle__theme_dark');
-		themeSwitchSide.classList.add('toggle__theme_dark');
+		page.classList.add('dark');
+		localStorage.setItem('weblinks-theme', 'dark');
+		// Togle style state function
+		toggleSwitchTop.classList.add('toggle__theme_dark');
+		toggleSwitchSide.classList.add('toggle__theme_dark');
 	} 
 	else if (state === 'light') {
-		themeSwitchTop.classList.remove('toggle__theme_dark');
-		themeSwitchSide.classList.remove('toggle__theme_dark');
+		page.classList.remove('dark');
+		localStorage.setItem('weblinks-theme', 'light');
+		// Togle style state function
+		toggleSwitchTop.classList.remove('toggle__theme_dark');
+		toggleSwitchSide.classList.remove('toggle__theme_dark');
 	}
 }
 
-// Check theme preference switch real time
+// Sync last user choice
+if (localStorage.getItem('weblinks-theme') === 'dark') {
+	switchTheme('dark');
+} 
+// else if (localStorage.getItem('weblinks-theme') === 'light') {
+// 	switchTheme('light');
+// }
+// Sync os setting
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	switchTheme('dark');
+} 
+// else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+// 	switchTheme('light');
+// }
+
+// Check theme switch real time
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
 	const newColorScheme = event.matches ? 'dark' : 'light';
-	if (newColorScheme == 'dark') {
-		page.classList.add('dark');
-		themeSwitch('dark');
+	if (newColorScheme === 'dark') {
+		switchTheme('dark');
 	}
-	if (newColorScheme == 'light') {
-		page.classList.remove('dark');
-		themeSwitch('light');
+	if (newColorScheme === 'light') {
+		switchTheme('light');
 	} 
 });
 
-// Theme switch sync
-if (localStorage.getItem('weblinks-theme') == 'dark') {
-	themeSwitch('dark');
-}
-
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-	themeSwitch('dark');
-}
-
-themeSwitchTop.addEventListener('click', (el) => {
-	page.classList.toggle('dark');
-	if (localStorage.getItem('weblinks-theme') == 'dark') {
-		localStorage.setItem('weblinks-theme', 'light');
-		themeSwitch('light');
-	} else if (localStorage.getItem('weblinks-theme') == 'light') {
-		localStorage.setItem('weblinks-theme', 'dark');
-		themeSwitch('dark');
-	}
-});
-
-themeSwitchSide.addEventListener('click', (el) => {
-	page.classList.toggle('dark');
-	if (localStorage.getItem('weblinks-theme') == 'dark') {
-		localStorage.setItem('weblinks-theme', 'light');
-		themeSwitch('light');
-	} else if (localStorage.getItem('weblinks-theme') == 'light') {
-		localStorage.setItem('weblinks-theme', 'dark');
-		themeSwitch('dark');
-	}
+// Theme toggle
+let toggles = [toggleSwitchTop, toggleSwitchSide];
+toggles.forEach((el) => {
+	el.addEventListener('click', () => {
+		if (localStorage.getItem('weblinks-theme') === 'dark') {
+			switchTheme('light');
+		} else if (localStorage.getItem('weblinks-theme') === 'light') {
+			switchTheme('dark');
+		} else if (toggleSwitchTop.classList.contains === 'toggle__theme_dark') {
+			switchTheme('light');
+		}
+	});
 });
 
 // Animation toggle
@@ -72,7 +74,7 @@ animSwitch.addEventListener('click', (button) => {
 	// Scroll animation swich
 	let root = document.documentElement;
 	let rootScroll = window.getComputedStyle(root).getPropertyValue('scroll-behavior');
-	rootScroll == 'smooth' ? root.style.scrollBehavior = 'auto' : root.style.scrollBehavior = 'smooth';
+	rootScroll === 'smooth' ? root.style.scrollBehavior = 'auto' : root.style.scrollBehavior = 'smooth';
 	// Contents animation swich
 	const topicsList = document.querySelectorAll('.contents__topics');
 	topicsList.forEach((el) => {
