@@ -6,7 +6,7 @@ const toggleSwitchSide = document.querySelector('.settings__theme');
 const animSwitch = document.querySelector('.settings__anim');
 
 // No theme transition on start
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
 	page.classList.remove('no-animation');
 });
 
