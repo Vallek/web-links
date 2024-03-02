@@ -281,7 +281,7 @@
 /* Settings */
 .settings {
 	position: sticky;
-	top: 2em;
+	top: 4.2em;
 	overflow: auto;
 	box-sizing: border-box;
 	grid-column: 2 / 3;
@@ -291,7 +291,7 @@
 	align-items: flex-end;
 	max-width: 100%;
 	width: 100%;
-	padding-top: 4em;
+	margin-top: 4.2em;
 	padding-left: 0.1em;
 	padding-right: 1.5em;
 	justify-self: left;
@@ -303,6 +303,7 @@
 		position: static;
 		grid-column: 3 / 4;
 		justify-self: end;
+		margin-top: 0;
 		padding: 2em 2em 0 2em;
 		width: auto;
 		height: unset;
@@ -334,6 +335,10 @@
 	background-color: transparent;
 	box-sizing: border-box;
 	cursor: pointer;
+}
+
+.settings__button {
+	margin: 1.1em 0;
 }
 
 .toggle__theme_dark,
@@ -375,6 +380,17 @@
 	content: '🎞️';
 }
 
+.settings__label {
+	font-size: 1.2em;
+	color: white;
+	position: absolute;
+	width: max-content;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -100%);
+
+}
+
 /* Main */
 .main {
 	width: 100%;
@@ -390,7 +406,6 @@
 
 /* Parts */
 .part {
-	background-color: var(--back-color);
 	position: relative;
 	z-index: 1;
 }
@@ -410,6 +425,8 @@
 	background-color: var(--back-color);
 	scroll-margin-top: 1em;
 	scroll-snap-margin-top: 1em;
+	cursor: pointer;
+	user-select: none;
 }
 
 .part__content {
