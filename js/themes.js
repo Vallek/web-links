@@ -10,15 +10,17 @@ window.addEventListener('load', () => {
 	page.classList.remove('no-animation');
 });
 
-// Enable dark theme
-function themeSwitchDark() {
-	themeSwitchTop.classList.add('toggle__theme_dark');
-	themeSwitchSide.classList.add('toggle__theme_dark');
-}
-// Enable light theme
-function themeSwitchLight() {
-	themeSwitchTop.classList.remove('toggle__theme_dark');
-	themeSwitchSide.classList.remove('toggle__theme_dark');
+function themeSwitch(state) {
+	// Enable dark theme function
+	if (state === 'dark') {
+		themeSwitchTop.classList.add('toggle__theme_dark');
+		themeSwitchSide.classList.add('toggle__theme_dark');
+	} 
+	// Enable light theme function
+	else if (state === 'light') {
+		themeSwitchTop.classList.remove('toggle__theme_dark');
+		themeSwitchSide.classList.remove('toggle__theme_dark');
+	}
 }
 
 // Check theme preference switch real time
@@ -36,33 +38,36 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 	} 
 });
 
-// Theme switch
+// Theme switch sync
 if (localStorage.getItem('weblinks-theme') == 'dark') {
 	themeSwitchTop.classList.add('toggle__theme_dark');
 	themeSwitchSide.classList.add('toggle__theme_dark');
 }
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 	themeSwitchTop.classList.add('toggle__theme_dark');
 	themeSwitchSide.classList.add('toggle__theme_dark');
 }
+
 themeSwitchTop.addEventListener('click', (el) => {
 	page.classList.toggle('dark');
 	if (localStorage.getItem('weblinks-theme') == 'dark') {
 		localStorage.setItem('weblinks-theme', 'light');
-		themeSwitchLight();
+		themeSwitch('light');
 	} else if (localStorage.getItem('weblinks-theme') == 'light') {
 		localStorage.setItem('weblinks-theme', 'dark');
-		themeSwitchDark();
+		themeSwitch('dark');
 	}
 });
+
 themeSwitchSide.addEventListener('click', (el) => {
 	page.classList.toggle('dark');
 	if (localStorage.getItem('weblinks-theme') == 'dark') {
 		localStorage.setItem('weblinks-theme', 'light');
-		themeSwitchLight();
+		themeSwitch('light');
 	} else if (localStorage.getItem('weblinks-theme') == 'light') {
 		localStorage.setItem('weblinks-theme', 'dark');
-		themeSwitchDark();
+		themeSwitch('dark');
 	}
 });
 
