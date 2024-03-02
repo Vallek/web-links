@@ -61,26 +61,22 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 
 // Theme toggles
 toggleSwitchTop.addEventListener('click', () => {
-	if (!localStorage.getItem('weblinks-theme')) {
+	if (!localStorage.getItem('weblinks-theme') || 
+	localStorage.getItem('weblinks-theme') === 'light') {
 		switchTheme('dark');
-	} else if (localStorage.getItem('weblinks-theme') === 'dark') {
+	} else if (localStorage.getItem('weblinks-theme') === 'dark' || 
+	toggleSwitchTop.classList.contains === 'toggle__theme_dark') {
 		switchTheme('light');
-	} else if (localStorage.getItem('weblinks-theme') === 'light') {
-		switchTheme('dark');
-	} else if (toggleSwitchTop.classList.contains === 'toggle__theme_dark') {
-		switchTheme('light'); 
 	}
 });
 
 toggleSwitchSide.addEventListener('click', () => {
-	if (!localStorage.getItem('weblinks-theme')) {
+	if (!localStorage.getItem('weblinks-theme') || 
+	localStorage.getItem('weblinks-theme') === 'light') {
 		switchTheme('dark');
-	} else if (localStorage.getItem('weblinks-theme') === 'dark') {
+	} else if (localStorage.getItem('weblinks-theme') === 'dark' || 
+	toggleSwitchTop.classList.contains === 'toggle__theme_dark') {
 		switchTheme('light');
-	} else if (localStorage.getItem('weblinks-theme') === 'light') {
-		switchTheme('dark');
-	} else if (toggleSwitchTop.classList.contains === 'toggle__theme_dark') {
-		switchTheme('light'); 
 	}
 });
 

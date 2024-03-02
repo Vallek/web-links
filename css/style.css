@@ -369,7 +369,7 @@
 	position: absolute;
 	left: 0;
 	top: 50%;
-	transform: translate(-100%, -53%);
+	transform: translate(-100%, -50%);
 	font-size: 1.5em;
 	padding-right: 0.5em;
 }
@@ -398,7 +398,8 @@
 .themes__label {
 	padding-right: 2.4em;
 	left: 0;
-	transform: translate(-100%, 35%);
+	top: 50%;
+	transform: translate(-100%, -50%);
 }
 
 /* Main */
