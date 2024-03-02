@@ -6,8 +6,13 @@ const toggleSwitchSide = document.querySelector('.settings__theme');
 const animSwitch = document.querySelector('.settings__anim');
 
 // No theme transition on start
-window.addEventListener('DOMContentLoaded', () => {
-	page.classList.remove('no-animation');
+window.addEventListener('load', () => {
+	if (!localStorage.getItem('weblinks-animation') ||
+	localStorage.getItem('weblinks-animation') === 'on') {
+		page.classList.remove('no-animation'); // anim ON
+	} else {
+		page.classList.add('no-animation');
+	}
 });
 
 // Switch theme function
@@ -109,10 +114,12 @@ if (localStorage.getItem('weblinks-animation') === 'off') {
 // Animation toggle
 animSwitch.addEventListener('click', (button) => {
 	button.target.classList.toggle('settings__anim_on');
+	animToggle();
 	if (localStorage.getItem('weblinks-animation') === 'on') {
 		localStorage.setItem('weblinks-animation', 'off');
-	} else {
+	} else if (localStorage.getItem('weblinks-animation') === 'off') {
 		localStorage.setItem('weblinks-animation', 'on');
+	} else {
+		localStorage.setItem('weblinks-animation', 'off');
 	}
-	animToggle();
 });
