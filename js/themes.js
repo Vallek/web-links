@@ -79,6 +79,7 @@ toggleSwitchSide.addEventListener('click', () => {
 	}
 });
 
+// Switch animation function
 function animToggle() {
 	// Scroll animation swich
 	let root = document.documentElement;
@@ -98,6 +99,7 @@ function animToggle() {
 	page.classList.toggle('no-animation');
 }
 
+// Check animation setting on start
 if (localStorage.getItem('weblinks-animation') === 'off') {
 	animToggle();
 	animSwitch.classList.remove('settings__anim_on');
