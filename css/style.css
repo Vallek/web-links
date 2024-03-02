@@ -332,7 +332,7 @@
 	color: var(--prime-color);
 	background-image: url('../img/toggle_off.svg');
 	background-repeat: no-repeat;
-	background-size: 100% 130%;
+	background-size: 100% 120%;
 	background-position: center;
 	background-color: transparent;
 	cursor: pointer;
