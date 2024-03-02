@@ -54,23 +54,32 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 	} 
 });
 
-// Theme toggle
-let toggles = [toggleSwitchTop, toggleSwitchSide];
-toggles.forEach((el) => {
-	el.addEventListener('click', () => {
-		if (localStorage.getItem('weblinks-theme') === 'dark') {
-			switchTheme('light');
-		} else if (localStorage.getItem('weblinks-theme') === 'light') {
-			switchTheme('dark');
-		} else if (toggleSwitchTop.classList.contains === 'toggle__theme_dark') {
-			switchTheme('light');
-		}
-	});
+// Theme toggles
+toggleSwitchTop.addEventListener('click', () => {
+	if (!localStorage.getItem('weblinks-theme')) {
+		switchTheme('dark');
+	} else if (localStorage.getItem('weblinks-theme') === 'dark') {
+		switchTheme('light');
+	} else if (localStorage.getItem('weblinks-theme') === 'light') {
+		switchTheme('dark');
+	} else if (toggleSwitchTop.classList.contains === 'toggle__theme_dark') {
+		switchTheme('light'); 
+	}
 });
 
-// Animation toggle
-animSwitch.addEventListener('click', (button) => {
-	button.target.classList.toggle('settings__anim_on');
+toggleSwitchSide.addEventListener('click', () => {
+	if (!localStorage.getItem('weblinks-theme')) {
+		switchTheme('dark');
+	} else if (localStorage.getItem('weblinks-theme') === 'dark') {
+		switchTheme('light');
+	} else if (localStorage.getItem('weblinks-theme') === 'light') {
+		switchTheme('dark');
+	} else if (toggleSwitchTop.classList.contains === 'toggle__theme_dark') {
+		switchTheme('light'); 
+	}
+});
+
+function animToggle() {
 	// Scroll animation swich
 	let root = document.documentElement;
 	let rootScroll = window.getComputedStyle(root).getPropertyValue('scroll-behavior');
@@ -87,4 +96,21 @@ animSwitch.addEventListener('click', (button) => {
 	});
 	// Theme animation switch
 	page.classList.toggle('no-animation');
+}
+
+if (localStorage.getItem('weblinks-animation') === 'off') {
+	animToggle();
+	animSwitch.classList.remove('settings__anim_on');
+	localStorage.setItem('weblinks-animation', 'off');
+}
+
+// Animation toggle
+animSwitch.addEventListener('click', (button) => {
+	button.target.classList.toggle('settings__anim_on');
+	if (localStorage.getItem('weblinks-animation') === 'on') {
+		localStorage.setItem('weblinks-animation', 'off');
+	} else {
+		localStorage.setItem('weblinks-animation', 'on');
+	}
+	animToggle();
 });
