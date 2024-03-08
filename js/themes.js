@@ -135,11 +135,10 @@ if (localStorage.getItem('weblinks-animation') === 'off') {
 
 // Animation toggle
 animSwitch.addEventListener('click', (button) => {
-	if (localStorage.getItem('weblinks-animation') === 'on') {
+	if (localStorage.getItem('weblinks-animation') === 'on' ||
+	!localStorage.getItem('weblinks-animation')) {
 		switchAnim('anim-off');
 	} else if (localStorage.getItem('weblinks-animation') === 'off') {
 		switchAnim('anim-on');
-	} else {
-		switchAnim('anim-off');
 	}
 });
