@@ -81,48 +81,65 @@ toggleSwitchSide.addEventListener('click', () => {
 });
 
 // Switch animation function
-function animToggle() {
-	// Scroll animation swich
+function switchAnim(state) {
 	let root = document.documentElement;
-	let rootScroll = window.getComputedStyle(root).getPropertyValue('scroll-behavior');
-	rootScroll === 'smooth' ? root.style.scrollBehavior = 'auto' : root.style.scrollBehavior = 'smooth';
-	// Contents animation swich
-	const topicsList = document.querySelectorAll('.contents__topics');
-	topicsList.forEach((el) => {
-		el.classList.toggle('no-animation');
-	});
-	// Sections animation
-	const partWrapper = document.querySelectorAll('.part__content');
-	partWrapper.forEach((el) => {
-		el.classList.toggle('no-animation');
-	});
-	// Theme animation switch
-	page.classList.toggle('no-animation');
+	let topicsList = document.querySelectorAll('.contents__topics');
+	let partWrapper = document.querySelectorAll('.part__content');
+	if (state === 'anim-on') {
+		// Scroll animation swich
+		root.style.scrollBehavior = 'smooth';
+		// Contents animation swich
+		topicsList.forEach((el) => {
+			el.classList.remove('no-animation');
+		});
+		// Sections animation
+		partWrapper.forEach((el) => {
+			el.classList.remove('no-animation');
+		});
+		// Theme animation switch
+		page.classList.remove('no-animation');
+		// Button state style
+		animSwitch.classList.add('settings__anim_on');
+		// Remember state
+		localStorage.setItem('weblinks-animation', 'on');
+	}
+	if (state === 'anim-off') {
+		// Scroll animation swich
+		root.style.scrollBehavior = 'auto';
+		// Contents animation swich
+		topicsList.forEach((el) => {
+			el.classList.add('no-animation');
+		});
+		// Sections animation
+		partWrapper.forEach((el) => {
+			el.classList.add('no-animation');
+		});
+		// Theme animation switch
+		page.classList.add('no-animation');
+		// Button state style
+		animSwitch.classList.remove('settings__anim_on');
+		// Remember state
+		localStorage.setItem('weblinks-animation', 'off');
+	}
 }
 
+// Check os no animation setting
 if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-	animToggle();
-	animSwitch.classList.remove('settings__anim_on');
-	localStorage.setItem('weblinks-animation', 'off');
+	switchAnim('anim-off');
 } 
 
 // Check animation setting on start
 if (localStorage.getItem('weblinks-animation') === 'off') {
-	animToggle();
-	page.classList.add('no-animation');
-	animSwitch.classList.remove('settings__anim_on');
-	localStorage.setItem('weblinks-animation', 'off');
+	switchAnim('anim-off');
 }
 
 // Animation toggle
 animSwitch.addEventListener('click', (button) => {
-	button.target.classList.toggle('settings__anim_on');
-	animToggle();
 	if (localStorage.getItem('weblinks-animation') === 'on') {
-		localStorage.setItem('weblinks-animation', 'off');
+		switchAnim('anim-off');
 	} else if (localStorage.getItem('weblinks-animation') === 'off') {
-		localStorage.setItem('weblinks-animation', 'on');
+		switchAnim('anim-on');
 	} else {
-		localStorage.setItem('weblinks-animation', 'off');
+		switchAnim('anim-off');
 	}
 });
