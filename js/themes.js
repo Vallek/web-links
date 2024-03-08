@@ -109,6 +109,7 @@ if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').m
 // Check animation setting on start
 if (localStorage.getItem('weblinks-animation') === 'off') {
 	animToggle();
+	page.classList.add('no-animation');
 	animSwitch.classList.remove('settings__anim_on');
 	localStorage.setItem('weblinks-animation', 'off');
 }
