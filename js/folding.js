@@ -34,7 +34,7 @@ function foldList(el, status) {
 	});
 }
 
-// Toggle-all button
+// Fold/unfold contents toggle
 function foldCOntents(event) {
 	// Change title
 	const unfoldTitle = document.querySelector('.fold__title_show');
@@ -66,7 +66,7 @@ function foldCOntents(event) {
 	fold.classList.toggle('fold_folded');
 }
 
-// Fold/unfold each
+// Fold/unfold each content list
 function foldListAll(el) {
 	let thisItem = el.target.parentNode;
 	let thisLIst = thisItem.parentNode.querySelector('.contents__topics');
