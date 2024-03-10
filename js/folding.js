@@ -83,6 +83,7 @@ partHeadings.forEach((el) => {
 	el.addEventListener('click', () => {
 		let partContent = el.parentElement.querySelector('.part__content');
 		foldList(partContent);
+		el.classList.toggle('heading-folded');
 		partContent.classList.toggle('item-folded');
 	});
 });
@@ -110,6 +111,7 @@ foldSwitch.addEventListener('click', () => {
 		partHeadings.forEach((el) => {
 			let partContent = el.parentElement.querySelector('.part__content');
 			foldList(partContent, 'hide');
+			el.classList.add('heading-folded');
 			partContent.classList.add('item-folded');
 			foldSwitch.value = 'hide';
 			foldSwitch.classList.add('settings__fold_folded');
@@ -119,6 +121,7 @@ foldSwitch.addEventListener('click', () => {
 		partHeadings.forEach((el) => {
 			let partContent = el.parentElement.querySelector('.part__content');
 			foldList(partContent, 'show');
+			el.classList.remove('heading-folded');
 			partContent.classList.remove('item-folded');
 			foldSwitch.value = 'show';
 			foldSwitch.classList.remove('settings__fold_folded');

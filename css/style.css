@@ -422,10 +422,14 @@
 }
 
 .part__heading {
+	--accent-color-2: rgba(132, 207, 250, 0.3);
+	display: flex;
+	justify-content: space-between;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 1em;
 	letter-spacing: 0.1em;
+	border-radius: 2px;
 	padding: 0 2vw;
 	margin-top: 0;
 	margin-bottom: 1.5em;
@@ -433,6 +437,42 @@
 	scroll-snap-margin-top: 1em;
 	cursor: pointer;
 	user-select: none;
+}
+
+.part__heading:hover {
+	box-shadow: 0px 0px 8px 1px var(--accent-color-2) inset;
+}
+
+.part__heading::before,
+.part__heading::after {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	width: 1em;
+	height: 1em;
+	background-color: transparent;
+	background-image: url('../img/fold-arrow.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.heading-folded.part__heading::before {
+	transform: rotate(-90deg);
+}
+
+.heading-folded.part__heading::after {
+	transform: rotate(90deg);
+}
+
+.dark .part__heading::before,
+.dark .part__heading::after {
+	filter: invert(1);
+}
+
+.part__link {
+	line-height: unset;
 }
 
 .part__content {
@@ -445,6 +485,10 @@
 	position: relative;
 	margin-bottom: 1.5em;
 	padding: 0 2vw;
+}
+
+.topic:first-of-type {
+	padding: 2px 2vw;
 }
 
 .topic__heading {
