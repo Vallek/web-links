@@ -14,16 +14,16 @@ foldButton.forEach(el => {
 
 // Fold list for css transition with height detection function
 function foldList(el, status) {
-	if (el.style.height === '0px' ||
-		status === 'show') {
+	if (status === 'show' ||
+	el.style.height === '0px') {
 		el.style.height = el.scrollHeight + 'px';
 	} else {
 		el.style.height = el.scrollHeight + 'px';
 		window.getComputedStyle(el, null).getPropertyValue('height');
 		el.style.height = '0';
 	}
-	if (el.style.height === 'auto' ||
-	status === 'hide') {
+	if (status === 'hide' ||
+	el.style.height === 'auto') {
 		el.style.height = el.scrollHeight + 'px';
 		window.getComputedStyle(el, null).getPropertyValue('height');
 		el.style.height = '0';
@@ -95,7 +95,7 @@ topicsListLinks.forEach((el) => {
 		let partContent = targetHeading.closest('.part__content');
 		if (partContent.classList.contains('item-folded')) {
 			partContent.classList.remove('item-folded');
-			foldList(partContent);
+			foldList(partContent, 'show');
 			setTimeout(() => {
 				targetHeading.scrollIntoView();
 			}, 550);
