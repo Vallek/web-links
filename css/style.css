@@ -227,7 +227,9 @@
 		display: none;
 		position: static;
 		grid-column: 3 / 4;
+		border: 2px solid var(--accent-color);
 		padding: 1em;
+		padding-bottom: 3em;
 		width: auto;
 		overflow: auto;
 		height: initial;
@@ -380,8 +382,9 @@
 		position: static;
 		grid-column: 3 / 4;
 		justify-self: end;
+		border: 2px solid var(--accent-color);
 		margin-top: 0;
-		padding: 2em 2em 0 2em;
+		padding: 1em;
 		width: auto;
 		height: unset;
 		background-color: var(--back-color);
