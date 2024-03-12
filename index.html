@@ -8,8 +8,9 @@
 	<meta name="description" content="Подборка ссылок по фронтенду, полезные ресурсы для веб разработчика">
 	<meta name="author" content="Валерий Хаслер">
 	<link rel="stylesheet" href="css/style.css">
-	<script defer src="js/themes.js"></script>
-	<script defer src="js/header.js"></script>
+	<script type="module" src="js/index.js"></script>
+	<script type="module" src="js/themes.js"></script>
+	<script type="module" src="js/header.js"></script>
 	<script defer src="js/folding.js"></script>
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="vallek.github.io">
@@ -28,14 +29,14 @@
 </head>
 <body class="page no-animation">
 	<script>
-		const thisPage = document.querySelector('.page');
+		const page = document.querySelector('.page');
 		// Check if user set dark theme before
 		if (localStorage.getItem('weblinks-theme') == 'dark') {
-			thisPage.classList.add('dark');
+			page.classList.add('dark');
 		}
 		// Check if user prefers dark theme
 		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			thisPage.classList.add('dark');
+			page.classList.add('dark');
 		}
 	</script>
 	<header class="header">

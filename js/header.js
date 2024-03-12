@@ -1,10 +1,9 @@
-'use strict';
+import { page as page } from "./index.js";
 
 const stickyContents = document.querySelector('.sticky');
-const thisPage = document.querySelector('.sticky');
 
 function stickHeader() {
-	let pageTop = thisPage.getBoundingClientRect().top;
+	let pageTop = page.getBoundingClientRect().top;
 	if (pageTop < -350) {
 		stickyContents.classList.add('sticky-contents_fixed');
 	}
