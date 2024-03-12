@@ -231,7 +231,6 @@
 		padding: 1em;
 		padding-bottom: 3em;
 		width: auto;
-		overflow: auto;
 		height: initial;
 		max-height: 100vh;
 		background-color: var(--back-color);
