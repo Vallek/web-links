@@ -1,6 +1,5 @@
-'use strict';
+import { page as page } from "./index.js";
 
-const page = document.querySelector('.page');
 const toggleSwitchTop = document.querySelector('.toggle__theme');
 const toggleSwitchSide = document.querySelector('.settings__theme');
 const animSwitch = document.querySelector('.settings__anim');

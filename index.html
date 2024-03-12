@@ -8,7 +8,9 @@
 	<meta name="description" content="Подборка ссылок по фронтенду, полезные ресурсы для веб разработчика">
 	<meta name="author" content="Валерий Хаслер">
 	<link rel="stylesheet" href="css/style.css">
-	<script defer src="js/themes.js"></script>
+	<script type="module" src="js/index.js"></script>
+	<script type="module" src="js/themes.js"></script>
+	<script type="module" src="js/header.js"></script>
 	<script defer src="js/folding.js"></script>
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="vallek.github.io">
@@ -27,20 +29,21 @@
 </head>
 <body class="page no-animation">
 	<script>
-		const thisPage = document.querySelector('.page');
+		const page = document.querySelector('.page');
 		// Check if user set dark theme before
 		if (localStorage.getItem('weblinks-theme') == 'dark') {
-			thisPage.classList.add('dark');
+			page.classList.add('dark');
 		}
 		// Check if user prefers dark theme
 		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			thisPage.classList.add('dark');
+			page.classList.add('dark');
 		}
 	</script>
 	<header class="header">
+		<a class="skip-to-main visually-hidden" href="#main">Перейти к основному содержимому</a>
 		<h1 class="header__heading">Основы&#160;Фронтенда</h1>
 		<span class="header__sub-heading">Материалы для студентов <a href="https://vallek.github.io/pages/courses/web.html">моего курса</a> и всех остальных)</span>
-		<span class="author">Автор подборки: <a href="https://twitter.com/_vallek">Vallek</a> (<a href="https://vallek.github.io/index.html">портфолио</a>, <a href="https://github.com/Vallek/">гитхаб</a>, <a href="https://www.youtube.com/@webvallek">youtube</a>)</span>
+		<span class="author">Автор подборки: <a href="https://vallek.github.io/">Vallek</a> (<a href="https://github.com/Vallek/">гитхаб</a>, <a href="https://www.youtube.com/@webvallek">youtube</a>, <a href="https://twitter.com/_vallek">твиттер</a>)</span>
 		<span class="feedback">Сообщить о проблеме на гитхабе в <a href="https://github.com/Vallek/web-links/issues">issues</a>, обсудить в <a href="https://github.com/Vallek/web-links/discussions">discussions</a></span>
 		<div class="header__ui">
 			<section class="locales">
@@ -56,120 +59,124 @@
 			</section>
 		</div>
 	</header>
-	<aside class="contents">
-		<h2 class="contents__heading" title="В начало">
-			<a class="contents__heading-link" href="#">Содержание</a>
-		</h2>
-		<label class="contents__fold fold" for="fold-contents" aria-label="Кнопка, чтобы визуально свернуть и развернуть содержание">
-			<span class="fold__title fold__title_show visually-hidden">Развернуть</span>
-			<span class="fold__title fold__title_hide">Свернуть</span>
-			<input class="fold__input visually-hidden" value="show" type="checkbox" name="fold-contents" id="fold-contents">
-		</label>
-		<ol class="contents__list list">
-			<li>
-				<span class="contents__title">
-					<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
-					<a class="contents__link" href="#begin">Начало</a>
-				</span>
-				<ol class="contents__topics">
-					<li><a href="#roadmap">План</a></li>
-					<li><a href="#manuals">Учебники </a></li>
-					<li><a href="#reference">Справка </a></li>
-					<li><a href="#resources">Ресурсы</a></li>
-				</ol>
-			</li>
-			<li>
-				<span class="contents__title">
-					<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
-					<a class="contents__link" href="#base">Основы</a>
-				</span>
-				<ol class="contents__topics">
-					<li><a href="#html">HTML</a></li>
-					<li><a href="#layout">CSS</a></li>
-					<li><a href="#fonts">Шрифты</a></li>
-					<li><a href="#js">JavaScript</a></li>
-					<li><a href="#backend">Бэкенд</a></li>
-				</ol>
-			</li>
-			<li>
-				<span class="contents__title">
-					<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
-					<a class="contents__link" href="#test">Тестирование</a>
-				</span>
-				<ol class="contents__topics">
-					<li><a href="#soft">Софт</a></li>
-					<li><a href="#tools">Инструменты</a></li>
-					<li><a href="#qa">Тестирование</a></li>
-					<li><a href="#access">Доступность</a></li>
-					<li><a href="#safe">Безопасность</a></li>
-					<li><a href="#speed">Скорость</a></li>
-				</ol>
-			</li>
-			<li>
-				<span class="contents__title">
-					<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
-					<a class="contents__link" href="#arch">Архитектура</a>
-				</span>
-				<ol class="contents__topics">
-					<li><a href="#git">Git</a></li>
-					<li><a href="#bem">БЭМ</a></li>
-					<li><a href="#build">Сборка</a></li>
-					<li><a href="#auto">Автоматизация</a></li>
-					<li><a href="#linters">Линтеры</a></li>
-				</ol>
-			</li>
-			<li>
-				<span class="contents__title">
-					<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
-					<a class="contents__link" href="#pulse">Быть в курсе</a>
-				</span>
-				<ol class="contents__topics">
-					<li><a href="#news">Новости</a></li>
-					<li><a href="#video">Видео</a></li>
-					<li><a href="#qna">Ответы</a></li>
-				</ol>
-			</li>
-			<li>
-				<span class="contents__title">
-					<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
-					<a class="contents__link" href="#other">Другое</a>
-				</span>
-				<ol class="contents__topics">
-					<li><a href="#work">Работа</a></li>
-					<li><a href="#seo">SEO</a></li>
-					<li><a href="#design">Дизайн</a></li>
-					<li><a href="#text">Текст</a></li>
-					<li><a href="#bad">Плохие</a></li>
-				</ol>
-			</li>
-			<li>
-				<span class="contents__title">
-					<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
-					<a class="contents__link" href="#advanced">Дальше</a>
-				</span>
-				<ol class="contents__topics contents__topics_default">
-					<li><a href="#csr">Фреймворки</a></li>
-					<li><a href="#ssr">SSR</a></li>
-					<li><a href="#headless">Headless CMS</a></li>
-				</ol>
-			</li>
-		</ol>
-	</aside>
-	<aside class="settings toggle">
-		<h2 class="settings__heading">настройки</h2>
-		<button class="toggle__button settings__button toggle__theme settings__theme" aria-label="Переключение тем" title="Переключение тем">
-			<span class="settings__label">Тема</span>
-		</button>
-		<button class="toggle__button settings__button settings__fold" value="show" aria-label="Свернуть/развернуть разделы" title="Свернуть/развернуть разделы">
-			<span class="settings__label">Разделы</span>
-		</button>
-		<button class="toggle__button settings__button settings__anim settings__anim_on" aria-label="Включить/выключить плавные переходы" title="Включить/выключить плавные переходы">
-			<span class="settings__label">Анимации</span>
-		</button>
-	</aside>
-	<main class="main shadow-box">
+	<div class="sticky">
+		<input class="sticky-contents-btn" type="checkbox" name="sticky-contents-btn" id="sticky-contents-btn">
+		<aside class="contents">
+			<h2 class="contents__heading" title="В начало">
+				<a class="contents__heading-link" href="#">Содержание</a>
+			</h2>
+			<label class="contents__fold fold" for="fold-contents" aria-label="Кнопка, чтобы визуально свернуть и развернуть содержание">
+				<span class="fold__title fold__title_show visually-hidden">Развернуть</span>
+				<span class="fold__title fold__title_hide">Свернуть</span>
+				<input class="fold__input visually-hidden" value="show" type="checkbox" name="fold-contents" id="fold-contents">
+			</label>
+			<ol class="contents__list list">
+				<li>
+					<span class="contents__title">
+						<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
+						<a class="contents__link" href="#begin">Начало</a>
+					</span>
+					<ol class="contents__topics">
+						<li><a href="#roadmap">План</a></li>
+						<li><a href="#manuals">Учебники </a></li>
+						<li><a href="#reference">Справка </a></li>
+						<li><a href="#resources">Ресурсы</a></li>
+					</ol>
+				</li>
+				<li>
+					<span class="contents__title">
+						<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
+						<a class="contents__link" href="#base">Основы</a>
+					</span>
+					<ol class="contents__topics">
+						<li><a href="#html">HTML</a></li>
+						<li><a href="#layout">CSS</a></li>
+						<li><a href="#fonts">Шрифты</a></li>
+						<li><a href="#js">JavaScript</a></li>
+						<li><a href="#backend">Бэкенд</a></li>
+					</ol>
+				</li>
+				<li>
+					<span class="contents__title">
+						<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
+						<a class="contents__link" href="#test">Тестирование</a>
+					</span>
+					<ol class="contents__topics">
+						<li><a href="#soft">Софт</a></li>
+						<li><a href="#tools">Инструменты</a></li>
+						<li><a href="#qa">Тестирование</a></li>
+						<li><a href="#access">Доступность</a></li>
+						<li><a href="#safe">Безопасность</a></li>
+						<li><a href="#speed">Скорость</a></li>
+					</ol>
+				</li>
+				<li>
+					<span class="contents__title">
+						<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
+						<a class="contents__link" href="#arch">Архитектура</a>
+					</span>
+					<ol class="contents__topics">
+						<li><a href="#git">Git</a></li>
+						<li><a href="#bem">БЭМ</a></li>
+						<li><a href="#build">Сборка</a></li>
+						<li><a href="#auto">Автоматизация</a></li>
+						<li><a href="#linters">Линтеры</a></li>
+					</ol>
+				</li>
+				<li>
+					<span class="contents__title">
+						<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
+						<a class="contents__link" href="#pulse">Быть в курсе</a>
+					</span>
+					<ol class="contents__topics">
+						<li><a href="#news">Новости</a></li>
+						<li><a href="#video">Видео</a></li>
+						<li><a href="#qna">Ответы</a></li>
+					</ol>
+				</li>
+				<li>
+					<span class="contents__title">
+						<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
+						<a class="contents__link" href="#other">Другое</a>
+					</span>
+					<ol class="contents__topics">
+						<li><a href="#work">Работа</a></li>
+						<li><a href="#seo">SEO</a></li>
+						<li><a href="#design">Дизайн</a></li>
+						<li><a href="#text">Текст</a></li>
+						<li><a href="#bad">Плохие</a></li>
+					</ol>
+				</li>
+				<li>
+					<span class="contents__title">
+						<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
+						<a class="contents__link" href="#advanced">Дальше</a>
+					</span>
+					<ol class="contents__topics contents__topics_default">
+						<li><a href="#csr">Фреймворки</a></li>
+						<li><a href="#ssr">SSR</a></li>
+						<li><a href="#headless">Headless CMS</a></li>
+					</ol>
+				</li>
+			</ol>
+		</aside>
+		<input class="sticky-settings-btn" type="checkbox" name="sticky-settings-btn" id="sticky-settings-btn">
+		<aside class="settings toggle">
+			<h2 class="settings__heading">настройки</h2>
+			<button class="toggle__button settings__button toggle__theme settings__theme" aria-label="Переключение тем" title="Переключение тем">
+				<span class="settings__label">Тема</span>
+			</button>
+			<button class="toggle__button settings__button settings__fold" value="show" aria-label="Свернуть/развернуть разделы" title="Свернуть/развернуть разделы">
+				<span class="settings__label">Разделы</span>
+			</button>
+			<button class="toggle__button settings__button settings__anim settings__anim_on" aria-label="Включить/выключить плавные переходы" title="Включить/выключить плавные переходы">
+				<span class="settings__label">Анимации</span>
+			</button>
+		</aside>
+	</div>
+	<main class="main shadow-box" id="main">
 		<section class="part main__part">
-			<h2 class="part__heading" id="begin">Начало и Ресурсы</h2>
+			<h2 class="part__heading" id="begin"><a class="part__link" href="#begin">Начало и Ресурсы</a></h2>
 			<div class="part__content">
 				<article class="topic roadmap">
 					<h3 class="topic__heading" id="roadmap"><a href="#roadmap">Учебный план</a></h3>
@@ -222,7 +229,7 @@
 			</div>	
 		</section>
 		<section class="part main__part">
-			<h2 class="part__heading" id="base">Языки и Нативные API</h2>
+			<h2 class="part__heading" id="base"><a class="part__link" href="#base">Языки и Нативные API</a></h2>
 			<div class="part__content">
 				<article class="topic html">
 					<h3 class="topic__heading" id="html"><a href="#html">HTML Разметка</a></h3>
@@ -372,7 +379,7 @@
 			</div>
 		</section>
 		<section class="part main__part">
-			<h2 class="part__heading" id="test">Инструменты и Тестирование</h2>
+			<h2 class="part__heading" id="test"><a class="part__link" href="#test">Инструменты и Тестирование</a></h2>
 			<div class="part__content">
 				<article class="topic soft">
 					<h3 class="topic__heading" id="soft"><a href="#soft">Софт</a></h3>
@@ -501,7 +508,7 @@
 			</div>
 		</section>
 		<section class="part main__part">
-			<h2 class="part__heading" id="arch">Архитектура и Сборка</h2>
+			<h2 class="part__heading" id="arch"><a class="part__link" href="#arch">Архитектура и Сборка</a></h2>
 			<div class="part__content">
 				<article class="topic git">
 					<h3 class="topic__heading" id="git"><a href="#git">Система контроля версий Git</a></h3>
@@ -610,7 +617,7 @@
 			</div>
 		</section>
 		<section class="part main__part">
-			<h2 class="part__heading" id="pulse">Быть в курсе</h2>
+			<h2 class="part__heading" id="pulse"><a class="part__link" href="#pulse">Быть в курсе</a></h2>
 			<div class="part__content">
 				<article class="topic news">
 					<h3 class="topic__heading" id="news"><a href="#news">Новости, статьи и подборки</a></h3>
@@ -666,7 +673,7 @@
 			</div>
 		</section>
 		<section class="part main__part">
-			<h2 class="part__heading" id="other">Другое</h2>
+			<h2 class="part__heading" id="other"><a class="part__link" href="#other">Другое</a></h2>
 			<div class="part__content">
 				<article class="topic work">
 					<h3 class="topic__heading" id="work"><a href="#work">Планирование и организация работы</a></h3>
@@ -735,11 +742,12 @@
 							<li>Корпоративные блоги (есть хорошие, есть не очень)</li>
 						</ul>
 					</section>
+					<p><span class="tip" title="Совет" aria-label="Совет">💡 </span>Относитесь <a href="https://vallek.github.io/web-pres/search.html#12">критически</a> к любой информации)</p>
 				</article>
 			</div>
 		</section>
 		<section class="part main__part">
-			<h2 class="part__heading" id="advanced">Продвинутые темы</h2>
+			<h2 class="part__heading" id="advanced"><a class="part__link" href="#anvanced">Продвинутые темы</a></h2>
 			<div class="part__content">
 				<article class="topic advanced">
 					<h3 class="topic__heading" id="csr"><a href="#frame">Фреймворки</a></h3>

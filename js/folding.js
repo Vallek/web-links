@@ -5,6 +5,7 @@ const foldInput = document.querySelector('#fold-contents');
 const topics = document.querySelectorAll('.list__fold-button');
 const foldButton  = document.querySelectorAll('.list__fold-button');
 const topicsList = document.querySelectorAll('.contents__topics');
+const topicsListLinks = document.querySelectorAll('.contents__topics a');
 
 foldInput.addEventListener('click', foldCOntents);
 foldButton.forEach(el => {
@@ -13,16 +14,16 @@ foldButton.forEach(el => {
 
 // Fold list for css transition with height detection function
 function foldList(el, status) {
-	if (el.style.height === '0px' ||
-		status === 'show') {
+	if (status === 'show' ||
+	el.style.height === '0px') {
 		el.style.height = el.scrollHeight + 'px';
 	} else {
 		el.style.height = el.scrollHeight + 'px';
 		window.getComputedStyle(el, null).getPropertyValue('height');
 		el.style.height = '0';
 	}
-	if (el.style.height === 'auto' ||
-	status === 'hide') {
+	if (status === 'hide' ||
+	el.style.height === 'auto') {
 		el.style.height = el.scrollHeight + 'px';
 		window.getComputedStyle(el, null).getPropertyValue('height');
 		el.style.height = '0';
@@ -34,7 +35,7 @@ function foldList(el, status) {
 	});
 }
 
-// Toggle-all button
+// Fold/unfold contents toggle
 function foldCOntents(event) {
 	// Change title
 	const unfoldTitle = document.querySelector('.fold__title_show');
@@ -66,7 +67,7 @@ function foldCOntents(event) {
 	fold.classList.toggle('fold_folded');
 }
 
-// Fold/unfold each
+// Fold/unfold each content list
 function foldListAll(el) {
 	let thisItem = el.target.parentNode;
 	let thisLIst = thisItem.parentNode.querySelector('.contents__topics');
@@ -82,6 +83,24 @@ partHeadings.forEach((el) => {
 	el.addEventListener('click', () => {
 		let partContent = el.parentElement.querySelector('.part__content');
 		foldList(partContent);
+		el.classList.toggle('heading-folded');
+		partContent.classList.toggle('item-folded');
+	});
+});
+
+// Unfold section on anchor link click
+topicsListLinks.forEach((el) => {
+	el.addEventListener('click', (evt) => {
+		let hrefId = evt.target.getAttribute('href');
+		let targetHeading = document.querySelector(hrefId.toString());
+		let partContent = targetHeading.closest('.part__content');
+		if (partContent.classList.contains('item-folded')) {
+			partContent.classList.remove('item-folded');
+			foldList(partContent, 'show');
+			setTimeout(() => {
+				targetHeading.scrollIntoView();
+			}, 550);
+		}
 	});
 });
 
@@ -92,6 +111,8 @@ foldSwitch.addEventListener('click', () => {
 		partHeadings.forEach((el) => {
 			let partContent = el.parentElement.querySelector('.part__content');
 			foldList(partContent, 'hide');
+			el.classList.add('heading-folded');
+			partContent.classList.add('item-folded');
 			foldSwitch.value = 'hide';
 			foldSwitch.classList.add('settings__fold_folded');
 		});
@@ -100,6 +121,8 @@ foldSwitch.addEventListener('click', () => {
 		partHeadings.forEach((el) => {
 			let partContent = el.parentElement.querySelector('.part__content');
 			foldList(partContent, 'show');
+			el.classList.remove('heading-folded');
+			partContent.classList.remove('item-folded');
 			foldSwitch.value = 'show';
 			foldSwitch.classList.remove('settings__fold_folded');
 		});
