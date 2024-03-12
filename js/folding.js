@@ -80,11 +80,13 @@ function foldListAll(el) {
 const partHeadings = document.querySelectorAll('.part__heading');
 
 partHeadings.forEach((el) => {
-	el.addEventListener('click', () => {
-		let partContent = el.parentElement.querySelector('.part__content');
-		foldList(partContent);
-		el.classList.toggle('heading-folded');
-		partContent.classList.toggle('item-folded');
+	el.addEventListener('click', (evt) => {
+		if (evt.target === evt.currentTarget) {
+			let partContent = el.parentElement.querySelector('.part__content');
+			foldList(partContent);
+			el.classList.toggle('heading-folded');
+			partContent.classList.toggle('item-folded');
+		} 
 	});
 });
 
