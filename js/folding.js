@@ -101,6 +101,7 @@ topicsListLinks.forEach((el) => {
 			foldList(partContent, 'show');
 			setTimeout(() => {
 				targetHeading.scrollIntoView();
+				// Time higher then transition time
 			}, 550);
 		}
 	});
