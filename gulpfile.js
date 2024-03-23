@@ -12,3 +12,12 @@ gulp.task('scripts', function() {
 
 	return Promise.all([clean, scripts]);
 });
+
+gulp.task('styles', function() {
+  let clean = del("./js/main.css");
+	let scripts = gulp.src(['./css/style.css', './css/emojis.css', './css/favicons.css'])
+		.pipe(concat('main.css', {newLine: '\n\n'}))
+		.pipe(gulp.dest('./css/'));
+
+	return Promise.all([clean, scripts]);
+});
