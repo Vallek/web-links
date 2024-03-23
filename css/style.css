@@ -611,6 +611,34 @@ h4:target,
 	margin-bottom: 0;
 }
 
+.topic__favicon {
+	width: 16px; 
+	height: 16px;
+	object-fit: none;
+	vertical-align: middle;
+	/* margin-right: 0.5em; */
+}
+
+.topic li a {
+	vertical-align: middle;
+}
+
+.topic li a::before {
+	content: '\00a0';
+	display: inline-block;
+}
+
+.topic li span {
+	vertical-align: middle;
+}
+
+.topic__list_normal li::before,
+.topic__item_normal::before {
+	content: '\2022\00a0';
+	display: inline-block;
+	vertical-align: middle;
+}
+
 p {
 	color: var(--second-color, revert);
 	font-size: 1em;
@@ -639,6 +667,8 @@ ul {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 1em;
+	list-style: none;
+	padding-left: 0;
 }
 
 li {
@@ -821,4 +851,635 @@ a:hover {
 .topic__heading a[href="#roadmap"]::after,
 .contents__topics_default {
 	list-style: disc;
+}
+
+/* Favicons */
+.alternativeto_net {
+    width: 16px; height: 16px;
+    object-position: -10px -10px;
+}
+
+.angdev_ru {
+    width: 16px; height: 16px;
+    object-position: -46px -10px;
+}
+
+.angular_io {
+    width: 16px; height: 16px;
+    object-position: -10px -46px;
+}
+
+.app_daily_dev {
+    width: 16px; height: 16px;
+    object-position: -46px -46px;
+}
+
+.bespoyasov_ru {
+    width: 16px; height: 16px;
+    object-position: -82px -10px;
+}
+
+.bureau_ru {
+    width: 16px; height: 16px;
+    object-position: -82px -46px;
+}
+
+.caninclude_glitch_me {
+    width: 16px; height: 16px;
+    object-position: -10px -82px;
+}
+
+.caniuse_com {
+    width: 16px; height: 16px;
+    object-position: -46px -82px;
+}
+
+.cmd_readthedocs_io {
+    width: 16px; height: 16px;
+    object-position: -82px -82px;
+}
+
+.code_visualstudio_com {
+    width: 16px; height: 16px;
+    object-position: -118px -10px;
+}
+
+.codepen_io {
+    width: 16px; height: 16px;
+    object-position: -118px -46px;
+}
+
+.codex_wordpress_org {
+    width: 16px; height: 16px;
+    object-position: -118px -82px;
+}
+
+.css_tricks_com {
+    width: 16px; height: 16px;
+    object-position: -10px -118px;
+}
+
+.css_weekly_com {
+    width: 16px; height: 16px;
+    object-position: -46px -118px;
+}
+
+.css_yoksel_ru {
+    width: 16px; height: 16px;
+    object-position: -82px -118px;
+}
+
+.csstriggers_com {
+    width: 16px; height: 16px;
+    object-position: -118px -118px;
+}
+
+.dev_to {
+    width: 16px; height: 16px;
+    object-position: -154px -10px;
+}
+
+.developer_chrome_com {
+    width: 16px; height: 16px;
+    object-position: -154px -46px;
+}
+
+.developer_mozilla_org {
+    width: 16px; height: 16px;
+    object-position: -154px -82px;
+}
+
+.developer_mozilla_org_Tools {
+    width: 16px; height: 16px;
+    object-position: -154px -118px;
+}
+
+.developers_google_com {
+    width: 16px; height: 16px;
+    object-position: -10px -154px;
+}
+
+.docs_emmet_io {
+    width: 16px; height: 16px;
+    object-position: -46px -154px;
+}
+
+.docs_microsoft_com {
+    width: 16px; height: 16px;
+    object-position: -82px -154px;
+}
+
+.docs_npmjs_com {
+    width: 16px; height: 16px;
+    object-position: -118px -154px;
+}
+
+.doka_guide {
+    width: 16px; height: 16px;
+    object-position: -154px -154px;
+}
+
+.editorconfig_org {
+    width: 16px; height: 16px;
+    object-position: -190px -10px;
+}
+
+.eslint_org {
+    width: 16px; height: 16px;
+    object-position: -190px -46px;
+}
+
+.eslint_style {
+    width: 16px; height: 16px;
+    object-position: -190px -82px;
+}
+
+.filezilla_project_org {
+    width: 16px; height: 16px;
+    object-position: -190px -118px;
+}
+
+.learn_microsoft_com {
+    width: 16px; height: 16px;
+    object-position: -190px -154px;
+}
+
+.ru_wordpress_org {
+    width: 16px; height: 16px;
+    object-position: -10px -190px;
+}
+
+.fonts_google_com {
+    width: 16px; height: 16px;
+    object-position: -46px -190px;
+}
+
+.medium_com {
+    width: 16px; height: 16px;
+    object-position: -82px -190px;
+}
+
+.frontender_ua_medium_com {
+    width: 16px; height: 16px;
+    object-position: -118px -190px;
+}
+
+.javascriptweekly_com {
+    width: 16px; height: 16px;
+    object-position: -154px -190px;
+}
+
+.frontendfoc_us {
+    width: 16px; height: 16px;
+    object-position: -190px -190px;
+}
+
+.frontendfront_com {
+    width: 16px; height: 16px;
+    object-position: -226px -10px;
+}
+
+.frontendweekly_co {
+    width: 16px; height: 16px;
+    object-position: -226px -46px;
+}
+
+.git_scm_com {
+    width: 16px; height: 16px;
+    object-position: -226px -82px;
+}
+
+.github_com {
+    width: 16px; height: 16px;
+    object-position: -226px -118px;
+}
+
+.guides_github_com {
+    width: 16px; height: 16px;
+    object-position: -226px -154px;
+}
+
+.gulpjs_com {
+    width: 16px; height: 16px;
+    object-position: -226px -190px;
+}
+
+.habr_com {
+    width: 16px; height: 16px;
+    object-position: -10px -226px;
+}
+
+.howhttps_works {
+    width: 16px; height: 16px;
+    object-position: -46px -226px;
+}
+
+.html_spec_whatwg_org {
+    width: 16px; height: 16px;
+    object-position: -82px -226px;
+}
+
+.html5book_ru {
+    width: 16px; height: 16px;
+    object-position: -118px -226px;
+}
+
+.htmlacademy_ru {
+    width: 16px; height: 16px;
+    object-position: -154px -226px;
+}
+
+.htmlhint_com {
+    width: 16px; height: 16px;
+    object-position: -190px -226px;
+}
+
+.ishadeed_com {
+    width: 16px; height: 16px;
+    object-position: -226px -226px;
+}
+
+.jamstack_org {
+    width: 16px; height: 16px;
+    object-position: -262px -10px;
+}
+
+.javascript_info {
+    width: 16px; height: 16px;
+    object-position: -262px -46px;
+}
+
+.learn_javascript_ru {
+    width: 16px; height: 16px;
+    object-position: -262px -82px;
+}
+
+.jekyllrb_com {
+    width: 16px; height: 16px;
+    object-position: -262px -118px;
+}
+
+.joyofcode_xyz {
+    width: 16px; height: 16px;
+    object-position: -262px -154px;
+}
+
+.jsbin_com {
+    width: 16px; height: 16px;
+    object-position: -262px -190px;
+}
+
+.svelte_dev {
+    width: 16px; height: 16px;
+    object-position: -262px -226px;
+}
+
+.kit_svelte_dev {
+    width: 16px; height: 16px;
+    object-position: -10px -262px;
+}
+
+.ksoftware_livejournal_com {
+    width: 16px; height: 16px;
+    object-position: -46px -262px;
+}
+
+.maximilyahov_ru {
+    width: 16px; height: 16px;
+    object-position: -82px -262px;
+}
+
+.nodejs_org {
+    width: 16px; height: 16px;
+    object-position: -118px -262px;
+}
+
+.nuxt_com {
+    width: 16px; height: 16px;
+    object-position: -154px -262px;
+}
+
+.packagecontrol_io {
+    width: 16px; height: 16px;
+    object-position: -190px -262px;
+}
+
+.pagespeed_web_dev {
+    width: 16px; height: 16px;
+    object-position: -226px -262px;
+}
+
+.prettier_io {
+    width: 16px; height: 16px;
+    object-position: -262px -262px;
+}
+
+.qna_habr_com {
+    width: 16px; height: 16px;
+    object-position: -298px -10px;
+}
+
+.react_dev {
+    width: 16px; height: 16px;
+    object-position: -298px -46px;
+}
+
+.reactdev_ru {
+    width: 16px; height: 16px;
+    object-position: -298px -82px;
+}
+
+.realfavicongenerator_net {
+    width: 16px; height: 16px;
+    object-position: -298px -118px;
+}
+
+.remix_run {
+    width: 16px; height: 16px;
+    object-position: -298px -154px;
+}
+
+.roadmap_sh {
+    width: 16px; height: 16px;
+    object-position: -298px -190px;
+}
+
+.ru_bem_info {
+    width: 16px; height: 16px;
+    object-position: -298px -226px;
+}
+
+.ru_stackoverflow_com {
+    width: 16px; height: 16px;
+    object-position: -298px -262px;
+}
+
+.rubygems_org {
+    width: 16px; height: 16px;
+    object-position: -10px -298px;
+}
+
+.search_google_com {
+    width: 16px; height: 16px;
+    object-position: -46px -298px;
+}
+
+.specificity_keegan_st {
+    width: 16px; height: 16px;
+    object-position: -82px -298px;
+}
+
+.stackoverflow_com {
+    width: 16px; height: 16px;
+    object-position: -118px -298px;
+}
+
+.stocksnap_io {
+    width: 16px; height: 16px;
+    object-position: -154px -298px;
+}
+
+.stylelint_io {
+    width: 16px; height: 16px;
+    object-position: -190px -298px;
+}
+
+.svgontheweb_com {
+    width: 16px; height: 16px;
+    object-position: -226px -298px;
+}
+
+.symbl_cc {
+    width: 16px; height: 16px;
+    object-position: -262px -298px;
+}
+
+.tools_pingdom_com {
+    width: 16px; height: 16px;
+    object-position: -298px -298px;
+}
+
+.tproger_ru {
+    width: 16px; height: 16px;
+    object-position: -334px -10px;
+}
+
+.twitter_com {
+    width: 16px; height: 16px;
+    object-position: -334px -46px;
+}
+
+.unsplash_com {
+    width: 16px; height: 16px;
+    object-position: -334px -82px;
+}
+
+.ux_journal_ru {
+    width: 16px; height: 16px;
+    object-position: -334px -118px;
+}
+
+.v3_ru_vuejs_org {
+    width: 16px; height: 16px;
+    object-position: -334px -154px;
+}
+
+.www_w3_org {
+    width: 16px; height: 16px;
+    object-position: -334px -190px;
+}
+
+.validator_w3_org {
+    width: 16px; height: 16px;
+    object-position: -334px -226px;
+}
+
+.vallek_github_io {
+    width: 16px; height: 16px;
+    object-position: -334px -262px;
+}
+
+.vallek_github_io_webdevtips {
+    width: 16px; height: 16px;
+    object-position: -334px -298px;
+}
+
+.vallek_github_io_webval_blog {
+    width: 16px; height: 16px;
+    object-position: -10px -334px;
+}
+
+.vuejs_org {
+    width: 16px; height: 16px;
+    object-position: -46px -334px;
+}
+
+.web_standards_ru {
+    width: 16px; height: 16px;
+    object-position: -82px -334px;
+}
+
+.web_dev {
+    width: 16px; height: 15px;
+    object-position: -406px -118px;
+}
+
+.webfontloader_altmann_de {
+    width: 16px; height: 16px;
+    object-position: -118px -334px;
+}
+
+.webmaster_yandex_ru {
+    width: 16px; height: 16px;
+    object-position: -154px -334px;
+}
+
+.webpack_js_org {
+    width: 16px; height: 16px;
+    object-position: -190px -334px;
+}
+
+.webpagetest_org {
+    width: 16px; height: 16px;
+    object-position: -226px -334px;
+}
+
+.www_a11yproject_com {
+    width: 16px; height: 16px;
+    object-position: -262px -334px;
+}
+
+.www_apachefriends_org {
+    width: 15px; height: 16px;
+    object-position: -406px -153px;
+}
+
+.www_atlassian_com {
+    width: 16px; height: 16px;
+    object-position: -298px -334px;
+}
+
+.www_bram_us {
+    width: 16px; height: 16px;
+    object-position: -334px -334px;
+}
+
+.www_browserstack_com {
+    width: 16px; height: 16px;
+    object-position: -370px -10px;
+}
+
+.www_cssfontstack_com {
+    width: 16px; height: 16px;
+    object-position: -370px -46px;
+}
+
+.www_figma_com {
+    width: 16px; height: 16px;
+    object-position: -370px -82px;
+}
+
+.www_flaticon_com {
+    width: 16px; height: 16px;
+    object-position: -370px -118px;
+}
+
+.www_freecodecamp_org {
+    width: 16px; height: 16px;
+    object-position: -370px -154px;
+}
+
+.www_freepik_com {
+    width: 16px; height: 16px;
+    object-position: -370px -190px;
+}
+
+.www_gatsbyjs_com {
+    width: 16px; height: 16px;
+    object-position: -370px -226px;
+}
+
+.www_lambdatest_com {
+    width: 16px; height: 16px;
+    object-position: -370px -262px;
+}
+
+.www_npmjs_com {
+    width: 16px; height: 16px;
+    object-position: -370px -298px;
+}
+
+.www_quickandlazy_appspot_com {
+    width: 16px; height: 16px;
+    object-position: -370px -334px;
+}
+
+.www_reddit_com {
+    width: 16px; height: 16px;
+    object-position: -10px -370px;
+}
+
+.www_searchengines_ru {
+    width: 16px; height: 16px;
+    object-position: -46px -370px;
+}
+
+.www_shopify_com {
+    width: 16px; height: 16px;
+    object-position: -82px -370px;
+}
+
+.www_sitepoint_com {
+    width: 16px; height: 16px;
+    object-position: -118px -370px;
+}
+
+.www_smashingmagazine_com {
+    width: 16px; height: 16px;
+    object-position: -154px -370px;
+}
+
+.www_sublimetext_com {
+    width: 16px; height: 16px;
+    object-position: -190px -370px;
+}
+
+.www_svgrepo_com {
+    width: 16px; height: 16px;
+    object-position: -226px -370px;
+}
+
+.www_uprock_ru {
+    width: 16px; height: 16px;
+    object-position: -262px -370px;
+}
+
+.www_youtube_com {
+    width: 16px; height: 16px;
+    object-position: -298px -370px;
+}
+
+.www_youtube_com_yandex_ac {
+    width: 16px; height: 16px;
+    object-position: -334px -370px;
+}
+
+.www_youtube_com_yandex_seo {
+    width: 16px; height: 16px;
+    object-position: -370px -370px;
+}
+
+.yandex_ru {
+    width: 16px; height: 16px;
+    object-position: -406px -10px;
+}
+
+.yoksel_github_io {
+    width: 16px; height: 16px;
+    object-position: -406px -46px;
+}
+
+.youtube_com {
+    width: 16px; height: 16px;
+    object-position: -406px -82px;
 }
