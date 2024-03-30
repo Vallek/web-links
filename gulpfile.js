@@ -15,7 +15,7 @@ gulp.task('scripts', function() {
 
 gulp.task('styles', function() {
   let clean = del("./js/main.css");
-	let styles = gulp.src(['./css/style.css', './css/emojis.css', './css/favicons.css'])
+	let styles = gulp.src(['./src/css/style.css', './src/css/emojis.css', './src/css/favicons.css'])
 		.pipe(concat('main.css', {newLine: '\n\n'}))
 		.pipe(gulp.dest('./css/'));
 
