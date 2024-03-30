@@ -680,6 +680,8 @@ a {
 	font-size: 1em;
 	text-decoration: none;
 	line-height: 1.4;
+	scroll-margin-top: 0.5em;
+	scroll-snap-margin-top: 0.5em;
 }
 
 a:hover {
