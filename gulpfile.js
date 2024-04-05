@@ -18,6 +18,9 @@ gulp.task('styles', function() {
 	let styles = gulp.src(['./src/css/style.css', './src/css/emojis.css', './src/css/favicons.css'])
 		.pipe(concat('main.css', {newLine: '\n\n'}))
 		.pipe(gulp.dest('./css/'));
+	let stylesEN = gulp.src(['./src/css/style.css', './src/css/emojis.css', './src/css/favicons_EN.css'])
+		.pipe(concat('main_EN.css', {newLine: '\n\n'}))
+		.pipe(gulp.dest('./css/'));	
 
-	return Promise.all([clean, styles]);
+	return Promise.all([clean, styles, stylesEN]);
 });

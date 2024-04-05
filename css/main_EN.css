@@ -666,7 +666,6 @@ h3, h4 {
 ul {
 	margin-top: 0;
 	margin-bottom: 0;
-	padding-left: 1em;
 	list-style: none;
 	padding-left: 0;
 }
@@ -681,6 +680,8 @@ a {
 	font-size: 1em;
 	text-decoration: none;
 	line-height: 1.4;
+	scroll-margin-top: 0.5em;
+	scroll-snap-margin-top: 0.5em;
 }
 
 a:hover {
@@ -853,7 +854,6 @@ a:hover {
 	list-style: disc;
 }
 
-/* Favicons */
 .alternativeto_net {
 	width: 16px; height: 16px;
 	background: url('../img/css_spritesEN.png') -10px -10px;
