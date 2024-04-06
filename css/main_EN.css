@@ -612,6 +612,7 @@ h4:target,
 }
 
 .topic__favicon {
+	display: inline-block;
 	width: 16px; 
 	height: 16px;
 	object-fit: none;
@@ -1402,4 +1403,9 @@ a:hover {
 .netlify {
 	width: 16px; height: 16px;
 	background: url('../img/css_spritesEN.png') -370px -334px;
+}
+
+.stylelint_io {
+	width: 16px; height: 16px;
+	background: url('../img/css_sprites.png') -190px -298px;
 }
