@@ -612,6 +612,7 @@ h4:target,
 }
 
 .topic__favicon {
+	display: inline-block;
 	width: 16px; 
 	height: 16px;
 	object-fit: none;
@@ -1483,4 +1484,9 @@ a:hover {
 .youtube_com {
     width: 16px; height: 16px;
     object-position: -406px -82px;
+}
+
+.nextjs_org {
+	width: 16px; height: 16px;
+	object-position: -262px -82px;
 }
