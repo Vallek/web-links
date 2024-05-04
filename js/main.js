@@ -1,7 +1,6 @@
 'use strict';
-// Themes
-const page = document.querySelector('.page');
 
+const page = document.querySelector('.page');
 const toggleSwitchTop = document.querySelector('.toggle__theme');
 const toggleSwitchSide = document.querySelector('.settings__theme');
 const animSwitch = document.querySelector('.settings__anim');
@@ -144,7 +143,6 @@ animSwitch.addEventListener('click', (button) => {
 	}
 });
 
-// Header
 const stickyContents = document.querySelector('.sticky');
 
 function stickHeader() {
@@ -160,7 +158,6 @@ function stickHeader() {
 window.addEventListener('scroll', stickHeader);
 window.addEventListener('DOMContentLoaded', stickHeader);
 
-// Folding
 const fold = document.querySelector('.contents__fold');
 const foldInput = document.querySelector('#fold-contents');
 const topics = document.querySelectorAll('.list__fold-button');

@@ -5,9 +5,10 @@ const header = require('gulp-header');
 
 gulp.task('scripts', function() {
   let clean = del("./js/main.js");
-	let scripts = gulp.src(['./js/themes.js', './js/header.js', './js/folding.js'])
+	let scripts = gulp.src(['./src/js/themes.js', './src/js/header.js', './src/js/folding.js'])
 		.pipe(concat('main.js', {newLine: '\n\n'}))
-		.pipe(header("'use strict';\n"))
+		// .pipe(header("const page = document.querySelector('.page');\n"))
+		.pipe(header("'use strict';\n\n"))
 		.pipe(gulp.dest('./js/'));
 
 	return Promise.all([clean, scripts]);
