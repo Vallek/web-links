@@ -144,6 +144,8 @@ animSwitch.addEventListener('click', (button) => {
 });
 
 const stickyContents = document.querySelector('.sticky');
+const contentsBtn = document.querySelector('.sticky-contents-btn');
+const settingsBtn = document.querySelector('.sticky-settings-btn');
 
 function stickHeader() {
 	let pageTop = page.getBoundingClientRect().top;
@@ -157,6 +159,15 @@ function stickHeader() {
 
 window.addEventListener('scroll', stickHeader);
 window.addEventListener('DOMContentLoaded', stickHeader);
+
+// Close when click outside
+document.addEventListener('click', (el) => {
+	let target = el.target;
+	if (!stickyContents.contains(target)) {
+		contentsBtn.checked = false;
+		settingsBtn.checked = false;
+	}
+});
 
 const fold = document.querySelector('.contents__fold');
 const foldInput = document.querySelector('#fold-contents');

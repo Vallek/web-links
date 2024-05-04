@@ -139,6 +139,7 @@
 
 @media screen and (max-width: 76.25rem) {
 	.sticky {
+		pointer-events: none;
 		grid-column: 3 / 4;
 		display: grid;
 		grid-template-columns: 1fr 1fr minmax(auto, 50rem) 1fr 1fr;
@@ -176,6 +177,7 @@
 @media screen and (max-width: 76.25rem) {
 	.sticky-contents-btn,
 	.sticky-settings-btn {
+		pointer-events: all;
 		display: unset;
 	}
 }
@@ -224,6 +226,7 @@
 
 @media screen and (max-width: 76.25rem) {
 	.contents {
+		pointer-events: all;
 		display: none;
 		position: static;
 		grid-column: 3 / 4;
@@ -377,6 +380,7 @@
 
 @media screen and (max-width: 76.25rem) {
 	.settings {
+		pointer-events: all;
 		display: none;
 		position: static;
 		grid-column: 3 / 4;
