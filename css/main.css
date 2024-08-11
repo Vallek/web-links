@@ -275,7 +275,12 @@
 	user-select: none;
 }
 
-.contents__fold::before {
+.fold__title {
+	display: flex;
+	align-items: center;
+}
+
+.fold__title::before {
 	content: '';
 	display: block;
 	width: 1em;
@@ -283,17 +288,16 @@
 	font-size: 1.5rem;
 	margin-top: 1px;
 	margin-right: 0.3em;
-	background-image: url('../img/eye-open.svg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
-.fold_folded::before {
+.fold__title_show::before {
 	background-image: url('../img/eye-close.svg');
 }
 
-.fold__title {
-	display: flex;
+.fold__title_hide::before {
+	background-image: url('../img/eye-open.svg');
 }
 
 .contents__list {
