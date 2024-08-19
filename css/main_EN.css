@@ -139,6 +139,7 @@
 
 @media screen and (max-width: 76.25rem) {
 	.sticky {
+		pointer-events: none;
 		grid-column: 3 / 4;
 		display: grid;
 		grid-template-columns: 1fr 1fr minmax(auto, 50rem) 1fr 1fr;
@@ -176,6 +177,7 @@
 @media screen and (max-width: 76.25rem) {
 	.sticky-contents-btn,
 	.sticky-settings-btn {
+		pointer-events: all;
 		display: unset;
 	}
 }
@@ -224,6 +226,7 @@
 
 @media screen and (max-width: 76.25rem) {
 	.contents {
+		pointer-events: all;
 		display: none;
 		position: static;
 		grid-column: 3 / 4;
@@ -272,7 +275,12 @@
 	user-select: none;
 }
 
-.contents__fold::before {
+.fold__title {
+	display: flex;
+	align-items: center;
+}
+
+.fold__title::before {
 	content: '';
 	display: block;
 	width: 1em;
@@ -280,17 +288,16 @@
 	font-size: 1.5rem;
 	margin-top: 1px;
 	margin-right: 0.3em;
-	background-image: url('../img/eye-open.svg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
-.fold_folded::before {
+.fold__title_show::before {
 	background-image: url('../img/eye-close.svg');
 }
 
-.fold__title {
-	display: flex;
+.fold__title_hide::before {
+	background-image: url('../img/eye-open.svg');
 }
 
 .contents__list {
@@ -377,6 +384,7 @@
 
 @media screen and (max-width: 76.25rem) {
 	.settings {
+		pointer-events: all;
 		display: none;
 		position: static;
 		grid-column: 3 / 4;
@@ -1408,4 +1416,8 @@ a:hover {
 .stylelint_io {
 	width: 16px; height: 16px;
 	background: url('../img/css_sprites.png') -190px -298px;
+}
+
+.sass-lang_com {
+	object-fit: contain;
 }

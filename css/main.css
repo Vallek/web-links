@@ -1498,3 +1498,7 @@ a:hover {
 	width: 16px; height: 16px;
 	object-position: -262px -82px;
 }
+
+.sass-lang_com {
+    object-fit: contain;
+}
