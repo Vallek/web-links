@@ -790,7 +790,7 @@ a:hover {
 .contents__topics a[href="#tools"]::before {
 	content: '🛠️';
 }
-#qa::after,
+.topic__heading a[href="#qa"]::after,
 .contents__topics a[href="#qa"]::before {
 	content: '🔬';
 }
