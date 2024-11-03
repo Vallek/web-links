@@ -641,10 +641,6 @@ h4:target,
 	vertical-align: middle;
 }
 
-.topic__section .tip span {
-	vertical-align: baseline;
-}
-
 .topic__list_normal li::before,
 .topic__item_normal::before {
 	content: '\2022\00a0';
@@ -794,7 +790,7 @@ a:hover {
 .contents__topics a[href="#tools"]::before {
 	content: '🛠️';
 }
-.topic__heading a[href="#qa"]::after,
+#qa::after,
 .contents__topics a[href="#qa"]::before {
 	content: '🔬';
 }
