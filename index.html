@@ -59,6 +59,10 @@
 	<div class="sticky">
 		<input class="sticky-contents-btn" type="checkbox" name="sticky-contents-btn" id="sticky-contents-btn" aria-label="Переключить видимость попапа с содержанием" title="Показать/скрыть содержание">
 		<aside class="contents">
+			<form autocomplete="off" class="search-form" action="" method="GET">
+				<label class="visually-hidden" for="page-search">Фильтр - быстрый поиск по странице</label>
+				<input placeholder="Начните набирать тему" type="search" name="page-search" id="page-search" class="page-search" title="Быстрый поиск">
+			</form>
 			<h2 class="contents__heading" title="В начало">
 				<a class="contents__heading-link" href="#">Содержание</a>
 			</h2>
@@ -146,10 +150,10 @@
 				</li>
 				<li>
 					<span class="contents__title">
-						<button class="list__fold-button" aria-label="Свернуть/развернуть список"></button>
+						<button class="list__fold-button list__fold-button_folded" aria-label="Свернуть/развернуть список"></button>
 						<a class="contents__link" href="#advanced">Дальше</a>
 					</span>
-					<ol class="contents__topics contents__topics_default">
+					<ol class="contents__topics contents__topics_default" style="height: 0px;">
 						<li><a href="#csr">Фреймворки</a></li>
 						<li><a href="#ssr">SSR</a></li>
 						<li><a href="#headless">Headless CMS</a></li>
