@@ -1,0 +1,558 @@
+.alternativeto_net {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -10px -10px;
+}
+
+.angular_io {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -10px;
+}
+
+.app_daily_dev {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -10px -46px;
+}
+
+.apps_microsoft_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -46px;
+}
+
+.caninclude_glitch_me {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -82px -10px;
+}
+
+.caniuse_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -82px -46px;
+}
+
+.code_visualstudio_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -10px -82px;
+}
+
+.codepen_io {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -82px;
+}
+
+.codex_wordpress_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -82px -82px;
+}
+
+.creativecloud_adobe_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -118px -10px;
+}
+
+.css_tricks_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -118px -46px;
+}
+
+.css_weekly_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -118px -82px;
+}
+
+.csstriggers_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -10px -118px;
+}
+
+.dev_to {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -118px;
+}
+
+.developer_chrome_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -82px -118px;
+}
+
+.developer_mozilla_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -118px -118px;
+}
+
+.developers_google_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -154px -10px;
+}
+
+.docs_emmet_io {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -154px -46px;
+}
+
+.docs_microsoft_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -154px -82px;
+}
+
+.wordpress_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -154px -118px;
+}
+
+.docs_npmjs_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -10px -154px;
+}
+
+.editorconfig_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -154px;
+}
+
+.en_bem_info {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -82px -154px;
+}
+
+.uxplanet_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -118px -154px;
+}
+
+.medium_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -154px -154px;
+}
+
+.frontender_ua_medium_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -10px;
+}
+
+.erdembesler_medium_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -46px;
+}
+
+.eslint_style {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -82px;
+}
+
+.filezilla_project_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -118px;
+}
+
+.fonts_google_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -154px;
+}
+
+.javascriptweekly_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -10px -190px;
+}
+
+.frontendfoc_us {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -190px;
+}
+
+.frontendfront_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -82px -190px;
+}
+
+.frontendweekly_co {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -118px -190px;
+}
+
+.getbem_com {
+	width: 16px; height: 13px;
+	background: url('../img/css_spritesEN.png') -370px -296px;
+}
+
+.git_scm_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -154px -190px;
+}
+
+.github_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -190px;
+}
+
+.guides_github_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -226px -10px;
+}
+
+.gulpjs_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -226px -46px;
+}
+
+.howhttps_works {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -226px -82px;
+}
+
+.html_spec_whatwg_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -226px -118px;
+}
+
+.htmlhint_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -226px -154px;
+}
+
+.ishadeed_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -226px -190px;
+}
+
+.jamstack_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -10px -226px;
+}
+
+.learn_javascript_info {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -226px;
+}
+
+.javascript_info {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -82px -226px;
+}
+
+.jekyllrb_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -118px -226px;
+}
+
+.joyofcode_xyz {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -154px -226px;
+}
+
+.jsbin_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -226px;
+}
+
+.svelte_dev {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -226px -226px;
+}
+
+.kit_svelte_dev {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -262px -10px;
+}
+
+.medium_muz_li {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -262px -46px;
+}
+
+.nextjs_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -262px -82px;
+}
+
+.nicolasgallagher_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -262px -118px;
+}
+
+.nodejs_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -262px -154px;
+}
+
+.nuxt_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -262px -190px;
+}
+
+.pagespeed_web_dev {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -262px -226px;
+}
+
+.philipwalton_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -10px -262px;
+}
+
+.pixabay_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -262px;
+}
+
+.prettier_io {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -82px -262px;
+}
+
+.react_dev {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -118px -262px;
+}
+
+.realfavicongenerator_net {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -154px -262px;
+}
+
+.remix_run {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -262px;
+}
+
+.roadmap_sh {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -226px -262px;
+}
+
+.search_google_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -262px -262px;
+}
+
+.searchengines_guru {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -298px -10px;
+}
+
+.snipcart_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -298px -46px;
+}
+
+.specificity_keegan_st {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -298px -82px;
+}
+
+.stackoverflow_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -298px -118px;
+}
+
+.svgontheweb_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -298px -154px;
+}
+
+.symbl_cc {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -298px -190px;
+}
+
+.tools_pingdom_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -298px -226px;
+}
+
+.tproger_ru {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -298px -262px;
+}
+
+.translate_yandex_ru {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -10px -298px;
+}
+
+.twitter_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -298px;
+}
+
+.unsplash_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -82px -298px;
+}
+
+.uxdesign_cc {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -118px -298px;
+}
+
+.validator_w3_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -154px -298px;
+}
+
+.www_w3_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -298px;
+}
+
+.vallek_github_io {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -226px -298px;
+}
+
+.vuejs_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -262px -298px;
+}
+
+.web_dev {
+	width: 16px; height: 15px;
+	background: url('../img/css_spritesEN.png') -370px -190px;
+}
+
+.web_dev_learn {
+	width: 16px; height: 15px;
+	background: url('../img/css_spritesEN.png') -370px -225px;
+}
+
+.webfontloader_altmann_de {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -298px -298px;
+}
+
+.webmaster_yandex_ru {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -334px -10px;
+}
+
+.webpack_js_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -334px -46px;
+}
+
+.webpagetest_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -334px -82px;
+}
+
+.www_a11yproject_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -334px -118px;
+}
+
+.www_apachefriends_org {
+	width: 15px; height: 16px;
+	background: url('../img/css_spritesEN.png') -370px -260px;
+}
+
+.www_atlassian_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -334px -154px;
+}
+
+.www_bram_us {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -334px -190px;
+}
+
+.www_browserstack_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -334px -226px;
+}
+
+.www_cssfontstack_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -334px -262px;
+}
+
+.www_figma_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -334px -298px;
+}
+
+.www_flaticon_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -10px -334px;
+}
+
+.www_freecodecamp_org {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -334px;
+}
+
+.www_freepik_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -82px -334px;
+}
+
+.www_gatsbyjs_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -118px -334px;
+}
+
+.www_lambdatest_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -154px -334px;
+}
+
+.www_pexels_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -334px;
+}
+
+.www_reddit_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -226px -334px;
+}
+
+.www_shopify_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -262px -334px;
+}
+
+.www_sitepoint_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -298px -334px;
+}
+
+.www_smashingmagazine_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -334px -334px;
+}
+
+.www_sublimetext_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -370px -10px;
+}
+
+.www_svgrepo_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -370px -46px;
+}
+
+.www_youtube_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -370px -82px;
+}
+
+.yandex_ru {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -370px -118px;
+}
+
+.yoksel_github_io {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -370px -154px;
+}
+
+.netlify {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -370px -334px;
+}
+
+.stylelint_io {
+	width: 16px; height: 16px;
+	background: url('../img/css_sprites.png') -190px -298px;
+}
+
+.sass-lang_com {
+	object-fit: contain;
+}
