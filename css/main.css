@@ -291,6 +291,10 @@
 	user-select: none;
 }
 
+.fold__input:focus ~ .fold__title_hide {
+	outline: auto;
+}
+
 .fold__title {
 	display: flex;
 	align-items: center;
