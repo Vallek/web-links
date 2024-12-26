@@ -745,7 +745,7 @@ a:hover {
 }
 
 .no-animation {
-	transition: none;
+	transition: height 0.001s ease;
 }
 
 /* Emoji */

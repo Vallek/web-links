@@ -27,7 +27,9 @@ function foldList(el, status) {
 		el.style.height = '0';
 	}
 	el.addEventListener('transitionend', () => {
-		el.style.height = 'auto';
+		if (el.style.height !== '0px') {
+				el.style.height = 'auto';
+		}
 	});
 }
 
