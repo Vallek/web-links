@@ -510,6 +510,7 @@
 	width: 100%;
 	max-width: 80ch;
 	margin: 0 auto;
+	padding-top: 1.5em;
 	position: relative;
 	box-sizing: border-box;
 	border-radius: 5px;
@@ -522,10 +523,6 @@
 .part {
 	position: relative;
 	z-index: 1;
-}
-
-.part:first-of-type {
-	padding-top: 1.5em;
 }
 
 .part__heading {
