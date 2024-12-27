@@ -1,10 +1,12 @@
 const form = document.querySelector('.search-form');
 const input = document.querySelector('#page-search');
 const main = document.querySelector('main');
-const article = main.querySelectorAll('article');
-const heading = main.querySelectorAll('h3 > a, h4');
-const section = main.querySelectorAll('section');
+const articles = main.querySelectorAll('article');
+const headings = main.querySelectorAll('h3 > a, h4');
+const sections = main.querySelectorAll('section');
 const listItems = main.querySelectorAll('li');
+let parts = [];
+parts.push(articles, sections);
 
 form.addEventListener('submit', submit);
 input.addEventListener('keyup', filter);
@@ -41,31 +43,21 @@ function filter(evt) {
 			);
 		}
 	);
-	article.forEach(
-		function hideArticles(item) {
-			if (! item.querySelector('.show')) {
-				item.classList.add('visually-hidden');
+	parts.map((part) => {
+		part.forEach((el) => {
+			if (! el.querySelector('.show')) {
+				el.classList.add('visually-hidden');
 			}
 			else {
-				item.classList.remove('visually-hidden');
+				el.classList.remove('visually-hidden');
 			}
-		}
-	);
-	section.forEach(
-		function hideSections(item) {
-			if (! item.querySelector('.show')) {
-				item.classList.add('visually-hidden');
-			}
-			else {
-				item.classList.remove('visually-hidden');
-			}
-		}
-	);
-	heading.forEach((item) => {
+		});
+	});
+	headings.forEach((item) => {
 		let linkText = item.textContent.toUpperCase();
+		let a = item.closest('article');
+		let s = item.closest('section');
 		if (item.nodeName === 'A' && linkText.includes(inputValue) ) {
-			let a = item.closest('article');
-			let s = item.closest('section');
 			a.classList.remove('visually-hidden');
 			s.classList.remove('visually-hidden');
 			let x = a.querySelectorAll('.visually-hidden');
@@ -74,8 +66,6 @@ function filter(evt) {
 			});
 		} 
 		else if (item.nodeName === 'H4' && linkText.includes(inputValue)) {
-			let a = item.closest('article');
-			let s = item.closest('section');
 			let p = item.closest('.part');
 			a.classList.remove('visually-hidden');
 			s.classList.remove('visually-hidden');
