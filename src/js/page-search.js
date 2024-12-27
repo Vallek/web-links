@@ -20,6 +20,7 @@ function submit(evt) {
 function filter(evt) {
 	evt.preventDefault();
 	let inputValue = input.value.toUpperCase();	
+	// Filter links
 	listItems.forEach(
 		function getMatch(item) {
 			let listLinks = item.querySelectorAll('a');
@@ -43,6 +44,7 @@ function filter(evt) {
 			);
 		}
 	);
+	// Filter sections with/without shown links 
 	parts.map((part) => {
 		part.forEach((el) => {
 			if (! el.querySelector('.show')) {
@@ -53,27 +55,27 @@ function filter(evt) {
 			}
 		});
 	});
+	// Show sections on page and links inside sections
+	function showLInks(part, links) {
+		for (let i = 0; i < part.length; i++) {
+			part[i].classList.remove('visually-hidden');
+		}
+		let x = links.querySelectorAll('.visually-hidden');
+		x.forEach((el) => {
+			el.classList.remove('visually-hidden');
+		});
+	}
+	// Filter sections based on headings h3 and h4
 	headings.forEach((item) => {
 		let linkText = item.textContent.toUpperCase();
 		let a = item.closest('article');
 		let s = item.closest('section');
 		if (item.nodeName === 'A' && linkText.includes(inputValue) ) {
-			a.classList.remove('visually-hidden');
-			s.classList.remove('visually-hidden');
-			let x = a.querySelectorAll('.visually-hidden');
-			x.forEach((el) => {
-				el.classList.remove('visually-hidden');
-			});
+			showLInks([a, s], a);
 		} 
 		else if (item.nodeName === 'H4' && linkText.includes(inputValue)) {
 			let p = item.closest('.part');
-			a.classList.remove('visually-hidden');
-			s.classList.remove('visually-hidden');
-			p.classList.remove('visually-hidden');
-			let x = s.querySelectorAll('.visually-hidden');
-			x.forEach((el) => {
-				el.classList.remove('visually-hidden');
-			});
+			showLInks([a, s, p], s);
 		}
 	});
 }
