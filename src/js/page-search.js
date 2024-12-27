@@ -2,7 +2,7 @@ const form = document.querySelector('.search-form');
 const input = document.querySelector('#page-search');
 const main = document.querySelector('main');
 const article = main.querySelectorAll('article');
-const heading = main.querySelectorAll('h3 > a');
+const heading = main.querySelectorAll('h3 > a, h4');
 const section = main.querySelectorAll('section');
 const listItems = main.querySelectorAll('li');
 
@@ -27,10 +27,15 @@ function filter(evt) {
 					if (! linkText.includes(inputValue)) {
 						item.classList.add('visually-hidden');
 						item.classList.remove('show');
+						link.classList.remove('show');
 					}
 					else {
 						item.classList.remove('visually-hidden');
 						item.classList.add('show');
+						link.classList.add('show');
+					}
+					if (item.querySelector('.show')) {
+						item.classList.remove('visually-hidden');
 					}
 				}
 			);
@@ -58,15 +63,27 @@ function filter(evt) {
 	);
 	heading.forEach((item) => {
 		let linkText = item.textContent.toUpperCase();
-		if (linkText.includes(inputValue)) {
+		if (item.nodeName === 'A' && linkText.includes(inputValue) ) {
 			let a = item.closest('article');
 			let s = item.closest('section');
+			a.classList.remove('visually-hidden');
+			s.classList.remove('visually-hidden');
 			let x = a.querySelectorAll('.visually-hidden');
 			x.forEach((el) => {
 				el.classList.remove('visually-hidden');
 			});
+		} 
+		else if (item.nodeName === 'H4' && linkText.includes(inputValue)) {
+			let a = item.closest('article');
+			let s = item.closest('section');
+			let p = item.closest('.part');
 			a.classList.remove('visually-hidden');
 			s.classList.remove('visually-hidden');
+			p.classList.remove('visually-hidden');
+			let x = s.querySelectorAll('.visually-hidden');
+			x.forEach((el) => {
+				el.classList.remove('visually-hidden');
+			});
 		}
 	});
 }
