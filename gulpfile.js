@@ -17,7 +17,7 @@ const stylesEn = () => {
 
 const scripts = () => {
 	return src(['./src/js/themes.js', './src/js/header.js', './src/js/folding.js', './src/js/page-search.js'])
-	.pipe(wrap(';\n// src/js/<%= file.relative %>;\n<%= contents %>'))
+	.pipe(wrap('\n// src/js/<%= file.relative %>\n<%= contents %>'))
 	.pipe(concat('main.js'))
 	.pipe(header("'use strict';\n"))
 	.pipe(dest('./js/'));
