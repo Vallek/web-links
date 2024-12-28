@@ -1,6 +1,7 @@
 const { src, dest, watch } = require('gulp');
 const concat = require('gulp-concat');
 const header = require('gulp-header');
+const wrap = require('gulp-wrap');
 
 const styles = () => {
 	return src(['./src/css/style.css', './src/css/emojis.css', './src/css/favicons.css'])
@@ -16,8 +17,9 @@ const stylesEn = () => {
 
 const scripts = () => {
 	return src(['./src/js/themes.js', './src/js/header.js', './src/js/folding.js', './src/js/page-search.js'])
-	.pipe(concat('main.js', {newLine: '\n\n'}))
-	.pipe(header("'use strict';\n\n"))
+	.pipe(wrap(';\n// src/js/<%= file.relative %>;\n<%= contents %>'))
+	.pipe(concat('main.js'))
+	.pipe(header("'use strict';\n"))
 	.pipe(dest('./js/'));
 }
 

@@ -1,5 +1,6 @@
 'use strict';
 
+// src/js/themes.js
 const page = document.querySelector('.page');
 const toggleSwitchTop = document.querySelector('.toggle__theme');
 const toggleSwitchSide = document.querySelector('.settings__theme');
@@ -143,6 +144,7 @@ animSwitch.addEventListener('click', (button) => {
 	}
 });
 
+// src/js/header.js
 const stickyContents = document.querySelector('.sticky');
 const contentsBtn = document.querySelector('.sticky-contents-btn');
 const settingsBtn = document.querySelector('.sticky-settings-btn');
@@ -169,6 +171,7 @@ document.addEventListener('click', (el) => {
 	}
 });
 
+// src/js/folding.js
 const fold = document.querySelector('.contents__fold');
 const foldInput = document.querySelector('#fold-contents');
 const topics = document.querySelectorAll('.list__fold-button');
@@ -301,6 +304,7 @@ foldSwitch.addEventListener('click', () => {
 	}
 });
 
+// src/js/page-search.js
 const form = document.querySelector('.search-form');
 const input = document.querySelector('#page-search');
 const main = document.querySelector('main');
