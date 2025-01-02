@@ -5,36 +5,41 @@ const foldButton  = document.querySelectorAll('.list__fold-button');
 const topicsList = document.querySelectorAll('.contents__topics');
 const topicsListLinks = document.querySelectorAll('.contents__topics a');
 
-foldInput.addEventListener('click', foldCOntents);
+foldInput.addEventListener('click', foldContents);
 foldButton.forEach(el => {
 	el.addEventListener('click', foldListAll);
 });
 
 // Fold list for css transition with height detection function
 function foldList(el, status) {
-	if (status === 'show' ||
-	el.style.height === '0px') {
+	if (status === 'show' || el.style.height === '0px') {
 		el.style.height = el.scrollHeight + 'px';
-	} else {
+	}
+	else {
 		el.style.height = el.scrollHeight + 'px';
 		window.getComputedStyle(el, null).getPropertyValue('height');
 		el.style.height = '0';
 	}
-	if (status === 'hide' ||
-	el.style.height === 'auto') {
+	if (status === 'hide' || el.style.height === 'auto') {
 		el.style.height = el.scrollHeight + 'px';
 		window.getComputedStyle(el, null).getPropertyValue('height');
 		el.style.height = '0';
 	}
 	el.addEventListener('transitionend', () => {
 		if (el.style.height !== '0px') {
-				el.style.height = 'auto';
+			el.style.height = 'auto';
 		}
 	});
 }
 
+function autoHeight(el) {
+	if (el.parentElement.classList.contains('visually-hidden') && el.style.height === '0px' && el.classList.contains('item-folded')) {
+		el.style.height = 'auto';
+	}
+}
+
 // Fold/unfold contents toggle
-function foldCOntents(event) {
+function foldContents(event) {
 	// Change title
 	const unfoldTitle = document.querySelector('.fold__title_show');
 	const foldTitle = document.querySelector('.fold__title_hide');
@@ -81,27 +86,17 @@ partHeadings.forEach((el) => {
 	el.addEventListener('click', (evt) => {
 		if (evt.target === evt.currentTarget) {
 			let partContent = el.parentElement.querySelector('.part__content');
-			foldList(partContent);
-			el.classList.toggle('heading-folded');
-			partContent.classList.toggle('item-folded');
+			if (! partContent.classList.contains('item-folded')) {
+				foldList(partContent, 'hide');
+				el.classList.add('heading-folded');
+				partContent.classList.add('item-folded');
+			} 
+			else if (partContent.classList.contains('item-folded')) {
+				foldList(partContent, 'show');
+				el.classList.remove('heading-folded');
+				partContent.classList.remove('item-folded');
+			}
 		} 
-	});
-});
-
-// Unfold section on anchor link click
-topicsListLinks.forEach((el) => {
-	el.addEventListener('click', (evt) => {
-		let hrefId = evt.target.getAttribute('href');
-		let targetHeading = document.querySelector(hrefId.toString());
-		let partContent = targetHeading.closest('.part__content');
-		if (partContent.classList.contains('item-folded')) {
-			partContent.classList.remove('item-folded');
-			foldList(partContent, 'show');
-			setTimeout(() => {
-				targetHeading.scrollIntoView();
-				// Time higher then transition time
-			}, 550);
-		}
 	});
 });
 
@@ -112,20 +107,41 @@ foldSwitch.addEventListener('click', () => {
 		partHeadings.forEach((el) => {
 			let partContent = el.parentElement.querySelector('.part__content');
 			foldList(partContent, 'hide');
+			autoHeight(partContent);
 			el.classList.add('heading-folded');
 			partContent.classList.add('item-folded');
 			foldSwitch.value = 'hide';
 			foldSwitch.classList.add('settings__fold_folded');
 		});
 	}
-	else {
+	else if (foldSwitch.value === 'hide') {
 		partHeadings.forEach((el) => {
 			let partContent = el.parentElement.querySelector('.part__content');
 			foldList(partContent, 'show');
+			autoHeight(partContent);
 			el.classList.remove('heading-folded');
 			partContent.classList.remove('item-folded');
 			foldSwitch.value = 'show';
 			foldSwitch.classList.remove('settings__fold_folded');
 		});
 	}
+});
+
+// Unfold section on anchor link click
+topicsListLinks.forEach((el) => {
+	el.addEventListener('click', (evt) => {
+		let hrefId = evt.target.getAttribute('href');
+		let targetHeading = document.querySelector(hrefId.toString());
+		let partContent = targetHeading.closest('.part__content');
+		let partHeading = partContent.previousElementSibling;
+		if (partContent.classList.contains('item-folded')) {
+			partHeading.classList.remove('heading-folded');
+			partContent.classList.remove('item-folded');
+			foldList(partContent, 'show');
+			setTimeout(() => {
+				targetHeading.scrollIntoView();
+				// Time higher then transition time
+			}, 310);
+		}
+	});
 });
