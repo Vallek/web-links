@@ -404,7 +404,7 @@ function filter(evt) {
 }
 
 function autoReset() {
-	if (input.value == null || input.value == "") {
+	if (input.value === null || input.value === "") {
 		let allHide = main.querySelectorAll('.visually-hidden');
 		let allShow = main.querySelectorAll('.show');
 		allHide.forEach(

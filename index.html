@@ -28,7 +28,7 @@
 	<script>
 		const thisPage = document.querySelector('.page');
 		// Check if user set dark theme before
-		if (localStorage.getItem('weblinks-theme') == 'dark') {
+		if (localStorage.getItem('weblinks-theme') === 'dark') {
 			thisPage.classList.add('dark');
 		}
 		// Check if user prefers dark theme
