@@ -746,5 +746,6 @@ a:hover {
 }
 
 .no-animation {
+	/* Not none for folding EventListener to work on transitionend */
 	transition: height 0.001s ease;
 }
