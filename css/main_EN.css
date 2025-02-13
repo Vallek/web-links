@@ -1436,10 +1436,8 @@ a:hover {
 	background: url('../img/css_sprites.png') -190px -298px;
 }
 
-.sass-lang_com {
-	object-fit: contain;
-}
-
-.jsfiddle {
+.sass-lang_com,
+.jsfiddle,
+.webtoolsweekly {
 	object-fit: contain;
 }
