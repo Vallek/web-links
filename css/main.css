@@ -1517,6 +1517,8 @@ a:hover {
 	object-position: -262px -82px;
 }
 
-.sass-lang_com {
-    object-fit: contain;
+.sass-lang_com,
+.jsfiddle,
+.webtoolsweekly {
+	object-fit: contain;
 }
