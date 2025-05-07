@@ -1436,6 +1436,11 @@ a:hover {
 	background: url('../img/css_sprites.png') -190px -298px;
 }
 
+.vallek_github_io_webdevtips {
+	width: 16px; height: 16px;
+	object-position: -334px -298px;
+}
+
 .sass-lang_com,
 .jsfiddle,
 .webtoolsweekly {
