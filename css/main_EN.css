@@ -1443,6 +1443,7 @@ a:hover {
 
 .sass-lang_com,
 .jsfiddle,
-.webtoolsweekly {
+.webtoolsweekly,
+.npm-compare {
 	object-fit: contain;
 }
