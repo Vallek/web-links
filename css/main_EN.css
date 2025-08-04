@@ -1441,9 +1441,6 @@ a:hover {
 	object-position: -334px -298px;
 }
 
-.sass-lang_com,
-.jsfiddle,
-.webtoolsweekly,
-.npm-compare {
+.topic__favicon_fit {
 	object-fit: contain;
 }

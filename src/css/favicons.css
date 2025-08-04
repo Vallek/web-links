@@ -634,9 +634,6 @@
 	object-position: -262px -82px;
 }
 
-.sass-lang_com,
-.jsfiddle,
-.webtoolsweekly,
-.npm-compare {
+.topic__favicon_fit {
 	object-fit: contain;
 }
