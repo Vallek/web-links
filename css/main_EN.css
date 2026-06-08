@@ -737,6 +737,10 @@ a:hover {
 	font-size: 0.8em;
 }
 
+.donate {
+	margin: 0.5em;
+}
+
 /* JS */
 .visually-hidden {
 	border: 0;
