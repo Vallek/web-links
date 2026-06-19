@@ -1528,3 +1528,13 @@ a:hover {
 .topic__favicon_fit {
 	object-fit: contain;
 }
+
+.www_pexels_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -190px -334px;
+}
+
+.pixabay_com {
+	width: 16px; height: 16px;
+	background: url('../img/css_spritesEN.png') -46px -262px;
+}
